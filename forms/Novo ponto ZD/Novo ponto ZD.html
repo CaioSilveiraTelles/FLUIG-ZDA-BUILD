@@ -1,0 +1,97 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+ <div class="row">
+		<div class="form-group col-md-6">
+			<label for ="nome">Nome</label>
+			<Input type="text" name="nome" id="nome" class="form-control">
+		</div>
+		
+		<div class="form-group col-md-4">
+			<label for ="email">E-Mail</label>
+			<Input type="email" name="email" id="email" class="form-control">
+		</div>
+		<div class="form-group col-md-2">
+			<label for ="telefone">Telefone</label>
+			<Input type="text" name="telefone" id="telefone" class="form-control">
+		</div>
+</div>
+
+<div class="row">
+		<div class="form-group col-md-2">
+			<label for ="dataNascimento">Data de Nascimento</label>
+			<Input type="text" name="dataNascimento" id="dataNascimento" class="form-control">
+		</div>
+		
+		<div class="form-group col-md-2">
+			<label for ="RG">Documento RG</label>
+			<Input type="text" name="RG" id="RG" class="form-control">
+		</div>
+</div>		
+			
+<div class ="row">
+	<div class= "form-control cold-md-2">
+		<laber for ="tipoChocolate">Tipo de Chocolate</laber>
+		<div class="radio">
+			<label><input type="radio" name ="tipoChocolate" id="tipoChocolate" valeu="Moranguete">Moranguete</label>
+			<label><input type="radio" name ="tipoChocolate" id="tipoChocolate" valeu="Diatt">Diatt</label>
+		</div>
+		
+		<div class="form-group col-md-4">
+			<label>Dias De funcionamento</label>
+			<label><input type="checkbox" name="segunda">Seg</label>
+			<label><input type="checkbox" name="terca">TEr</label>
+			<label><input type="checkbox" name="quarta">Quar</label>
+			<label><input type="checkbox" name="quinta">Quint</label>
+			<label><input type="checkbox" name="sexta">Sexta</label>
+			<label><input type="checkbox" name="sabado">Sabad</label>
+			<label><input type="checkbox" name="domingo">Doming</label>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="form-group col-md-3">
+			<label for ="cep">cep</label>
+			<Input type="text" name="cep" id="cep" class="form-control">
+		</div>
+		
+		<div class="form-group col-md-2">
+			<label for ="Logradouro">Logradouro</label>
+			<Input type="Logradouro" name="Logradouro" id="Logradouro" class="form-control">
+		</div>
+		<div class="form-group col-md-1">
+			<label for ="Numero">Numero</label>
+			<Input type="text" name="Numero" id="Numero" class="form-control">
+		</div>			
+		<div class="form-group col-md-3">
+			<label for ="Bairro">Bairro</label>
+			<Input type="text" name="Bairro" id="Bairro" class="form-control">
+		</div>
+		
+		<div class="form-group col-md-3">
+			<label for ="Cidade">Cidade</label>
+			<Input type="Cidade" name="Cidade" id="Cidade" class="form-control">
+		</div>
+		<div class="form-group col-md-2">
+			<label for ="Estado">Estado</label>
+			<Input type="text" name="Estado" id="Estado" class="form-control">
+		</div>
+	</div>
+</div>	
+</form>
+</div>
+</body>
+<script type="text/javascript" src="cep.js"></script>
+<script type="text/javascript">
+	var calendariodataNascimento = FLUIGC.calendar('#dataNascimento');	
+</script>
+
+</html>
