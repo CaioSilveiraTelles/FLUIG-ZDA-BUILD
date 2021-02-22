@@ -1,0 +1,274 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="http://style.fluig.com/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery.mask.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+	<script src="/portal/resources/js/mustache/mustache-min.js"></script>
+</head>
+<body style="max-width: 98%">
+	<div class="fluig-style-guide" >
+        	<form name="form" role="form">
+        		<input type="hidden" name="integraProtheus" id="integraProtheus"/>        		        	
+        		<input type="hidden" name="temEstoque" id="temEstoque"/>        		        	
+        		<input type="hidden" name="temContrato" id="temContrato"/>	        	
+        		<input type="hidden" name="codigoArea" id="codigoArea"/>	        	
+        		<input type="hidden" name="gerencia" id="gerencia"/>
+        		<input type="hidden" name="gerentesAreaDemandante" id="gerentesAreaDemandante"/>
+        		<input type="hidden" name="nrProtheus" id="nrProtheus"/>
+        		<input type="hidden" name="matriculaSolicitante" id="matriculaSolicitante"/>          	
+		 		<div class="panel panel-default" >
+		 			<div class="panel-body">
+		 				<h1>Requisi&#231;&#227;o de Material</h1>
+		 			</div>
+		 		</div>
+		 		<div class="panel panel-default" id="panelMaterial">
+					<div class="panel-heading ">
+	    				<h3 class="panel-title">
+							<b>Dados da Solicita&#231;&#227;o</b>
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-12">
+								<label for="cmb_tipo_solicitacao">Tipo de Solicita&#231;&#227;o</label>								
+								<select class="form-control" name="cmb_tipo_solicitacao" id="cmb_tipo_solicitacao">
+								    <option value="1">Requisi&#231;&#227;o</option>
+								    <option value="2">Devolu&#231;&#227;o</option>
+								</select>
+							</div>
+						</div>
+						<br/>
+						<div class="form-group row">
+							<div class="col-md-4">
+								<label for="id_grupoempresa">C&#243;digo da Empresa</label>								
+								<div class="input-group">
+									<input type="text" class="form-control" name="id_grupoempresa" id="id_grupoempresa" maxlength="40" />
+									<span class="input-group-addon btnZoom fs-cursor-pointer" id="btn_grupoempresa">
+										<span class="fluigicon fluigicon-search" ></span>
+									</span>
+								</div>
+							</div>
+							<div class="col-md-8">
+								<label for="txt_grupoempresa">Descri&#231;&#227;o Empresa</label>
+								<input type="text" class="form-control" name="txt_grupoempresa" id="txt_grupoempresa" readonly="readonly"/>
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-md-4">
+								<label for="id_empresafilial">C&#243;digo da Filial</label>								
+								<div class="input-group">
+									<input type="text" class="form-control" name="id_empresafilial" id="id_empresafilial" maxlength="40" />
+									<span class="input-group-addon btnZoom fs-cursor-pointer" id="btn_empresafilial">
+										<span class="fluigicon fluigicon-search"></span>
+									</span>
+								</div>
+							</div>
+							<div class="col-md-8">
+								<label for="txt_empresafilial">Descri&#231;&#227;o Filial</label>		
+								<input type="text" class="form-control" name="txt_empresafilial" id="txt_empresafilial" readonly="readonly"/>								
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<label for="textLoginSolicit">Solicitante</label>
+								<input type="text" class="form-control" name="textLoginSolicit" id="textLoginSolicit" readonly="readonly"/>							
+							</div>
+							<div class="col-md-6">
+								<label for="text_area_demandante">&#193;rea Demandante</label>								
+								<div class="input-group">
+									<input type="text" class="form-control" name="text_area_demandante" id="text_area_demandante" maxlength="40" />
+									<span class="input-group-addon btnZoom fs-cursor-pointer" id="btn_areaDemandante">
+										<span class="fluigicon fluigicon-search"></span>
+									</span>
+								</div>					
+							</div>
+						</div>
+						<br/>
+						<div class="row">
+							<div class="col-md-6" id="requisicaoMaterial">
+								<label for="zoom_requisicaoMaterial">Requisi&#231;&#227;o de Material</label>								
+								<div class="input-group">
+									<input type="text" class="form-control" name="zoom_requisicaoMaterial" id="zoom_requisicaoMaterial" readonly="readonly" maxlength="40" />
+									<span class="input-group-addon btnZoom fs-cursor-pointer" id="btn_requisicaoMaterial">
+										<span class="fluigicon fluigicon-search"></span>
+									</span>
+								</div>	
+							</div>
+							<div class="col-md-6">
+								<label for="text_dt_emissao">Data da Requisi&#231;&#227;o</label>					            
+							       	<input type="text" class="form-control" name="text_dt_emissao" id="text_dt_emissao"/>							    
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default" id="panelItens">
+					<div class="panel-heading ">
+	    				<h3 class="panel-title">
+							<b>Itens</b>
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="form-group row">
+							<div class="col-md-1">
+								<input type="button" value="Adicionar" name="addProduto" id="addProduto" class="btn btn-primary fs-display-none"/>
+							</div> 
+							<div class="col-md-12" id="tableProduto">
+								<label for="tableProduto" style="visibility: hidden">Tabela Produtos</label>
+								<table tablename="tableProduto" id="tableProduto" name="tableProduto" class="table table-striped table-hover " noaddbutton="true" nodeletebutton="true">
+								
+		    					<tr class="fs-display-none">
+								</tr>								
+								
+			    					<tr>
+
+			    						<td class="form-group form-group-sm">
+			    							<div class="row">
+				  								<div class="form-group col-md-4">
+													<label for="textGrupoProdServico">Grupo Produto</label>
+													<div class="input-group">
+														<input type="hidden" name="idGrupoProdServico" id="idGrupoProdServico"/>
+														<input type="text" class="form-control" name="textGrupoProdServico" id="textGrupoProdServico" readonly="readonly"/>
+														<span class="input-group-addon btnZoom fs-cursor-pointer grupo-produto" id="btn_grupoProduto">
+															<span class="fluigicon fluigicon-search" ></span>
+														</span>	
+													</div>																				
+												</div>
+				  								<div class="form-group col-md-4">
+													<label for="textCodProdServico">C&#243;digo Produto</label>
+													<div class="input-group">
+														<input type="hidden" name="itemRequisicao" id="itemRequisicao"/>
+														<input type="hidden" name="idCodProdServico" id="idCodProdServico"/>	
+														<input type="text" class="form-control" name="textCodProdServico" id="textCodProdServico" readonly="readonly"/>
+														<span class="input-group-addon btnZoom fs-cursor-pointer produto" id="btn_codigoProduto">
+															<span class="fluigicon fluigicon-search" ></span>
+														</span>	
+													</div>																				
+												</div>
+				  								<div class="form-group col-md-2">
+													<label for="textQuantidadeProd">Quantidade Solicitada</label>										
+														<input type="text" class="form-control" name="textQuantidadeProd" id="textQuantidadeProd" mask="000000"/>																			
+												</div>	
+				  								<div class="form-group col-md-2">
+													<label for="textQuantidadeAtend">Quantidade Atendida</label>
+														<input type="hidden" name="textQuantidadeAtendAnt" id="textQuantidadeAtendAnt" />										
+														<input type="text" class="form-control" name="textQuantidadeAtend" id="textQuantidadeAtend" readonly="readonly" mask="000000"/>																			
+												</div>												
+												</div>
+												<div class="row">
+												
+					  								<div class="form-group col-md-2">
+														<label for="id_unidadeMedida">Unidade de Medida</label>
+														<div class="input-group">
+															<input type="hidden" name="text_unidadeMedida" id="text_unidadeMedida"/>
+															<input type="text" class="form-control" name="id_unidadeMedida" id="id_unidadeMedida" readonly="readonly"/>
+															<span class="input-group-addon btnZoom fs-cursor-pointer unidade-medida" id="btn_unidadeMedida">
+																<span class="fluigicon fluigicon-search" ></span>
+															</span>	
+														</div>																				
+													</div>		
+													
+					  								<div class="form-group col-md-2">
+														<label for="textDtProd">Data Necessidade</label>
+														<div class="input-group date" id="divDtProd">															
+															<input type="text" class="form-control" name="textDtProd" id="textDtProd" readonly="readonly"/>
+															<span class="input-group-addon fs-cursor-pointer" >
+																<span class="fluigicon fluigicon-calendar"></span>
+															</span>	
+														</div>																				
+													</div>														
+													
+					  								<div class="form-group col-md-2">
+														<label for="text_armazemProd">C&#243;digo Armaz&#233;m</label>
+														<div class="input-group">
+															<input type="hidden" name="id_armazemProd" id="id_armazemProd"/>
+															<input type="text" class="form-control" name="text_armazemProd" id="text_armazemProd" readonly="readonly"/>
+															<span class="input-group-addon btnZoom fs-cursor-pointer armazem" id="btn_armazem">
+																<span class="fluigicon fluigicon-search" ></span>
+															</span>	
+														</div>																				
+													</div>		
+					  								<div class="form-group col-md-4">
+														<label for="text_obsProd">Observa&#231;&#227;o</label>										
+															<input type="text" class="form-control" name="text_obsProd" id="text_obsProd" maxlength="40"/>																			
+													</div>
+													
+				    								<div class="col-md-2 col-md-offset-11">
+														<input type="button" id="deleteItens" name="deleteItens" class="btn btn-danger" value="Excluir" onclick="Javascript:fnWdkRemoveChild(this)"/>
+													</div>																																																	
+												
+												</div>
+																						
+											</td>
+
+									</tr>
+
+			    				</table>
+			    			</div>
+						</div>
+
+					</div>
+				</div>
+				
+				
+				<div class="panel panel-default" id="panelAprovacao">
+					<div class="panel-heading ">
+	    				<h3 class="panel-title">
+							<b>Aprovação</b>
+						</h3>
+					</div>
+					<div class="panel-body">
+									
+	    				<div class="row">
+	    					<div class="col-md-2">
+		    					<div class="radio">
+								    <label>
+								    <input type="radio" name="aprovaRadio" id="aprovado" value="aprovado">
+								    Aprovado
+								    </label>
+								</div>
+								<div class="radio">
+								    <label>
+								    <input type="radio" name="aprovaRadio" id="reprovado" value="reprovado">
+								    Reprovado
+								    </label>
+								</div>
+							</div>
+							<div class="col-md-8">
+								<label for="motivoAprova">Motivo</label>
+								<textarea class="form-control" rows="3" id="motivoAprova" name="motivoAprova"></textarea>
+							</div>
+	    				</div>				
+				</div>
+				</div>
+				
+				<div class="panel panel-default" id="panelItens">
+					<div class="panel-heading ">
+	    				<h3 class="panel-title">
+							<b>Status da Entrega</b>
+						</h3>
+					</div>
+					<div class="panel-body">
+	    				<div class="row">
+	    					<div class="col-md-2">
+	    						<label>Entrega</label>
+		    					<div class="checkbox">
+								    <label>
+								    	<input type="checkbox" name="chk_incorreta" id="chk_incorreta" value="incorreta"> Incorreta
+								    </label>
+								</div>
+							</div>
+	    				</div>
+					</div>
+				</div>
+         	</form>
+      </div>
+	</body>
+</html>
+<script type="text/javascript" src="activities.js" charset="utf-8"></script>
+<script type="text/javascript" src="enableFields.js" charset="utf-8"></script>
+<script type="text/javascript" src="requiredFieldsRule.js" charset="utf-8"></script>
+<script type="text/javascript" src="beforeSendValidate.js" charset="utf-8"></script>
+<script type="text/javascript" src="custom.js" charset="utf-8"></script>

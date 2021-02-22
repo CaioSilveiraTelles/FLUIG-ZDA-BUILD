@@ -1,0 +1,1465 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="https://style.fluig.com/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery.mask.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+	<script src="/portal/resources/js/mustache/mustache-min.js"></script>
+</head>
+<body>
+	<div class="fluig-style-guide">
+        	<form name="form" role="form">
+        		<input type="hidden" name="pastaForn" id="pastaForn"/>          		
+        		<input type="hidden" name="codPessoa" id="codPessoa"/>
+        		<input type="hidden" name="gesadGroup" id="gesadGroup"/>
+        		<input type="hidden" name="geconGroup" id="geconGroup"/>
+        		<input type="hidden" name="geconAprovGroup" id="geconAprovGroup"/>
+        		<input type="hidden" name="poolGesad" id="poolGesad"/>
+        		<input type="hidden" name="poolGecon" id="poolGesad"/>
+        		<input type="hidden" name="poolGeconAprov" id="poolGesad"/>
+        		<input type="hidden" name="listDocs" id="listDocs"/>
+        		<input type="hidden" name="portal" id="portal"/>      
+        		<input type="hidden" name="dtAbertura" id="dtAbertura"/> 	
+        		<input type="hidden" name="hdnUserGesad" id="hdnUserGesad"/> 
+        		<input type="hidden" name="cloja" id="cloja"/>
+        		<input type="hidden" name="ccodigo" id="ccodigo"/>
+        		<input type="hidden" name="Text_Senha_Fornecedor_Portal" id="Text_Senha_Fornecedor_Portal"/> 
+        		<input type="hidden" name="text_user_gesad" id="text_user_gesad"/>
+        		<input type="hidden" name=text_data_analise id="text_data_analise"/>
+		 		<div class="panel panel-default" >
+		 			<div class="panel-body">
+		 				<h1>Cadastro de Fornecedor</h1>
+		 			</div>
+		 		</div>
+		 		<div class="panel panel-default" id="panelCadastro">
+					<div class="panel-heading ">
+	    				<h3 class="panel-title">
+							<b>Cadastro</b>
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="form-group row">
+							<div class="form-group col-md-2">
+								<label for="nm_tipo_solicitacao" class=>Modo</label>
+			                    <select class="form-control" name="nm_tipo_solicitacao" id="nm_tipo_solicitacao">
+			                        <option value="3">Inclus&#227;o</option>
+			                        <option value="4">Altera&#231;&#227;o</option>
+			                    </select>
+							</div>						
+							<div class="form-group col-md-2">
+								<label for="text_codigo_pessoa">Código Pessoa</label>
+                     			<input type="text" class="form-control onlyNumber" name="text_codigo_pessoa" id="text_codigo_pessoa" readonly="readonly" maxlength="5"/>														
+							</div>							
+							<div class="form-group col-md-2">							
+						 		<label for="Select_tipo_cadastro" class=>Tipo de Cadastro</label>
+			                    <select class="form-control" name="Select_tipo_cadastro" id="Select_tipo_cadastro">
+			                        <option value=""></option>
+			                        <option value="1">Completo</option>
+			                        <option value="2">Simplificado</option>
+			                     </select>                  							
+		                     </div>	
+							<div class="form-group col-md-2">							
+						 		<label for="nm_tipo_fornecedor" class=>Tipo Pessoa</label>
+			                    <select class="form-control" name="nm_tipo_fornecedor" id="nm_tipo_fornecedor">
+			                    	<option value=""></option>
+			                        <option value="J">Juridica</option>
+			                        <option value="F">Fisica</option>			                        
+			                     </select>                  							
+							</div>	
+							<div class="form-group col-md-2">
+								<label for="text_Atuacao_brasil">Atuante no Brasil?</label>
+                     			<select class="form-control" name="text_Atuacao_brasil" id="text_Atuacao_brasil">
+                     			   <option value=""></option>
+			                       <option value="S">Sim</option>
+			                       <option value="N">Nao</option>
+			                    </select> 													
+							</div>								
+							<div class="form-group col-md-2">							
+						 		<label for="Select_revalidacao" class=>Revalidação</label>
+			                    <select class="form-control" name="Select_revalidacao" id="Select_revalidacao">
+			                        <option value="N">Não</option>
+			                        <option value="S">Sim</option>			                        
+			                     </select>                  							
+							</div>																							                     					
+		                   </div>
+						<div class="form-group row">
+							<div class="col-md-4">
+								<label for="id_grupoempresa">Empresa</label>								
+								<div class="input-group">
+									<input type="text" class="form-control quickSearch" readonly="readonly" name="id_grupoempresa" id="id_grupoempresa" maxlength="40" />
+									<span class="input-group-addon btnZoom" id="btn_grupoempresa">
+										<span class="fluigicon fluigicon-search" ></span>
+									</span>
+								</div>
+							</div>
+							<div class="col-md-8">
+								<label for="txt_grupoempresa">Descri&#231;&#227;o Empresa</label>
+								<input type="text" class="form-control" name="txt_grupoempresa" id="txt_grupoempresa" readonly="readonly"/>
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-md-4">
+								<label for="id_empresafilial">Empresa/Filial</label>								
+								<div class="input-group">
+									<input type="text" class="form-control quickSearch" readonly="readonly" name="id_empresafilial" id="id_empresafilial" maxlength="40" />
+									<span class="input-group-addon btnZoom" id="btn_empresafilial">
+										<span class="fluigicon fluigicon-search"></span>
+									</span>
+								</div>
+							</div>
+							<div class="col-md-8">
+								<label for="txt_empresafilial">Descri&#231;&#227;o Empresa/Filial</label>		
+								<input type="text" class="form-control" name="txt_empresafilial" id="txt_empresafilial" readonly="readonly"/>								
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="panel panel-default" id="panelDados">
+					<div class="panel-heading ">
+	    				<h3 class="panel-title">
+							<b>Dados Básicos</b>
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="row">			
+							<div class="form-group col-md-4">							
+								<label for="nm_cpf_cnpj" class=>CPF/CNPJ</label>                  	
+                     			<input type="text" class="form-control" name="nm_cpf_cnpj" id="nm_cpf_cnpj" maxlength="14" />														
+							</div>	
+							<div class="form-group col-md-4" id="dtSerasa">
+								<label for="text_DataSerasa">Data Serasa</label>
+					            <div class="input-group date" >
+							       	<input type="text" class="form-control" name="text_DataSerasa" id="text_DataSerasa" mask="00/00/0000"/>	
+							        <span class="input-group-addon">
+							            <span class="fluigicon fluigicon-calendar"></span>
+							        </span>
+							    </div>
+							</div>
+							<div class="form-group col-md-4">
+								<label for="text_ObservaoSerasa">Observação Serasa</label>
+								<input type="text" class="form-control" name="text_ObservaoSerasa" id="text_ObservaoSerasa" maxlength="240" />								
+							</div>							
+						</div>		
+						<div class="row">							
+							<div class="form-group col-md-4">							
+								<label for="text_Nome" class=>Nome do Fornecedor</label>                  	
+                     			<input type="text" class="form-control" name="text_Nome" id="text_Nome" maxlength="70"/>                  
+							</div>							
+							<div class="form-group col-md-4">							
+								<label for="nm_nome_fantasia" class=>Nome Fantasia</label>
+                     			<input type="text" class="form-control" name="nm_nome_fantasia" id="nm_nome_fantasia" maxlength="30"/>							
+							</div>
+							<div class="form-group col-md-4">							
+								<label for="nm_nome_abreviado" class=>Nome Abreviado</label>
+                     			<input type="text" class="form-control" name="nm_nome_abreviado" id="nm_nome_abreviado" maxlength="15"/>							
+							</div>
+						</div>
+						<div class="row">	
+							<div class="form-group col-md-4">
+								<label for="id_insc_estadual">Inscri&#231;&#227;o Estadual</label>
+                     			<input type="text" class="form-control" name="id_insc_estadual" id="id_insc_estadual" maxlength="14"/>							
+							</div>							
+							<div class="form-group col-md-4">
+								<label for="id_ins_municipal">Inscri&#231;&#227;o Municipal</label>
+                     			<input type="text" class="form-control" name="id_ins_municipal" id="id_ins_municipal" maxlength="14"/>														
+							</div>
+							<div class="form-group col-md-4" id="div_text_ativEconomica">
+								<label for="text_ativEconomica">Atividade Econômica</label>
+								<div class="input-group">
+                     				<input type="hidden" id="cod_ativEconomica" name="cod_ativEconomica"/>
+									<input type="text" class="form-control" name="text_ativEconomica" id="text_ativEconomica" readonly="readonly"/>
+									<span class="input-group-addon btnZoom fs-cursor-pointer" id="btn_atividade_eco">
+										<span class="fluigicon fluigicon-search"></span>
+									</span>	
+								</div>														
+							</div>	
+						</div>	
+						<div class="row">	
+							<div class="form-group col-md-4">
+								<label for="text_NIRE">NIRE</label>
+								<input type="text" class="form-control" name="text_NIRE" id="text_NIRE" maxlength="11" />								
+							</div>
+							<div class="form-group col-md-4" id="div_CapSocial">
+								<label for="text_CapSocial">Data Capital Social</label>
+					            <div class="input-group date" id="dtCapitalSocial">
+							       	<input type="text" class="form-control" name="text_CapSocial" id="text_CapSocial" mask="00/00/0000"/>	
+							        <span class="input-group-addon">
+							            <span class="fluigicon fluigicon-calendar"></span>
+							        </span>
+							    </div>
+							</div>	
+							<div class="form-group col-md-4">
+								<label for="text_ValorCapSocial">Valor Capital Social</label>
+								<input type="text" class="form-control money" name="text_ValorCapSocial" id="text_ValorCapSocial"/>								
+							</div>												
+						</div>	
+						
+						<div class="row">
+							<div class="form-group col-md-4" id="div_text_DocConstituicao">
+								<label for="text_DocConstituicao">Documento Constituição</label>
+								<input type="text" class="form-control" name="text_DocConstituicao" id="text_DocConstituicao" maxlength="60" />								
+							</div>
+							<div class="form-group col-md-4" id="div_select_sexo_socio">
+								<label for="text_sexo">Sexo</label>
+								<select class="form-control" name="text_sexo" id="text_sexo">
+								   <option value=""></option>
+			                       <option value="M">Masculino</option>
+			                       <option value="F">Feminino</option>
+			                    </select> 
+		                    </div>
+		                    <!-- <div class="form-group col-md-4" id="text_patrocinio">
+								<label for="text_patrocinio">Patrocinador</label>
+								<select class="form-control" name="text_patrocinio" id="text_patrocinio">
+								   <option value=""></option>
+			                       <option value="N">Não</option>
+			                       <option value="S">Sim</option>
+			                    </select> 								
+							</div> -->
+						</div>
+						<div class="row">
+							<div class="form-group col-md-4" id="div_tipoDoc">
+								<label for="text_tipoDoc">Tipo Documento</label>
+								<select class="form-control" name="text_tipoDoc" id="text_tipoDoc">
+								   <option value=""></option>
+			                       <option value="20">Cart. Ident.</option>
+			                       <option value="21">Cart. Trab.</option>
+			                       <option value="22">Pass.</option>
+			                       <option value="23">Cert. Reserv.</option>
+			                       <option value="24">CI. Exerc., Mar.,Aer.</option>
+			                       <option value="25">CI Exp.Min.Rel. Ext.</option>
+			                       <option value="26">CI Exp.Cons. Prof.Lib.</option>
+			                       <option value="27">C. I. Juízes</option>
+			                       <option value="28">CI.Pol.Exp.Pol .Fed.</option>
+			                       <option value="29">C. I. Estr.</option>
+			                       <option value="30">Cert.Nasc.Menor Repr.</option>
+			                       <option value="31">Cart. Nac. Habilit.</option>
+			                       <option value="32">CI.EXP.MIN.PUBLIC.</option>
+			                       <option value="33">C.FUNC.MIN.PUBLIC.</option>			                       
+			                    </select>
+			                </div>
+	                		<div class="form-group col-md-4">
+								<label for="text_ID">Número Documento</label>
+								<input type="text" class="form-control" name="text_ID" id="text_ID" maxlength="11" />								
+							</div>
+							<div class="form-group col-md-4">
+								<label for="text_ORGEmis">Órgão Emissor</label>
+								<input type="text" class="form-control" name="text_ORGEmis" id="text_ORGEmis" maxlength="10"/>								
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-md-4" id="div_DtEmis">
+								<label for="text_DtEmis">Data Emissão</label>
+					            <div class="input-group date" id="dtEmisSocio">
+							       	<input type="text" class="form-control" name="text_DtEmis" id="text_DtEmis" mask="00/00/0000"/>	
+							        <span class="input-group-addon">
+							            <span class="fluigicon fluigicon-calendar"></span>
+							        </span>
+							    </div>
+							</div>
+							<div class="form-group col-md-4" id="div_EstadoCivil">
+								<label for="text_EstadoCivil">Estado Civil</label>
+								<select class="form-control" name="text_EstadoCivil" id="text_EstadoCivil">
+								   <option value=""></option>
+			                       <option value="1">Solteiro</option>
+			                       <option value="2">Casado</option>
+			                       <option value="3">Separado/Desquitado</option>
+			                       <option value="3">Divorciado</option>
+			                       <option value="4">Viúvo</option>			                       
+			                    </select>
+			                </div>
+							<div class="form-group col-md-4">
+								<label for="text_Conjuge">Nome do Cônjuge</label>
+								<input type="text" class="form-control" name="text_Conjuge" id="text_Conjuge" maxlength="70" />								
+							</div>
+						</div>
+						<div class="row">
+ 								<div class="form-group col-md-4">
+								<label for="text_Mae">Nome da Mãe</label>
+								<input type="text" class="form-control" name="text_Mae" id="text_Mae" maxlength="70" />								
+							</div>
+							<div class="form-group col-md-4">
+								<label for="text_Pai">Nome do Pai</label>
+								<input type="text" class="form-control" name="text_Pai" id="text_Pai" maxlength="70" />								
+							</div>
+							<div class="form-group col-md-4" id="text_Nacionalidade">
+								<label for="text_Nacionalidade_for" class=>Pa&#237;s Nacionalidade</label>
+								<div class="input-group">
+									<input type="hidden" id="cod_nacionalidade" name="cod_nacionalidade"/>
+									<input type="text" class="form-control" name="text_Nacionalidade_for" id="text_Nacionalidade_for" readonly="readonly"/>	
+									<span class="input-group-addon btnZoom fs-cursor-pointer" id="btn_cod_pais_nacionalidade">
+										<span class="fluigicon fluigicon-search"></span>
+									</span> 
+								</div>									
+							</div>
+						</div>		
+						<div class="row">
+							<div class="form-group col-md-4">
+								<label for="text_Naturalidade">Naturalidade</label>
+								<input type="text" class="form-control" name="text_Naturalidade" id="text_Naturalidade" maxlength="30"/>								
+							</div>
+							<div class="form-group col-md-4">
+								<label for="text_INSS">INSS</label>
+								<input type="text" class="form-control" name="text_INSS" id="text_INSS" mask="00000000000" />								
+							</div>
+							<div class="form-group col-md-4" id="div_DtNascimento">
+								<label for="text_DtNascimento">Data Nascimento</label>
+					            <div class="input-group date" id="dtNasc">
+							       	<input type="text" class="form-control" name="text_DtNascimento" id="text_DtNascimento" mask="00/00/0000"/>	
+							        <span class="input-group-addon">
+							            <span class="fluigicon fluigicon-calendar"></span>
+							        </span>
+							    </div>
+							</div>
+						</div>
+						<div class="row" id="divAtuanteExterior">
+							<div class="form-group col-md-4">
+								<label for="text_IdentificaoFiscalExterior">Identificação Fiscal no Exterior</label>
+								<input type="text" class="form-control" name="text_IdentificaoFiscalExterior" id="text_IdentificaoFiscalExterior" maxlength="30"/>														
+             				</div>							
+							<div class="form-group col-md-4" id="div_DataInicioValidade">
+								<label for="text_DataInicioValidade">Data início validade Identificação Fiscal Exterior</label>
+					            <div class="input-group date" id="dtValidadeExt">
+							       	<input type="text" class="form-control form-data" name="text_DataInicioValidade" id="text_DataInicioValidade" mask="00/00/0000"/>	
+							        <span class="input-group-addon">
+							            <span class="fluigicon fluigicon-calendar"></span>
+							        </span>
+							    </div>
+							</div>
+							<div class="form-group col-md-4" id="div_DataFinalValidade">
+								<label for="text_DataFinalValidade">Data fim validade Identificação Fiscal Exterior</label>
+					            <div class="input-group date" id="dtValidadeExtFim">
+							       	<input type="text" class="form-control form-data" name="text_DataFinalValidade" id="text_DataFinalValidade" mask="00/00/0000"/>	
+							        <span class="input-group-addon">
+							            <span class="fluigicon fluigicon-calendar"></span>
+							        </span>
+							    </div>
+							</div>
+							<!--  <div class="form-group col-md-4">
+								<label for="text_codPessoa_socio">Código Pessoa Sócio</label>
+                     			<input type="text" class="form-control" name="text_codPessoa_socio" id="text_codPessoa_socio" maxlength="5" mask="00000"/>														
+							</div>
+							-->	
+						</div>						
+						
+					</div>
+					</div>
+					<div class="panel panel-default" id="panelEndereco">
+						<div class="panel-heading ">
+		    				<h3 class="panel-title">
+								<b>Endereço</b>
+							</h3>
+						</div>
+					<div class="panel-body">							
+						<div class="row">
+							<div class="form-group col-md-3">
+								<label for="text_TpLogradouro">Tipo Logradouro</label>
+								<select class="form-control" name="text_TpLogradouro" id="text_TpLogradouro">
+								   <option value=""></option>
+						           <option value="AVN">Avenida</option>
+						           <option value="EST">Estrada</option>
+						           <option value="TRA">Travessa</option>
+						           <option value="RUA">Rua</option>
+						           <option value="BCO">Beco</option>
+						           <option value="ROD">Rodovia</option>
+						           <option value="PCA">Praça</option>
+						           <option value="LGO">Largo</option>
+						           <option value="PRA">Praia</option>
+						           <option value="QDA">Quadra</option>
+						           <option value="CND">Condomínio</option>
+						           <option value="CPO">Campo</option>
+						           <option value="ALM">Alameda</option>
+						        </select> 
+						    </div>
+				    		<div class="form-group col-md-5">
+								<label for="text_NomeLogradouro">Endereço</label>
+								<input type="text" class="form-control" name="text_NomeLogradouro" id="text_NomeLogradouro" maxlength="40" />								
+							</div> 
+							<div class="form-group col-md-2">
+								<label for="text_Numero">Número</label>
+								<input type="text" class="form-control" name="text_Numero" id="text_Numero" mask="000000" onkeypress="return SomenteNumero(event);" maxlength="6"/>								
+							</div>
+							<div class="form-group col-md-2">							
+								<label for="text_Complemento">Complemento</label>                  	
+                     			<input type="text" class="form-control" name="text_Complemento" id="text_Complemento" maxlength="15"/>							
+							</div>							
+						</div>
+						<div class="row">
+
+							<div class="form-group col-md-2" id="div_estado">																						
+								<label for="nm_estado">Estado</label>   
+								<div class="input-group">
+									<input type="text" class="form-control quickSearch" name="nm_estado" id="nm_estado" maxlength="2" readonly="readonly"/>
+									<span class="input-group-addon btnZoom fs-cursor-pointer" id="btn_estado">
+										<span class="fluigicon fluigicon-search"></span>
+									</span>	
+								</div>					
+							</div>	
+							<div class="form-group col-md-2">							
+								<label for="text_Cod_Municipio" class=>C&#243;d. Munic&#237;pio</label>
+								<div class="input-group">
+									<input type="text" class="form-control quickSearch" name="text_Cod_Municipio" id="text_Cod_Municipio" maxlength="5" readonly="readonly"/>
+									<span class="input-group-addon btnZoom fs-cursor-pointer" id="btn_cod_municipio">
+										<span class="fluigicon fluigicon-search"></span>
+									</span>
+								</div>							
+							</div>	
+							<div class="form-group col-md-4">							
+								<label for="text_Municipio" class=>Munic&#237;pio</label>                  
+                     			<input type="text" class="form-control" name="text_Municipio" id="text_Municipio" readonly="readonly" maxlength="15"/>							
+							</div>	
+							<div class="form-group col-md-4" id="div_bairro">							
+								<label for="text_Bairro">Bairro</label>                  	
+                     			<div class="input-group">                     			
+									<input type="text" class="form-control" name="text_Bairro" id="text_Bairro" readonly="readonly"/>
+									<input type="hidden" id="cod_Bairro" name="cod_Bairro"/>
+									<span class="input-group-addon btnZoom fs-cursor-pointer" id="btn_bairro">
+										<span class="fluigicon fluigicon-search"></span>
+									</span>	
+								</div>								
+							</div>								
+						</div>
+						<div class="row">		
+							<div class="form-group col-md-2">
+								<label for="text_CEP">CEP</label>                  
+                     			<input type="text" class="form-control cepSocio" name="text_CEP" id="text_CEP" maxlength="8" mask="00000-000" />														
+							</div>
+							<!-- <div class="form-group col-md-4">
+								<label for="text_TipoEndereo">Tipo Endereço</label>                  
+                     			<input type="text" class="form-control" name="text_TipoEndereo" id="text_TipoEndereo"  />														
+							</div> -->
+							<div class="form-group col-md-4">
+								<label for="text_codPais" class=>Cód. Pa&#237;s</label>
+								<div class="input-group">
+									<input type="text" class="form-control quickSearch" name="text_codPais" id="text_codPais" readonly="readonly" />
+									<span class="input-group-addon btnZoom fs-cursor-pointer" id="btn_cod_pais">
+										<span class="fluigicon fluigicon-search"></span>
+									</span> 
+								</div>						
+							</div>							
+							<div class="form-group col-md-6">
+								<label for="text_Pais" class=>Pa&#237;s</label>                  	
+                     			<input type="text" class="form-control" name="text_Pais" id="text_Pais" readonly="readonly" maxlength="30"/>							
+							</div>								
+						</div>
+						
+						</div>
+						</div>										
+						
+					<div class="panel panel-default" id="panelContatos">
+						<div class="panel-heading ">
+		    				<h3 class="panel-title">
+								<b>Contatos</b>
+							</h3>
+						</div>
+					<div class="panel-body">							
+						<div class="row">							
+							<div class="form-group col-md-2">
+                     			<label for="text_DDI" class=>DDI</label>
+								<div class="input-group">
+									<input type="text" class="form-control" name="text_DDI" id="text_DDI" maxlength="13"  autoclear="false" readonly="readonly"/>
+									<span class="input-group-addon btnZoom fs-cursor-pointer" id="btn_cod_ddi">
+										<span class="fluigicon fluigicon-search"></span>
+									</span>
+								</div>		                     										
+							</div>	
+							<div class="form-group col-md-2">
+								<label for="text_DDD" class=>DDD</label>
+                     			<input type="text" class="form-control onlyNumber" name="text_DDD" id="text_DDD" maxlength="3" onkeypress="return SomenteNumero(event);" autoclear="false"/>							
+							</div>
+							<div class="form-group col-md-4">
+								<label for="text_Telefone" class=>Telefone</label>
+                     			<input type="text" class="form-control" name="text_Telefone" id="text_Telefone" maxlength="12" onkeypress="return SomenteNumero(event);" mask="999999999999"/>							
+							</div>
+							<div class="form-group col-md-4">
+								<label for="text_TelefoneFax" class=>Telefone Fax</label>
+                     			<input type="text" class="form-control" name="text_TelefoneFax" id="text_TelefoneFax" maxlength="12" onkeypress="return SomenteNumero(event);" mask="999999999999" autoclear="false"/>							
+							</div>																
+						</div>		
+						
+						<div class="row">
+							<div class="form-group col-md-4">
+									<label for="text_TelefoneAd1">Telefone Adicional 1</label>
+									<input type="text" class="form-control" name="text_TelefoneAd1" id="text_TelefoneAd1" onkeypress="return SomenteNumero(event);" mask="999999999999" maxlength="12"/>								
+							</div>
+							<div class="form-group col-md-4">
+								<label for="text_TelefoneAd2">Telefone Adicional 2</label>
+								<input type="text" class="form-control" name="text_TelefoneAd2" id="text_TelefoneAd2" onkeypress="return SomenteNumero(event);" mask="999999999999" maxlength="12"/>								
+							</div>
+							<div class="form-group col-md-4">
+								<label for="text_TelefoneAd3">Telefone Adicional 3</label>
+								<input type="text" class="form-control" name="text_TelefoneAd3" id="text_TelefoneAd3" onkeypress="return SomenteNumero(event);" mask="999999999999" maxlength="12" />								
+							</div>
+						</div>	
+						<div class="row">
+							<div class="form-group col-md-4">
+								<label for="text_Email">E-mail</label>                  
+                     			<input type="text" class="form-control" name="text_Email" id="text_Email" maxlength="60"/>							
+							</div>
+							<div class="form-group col-md-4">
+								<label for="text_EmailAd1">Email Adicional 1</label>
+								<input type="text" class="form-control" name="text_EmailAd1" id="text_EmailAd1" />								
+							</div>
+							<div class="form-group col-md-4">
+								<label for="text_EmailAd2">Email Adicional 2</label>
+								<input type="text" class="form-control" name="text_EmailAd2" id="text_EmailAd2" />								
+							</div>																			
+						</div>	
+						<div class="row">
+							<div class="form-group col-md-4">							
+								<label for="text_PaginaInternet">Página Internet</label>
+                     			<input type="text" class="form-control" name="text_PaginaInternet" id="text_PaginaInternet" maxlength="60"/>							
+							</div>						
+						</div>
+						</div>
+						</div>
+
+					<div class="panel panel-default" id="panelBancarios">
+						<div class="panel-heading ">
+		    				<h3 class="panel-title">
+								<b>Dados Bancários</b>
+							</h3>
+						</div>
+					<div class="panel-body">
+
+						<div class="row">	
+							<div class="form-group col-md-2">
+								<label for="text_Banco">Banco</label>
+								<div class="input-group">
+                     				<input type="hidden" id="cod_Banco" name="cod_Banco"/>
+									<input type="text" class="form-control" name="text_Banco" id="text_Banco" readonly="readonly" />
+									<span class="input-group-addon btnZoom fs-cursor-pointer" id="btn_banco">
+										<span class="fluigicon fluigicon-search"></span>
+									</span>	
+								</div>								
+							</div>
+							<div class="form-group col-md-4">
+								<label for="text_Agncia">Agência Bancária</label>
+								<div class="input-group">
+									<input type="hidden" id="numAgenc" name="numAgenc"/>
+									<input type="hidden" id="codDvAgenc" name="codDvAgenc"/>
+									<input type="hidden" id="codAgencBncria" name="codAgencBncria"/>
+									<input type="text" class="form-control" name="text_Agncia" id="text_Agncia" readonly="readonly" /> 
+									<span class="input-group-addon btnZoom fs-cursor-pointer" id="btn_agencia">
+										<span class="fluigicon fluigicon-search"></span>
+									</span> 
+								</div>							
+							</div>							
+							<div class="form-group col-md-3">
+								<label for="text_Conta">Conta Corrente</label>
+								<input type="text" class="form-control" name="text_Conta" id="text_Conta" mask="000000000000"/>								
+							</div>
+							<div class="form-group col-md-3">
+								<label for="text_dv_conta">DV Conta Corrente</label>
+								<input type="text" class="form-control" name="text_dv_conta" id="text_dv_conta" maxlength="3" />								
+							</div>							
+						</div>
+
+						<div class="row">
+
+							<div class="form-group col-md-6">
+								<label for=text_JustDomicilio>Justificativa por Não Cadastrar Domicilio Bancário</label>
+								<input type="text" class="form-control" name="text_JustDomicilio" id="text_JustDomicilio" maxlength="300" />								
+							</div>
+							
+						</div>
+						<!-- <div class="row">
+							<div class="form-group col-md-4">
+								<label for="text_Atuacao">Atuação</label>
+                     			<select class="form-control" name="text_Atuacao" id="text_Atuacao">
+                     			   <option value=""></option>
+			                       <option value="C">Cadastrado</option>
+			                       <option value="A">Autorizado</option>
+			                       <option value="D">Desautorizado</option>
+			                       <option value="I">Impedido</option>
+			                    </select> 													
+							</div>
+							<div class="form-group col-md-4">
+								<label for="text_justificativa">Justificativa da análise</label>
+                     			<input type="text" class="form-control" name="text_justificativa" id="text_justificativa" maxlength="5"/>														
+							</div>	
+						</div>
+						<div class="row">
+							<div class="form-group col-md-4">
+								<label for="text_CdigoIdentidadeFiscal">Código Identidade Fiscal</label>
+                     			<input type="text" class="form-control" name="text_CdigoIdentidadeFiscal" id="text_CdigoIdentidadeFiscal" maxlength="18"/>														
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-md-4">
+								<label for="text_InscrioFiscal">Inscrição Fiscal</label>
+                     			<input type="text" class="form-control" name="text_InscrioFiscal" id="text_InscrioFiscal" maxlength="18"/>														
+							</div>						
+
+						</div> -->
+
+						</div>
+						</div>
+						
+				<div class="panel panel-default" id="panelFiscal">
+					<div class="panel-heading ">
+	    				<h3 class="panel-title">
+							<b>Fiscal</b>
+						</h3>
+					</div>
+					<div class="panel-body">
+					
+						<div class="row" id="headerFiscal">
+							<div class="form-group col-md-4">							
+						 		<label for="Select_cooperativa" class=>Cooperativa</label>
+			                    <select class="form-control" name="Select_cooperativa" id="Select_cooperativa">
+			                        <option value=""></option>
+			                    	<option value="N">Não</option>
+			                        <option value="S">Sim</option>			                        
+			                     </select>                  							
+							</div>	
+							<div class="form-group col-md-4">																					
+								<label for="Text_OptSimp">Optante Simples Nacional</label>
+			                    <select class="form-control" name="Text_OptSimp" id="Text_OptSimp">
+			                        <option value=""></option>
+			                        <option value="1">Sim</option>
+			                        <option value="2">N&#227;o</option>
+			                    </select>							
+							</div>											
+						</div>	
+					<div id="fiscalPIS">	
+	    				<h3 class="panel-title">
+							<b>PIS/PASEP</b>
+						</h3>														
+						<div class="row">
+							<div class="form-group col-md-3">
+								<label for="text_isencaoPIS" class=>Isenção de Tributos </label>
+								<select class="form-control" name="text_isencaoPIS" id="text_isencaoPIS">
+									<option value=""></option>
+									<option value="S">Sim</option>		
+									<option value="N">N&#227;o</option>															
+								</select>								
+							</div>
+							<div class="form-group col-md-2">														
+								<label for="text_liminarisencaoPIS">Isenção por Liminar </label>
+		                    	<select class="form-control" id="text_liminarisencaoPIS" name="text_liminarisencaoPIS">
+									<option value=""></option>		                    	
+		                    		<option value="N">Não</option>
+		                        	<option value="S">Sim</option>		                        	
+		                    	</select>							
+							</div>	
+							<div class="form-group col-md-4" id="div_venc_pis_indeterminado">														
+								<label for="Text_venc_pis_indeterminado" class=>Liminar de isenção de tributo Por tempo indeterminado?</label>
+		                    	<select class="form-control" id="Text_venc_pis_indeterminado" name="Text_venc_pis_indeterminado">
+									<option value=""></option>		                    	
+		                    		<option value="N">Não</option>
+		                        	<option value="S">Sim</option>		                        	
+		                    	</select>							
+							</div>								
+							<div class="form-group col-md-3">														
+								<label for="text_venc_isencaoPIS">Vencimento Isenção de Tributos </label>
+					            <div class="input-group date" id="dtVencIsencaoPIS">
+							       	<input type="text" class="form-control" name="text_venc_isencaoPIS" id="text_venc_isencaoPIS" readonly="readonly"/>	
+							        <span class="input-group-addon">
+							            <span class="fluigicon fluigicon-calendar"></span>
+							        </span>
+							    </div>					
+							</div>																											
+						</div>
+					</div>
+					<div id="fiscalCONFIS">	
+	    				<h3 class="panel-title">
+							<b>COFINS</b>
+						</h3>						
+						<div class="row">
+
+							<div class="form-group col-md-3">
+								<label for="text_isencaoCOFINS" class=>Isenção de Tributos</label>
+								<select class="form-control" name="text_isencaoCOFINS" id="text_isencaoCOFINS">
+									<option value=""></option>								
+									<option value="S">Sim</option>
+									<option value="N">N&#227;o</option>
+								</select>								
+							</div>
+							<div class="form-group col-md-2">																					
+								<label for="text_liminarisencaoCOFINS" class=>Isenção por Liminar</label>
+			                    <select class="form-control" name="text_liminarisencaoCOFINS" id="text_liminarisencaoCOFINS">
+									<option value=""></option>			                    
+			                        <option value="S">Sim</option>
+			                        <option value="N">N&#227;o</option>
+			                    </select>							
+							</div>
+							<div class="form-group col-md-4" id="div_venc_cofins_indeterminado">														
+								<label for="Text_venc_cofins_indeterminado" class=>Liminar de isenção de tributo Por tempo indeterminado?</label>
+		                    	<select class="form-control" id="Text_venc_cofins_indeterminado" name="Text_venc_cofins_indeterminado">
+									<option value=""></option>		                    	
+		                        	<option value="S">Sim</option>
+		                        	<option value="N">Não</option>
+		                    	</select>							
+							</div>									
+							<div class="form-group col-md-3">																					
+								<label for="text_venc_isencaoCOFINS">Vencimento Isenção de Tributos</label>
+					            <div class="input-group date" id="dtVencIsencaoCONFIS">
+							       	<input type="text" class="form-control" name="text_venc_isencaoCOFINS" id="text_venc_isencaoCOFINS" readonly="readonly"/>	
+							        <span class="input-group-addon">
+							            <span class="fluigicon fluigicon-calendar"></span>
+							        </span>
+							    </div>							
+							</div>		
+						</div>
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div id="fiscalIRFF">	
+						<h3 class="panel-title">
+							<b>IRRF</b>
+						</h3>	
+						<div class="row">
+							<div class="form-group col-md-3">
+								<label for="text_isencaoIRRF" class=>Isenção de Tributos</label>
+								<select class="form-control" name="text_isencaoIRRF" id="text_isencaoIRRF">
+									<option value=""></option>								
+									<option value="S">Sim</option>
+									<option value="N">N&#227;o</option>
+								</select>								
+							</div>
+							<div class="form-group col-md-2">														
+								<label for="text_liminarisencaoIRRF">Isenção por Liminar</label>
+		                    	<select class="form-control" id="text_liminarisencaoIRRF" name="text_liminarisencaoIRRF">
+									<option value=""></option>		                    	
+		                        	<option value="S">Sim</option>
+		                        	<option value="N">Não</option>
+		                    	</select>							
+							</div>	
+							<div class="form-group col-md-4" id="div_venc_irrf_indeterminado">														
+								<label for="Text_venc_irrf_indeterminado" class=>Liminar de isenção de tributo Por tempo indeterminado?</label>
+		                    	<select class="form-control" id="Text_venc_irrf_indeterminado" name="Text_venc_irrf_indeterminado">
+									<option value=""></option>		                    	
+		                        	<option value="S">Sim</option>
+		                        	<option value="N">Não</option>
+		                    	</select>							
+							</div>							
+							<div class="form-group col-md-3" id="dtVencIsencaoIRRF">														
+								<label for="text_venc_isencaoIRRF">Vencimento Isenção de Tributos </label>
+					            <div class="input-group date">
+							       	<input type="text" class="form-control" name="text_venc_isencaoIRRF" id="text_venc_isencaoIRRF" readonly="readonly"/>	
+							        <span class="input-group-addon">
+							            <span class="fluigicon fluigicon-calendar"></span>
+							        </span>
+							    </div>					
+							</div>	
+						</div>		
+					</div>
+					<div id="fiscalISS">	
+						<h3 class="panel-title">
+							<b>ISS</b>
+						</h3>	
+						<div class="row">																											
+							<div class="form-group col-md-3">
+								<label for="text_isencaoISS" class=>Isenção de Tributos</label>
+								<select class="form-control" name="text_isencaoISS" id="text_isencaoISS">
+									<option value=""></option>								
+									<option value="S">Sim</option>
+			                        <option value="N">N&#227;o</option>
+								</select>
+							</div>
+							<div class="form-group col-md-2">																					
+								<label for="text_liminarisencaoISS" class=>Isenção por Liminar</label>
+			                    <select class="form-control" name="text_liminarisencaoISS" id="text_liminarisencaoISS">
+									<option value=""></option>			                    
+			                        <option value="S">Sim</option>
+			                        <option value="N">N&#227;o</option>
+			                    </select>							
+							</div>	
+							<div class="form-group col-md-4" id="div_venc_iss_indeterminado">														
+								<label for="Text_venc_iss_indeterminado" class=>Liminar de isenção de tributo Por tempo indeterminado?</label>
+		                    	<select class="form-control" id="Text_venc_iss_indeterminado" name="Text_venc_iss_indeterminado">
+									<option value=""></option>		                    	
+		                        	<option value="S">Sim</option>
+		                        	<option value="N">Não</option>
+		                    	</select>							
+							</div>								
+							<div class="form-group col-md-3">																					
+								<label for="text_venc_isencaoISS">Vencimento Isenção de Tributos</label>
+					            <div class="input-group date" id="dtVencIsencaoISS">
+							       	<input type="text" class="form-control" name="text_venc_isencaoISS" id="text_venc_isencaoISS" readonly="readonly"/>	
+							        <span class="input-group-addon">
+							            <span class="fluigicon fluigicon-calendar"></span>
+							        </span>
+							    </div>							
+							</div>		
+							</div>
+						</div>
+						
+						
+
+						
+						<div id="fiscalCSLL">	
+						<h3 class="panel-title">
+							<b>CSLL</b>
+						</h3>						
+						<div class="row">																								
+							<div class="form-group col-md-3">
+								<label for="text_isencaoCSLL" class=>Isenção de Tributos</label>
+								<select class="form-control" name="text_isencaoCSLL" id="text_isencaoCSLL">
+									<option value=""></option>								
+									<option value="S">Sim</option>
+									<option value="N">N&#227;o</option>
+								</select>								
+							</div>
+							<div class="form-group col-md-2">														
+								<label for="text_liminarisencaoCSLL" class=>Isenção por Liminar</label>
+		                    	<select class="form-control" id="text_liminarisencaoCSLL" name="text_liminarisencaoCSLL">
+									<option value=""></option>		                    	
+		                        	<option value="S">Sim</option>
+		                        	<option value="N">Não</option>
+		                    	</select>							
+							</div>
+							<div class="form-group col-md-4" id="div_venc_csll_indeterminado">														
+								<label for="Text_venc_csll_indeterminado" class=>Liminar de isenção de tributo Por tempo indeterminado?</label>
+		                    	<select class="form-control" id="Text_venc_csll_indeterminado" name="Text_venc_csll_indeterminado">
+									<option value=""></option>		                    	
+		                        	<option value="S">Sim</option>
+		                        	<option value="N">Não</option>
+		                    	</select>							
+							</div>							
+							<div class="form-group col-md-3">														
+								<label for="text_venc_isencaoCSLL">Vencimento Isenção de Tributos</label>
+					            <div class="input-group date" id="dtVencIsencaoCSLL">
+							       	<input type="text" class="form-control" name="text_venc_isencaoCSLL" id="text_venc_isencaoCSLL" readonly="readonly"/>	
+							        <span class="input-group-addon">
+							            <span class="fluigicon fluigicon-calendar"></span>
+							        </span>
+							    </div>							
+							</div>																					
+						</div>
+					</div>
+												
+						
+						
+						
+						
+						
+						
+						
+						<div id="fiscalINSS">	
+							<h3 class="panel-title">
+								<b>INSS</b>
+							</h3>	
+							<div class="row">																										
+								<div class="form-group col-md-3">
+									<label for="text_isencaoINSS" class=>Isenção de Tributos</label>
+									<select class="form-control" name="text_isencaoINSS" id="text_isencaoINSS">
+										<option value=""></option>								
+										<option value="S">Sim</option>
+				                        <option value="N">N&#227;o</option>
+									</select>
+								</div>
+								<div class="form-group col-md-2">														
+									<label for="text_liminarisencaoINSS" class=>Isenção por Liminar</label>
+			                    	<select class="form-control" id="text_liminarisencaoINSS" name="text_liminarisencaoINSS">
+										<option value=""></option>
+			                        	<option value="S">Sim</option>
+			                        	<option value="N">Não</option>
+			                    	</select>							
+								</div>	
+								<div class="form-group col-md-4" id="div_venc_inss_indeterminado">														
+									<label for="Text_venc_inss_indeterminado" class=>Liminar de isenção de tributo Por tempo indeterminado?</label>
+			                    	<select class="form-control" id="Text_venc_inss_indeterminado" name="Text_venc_inss_indeterminado">
+										<option value=""></option>		                    	
+			                        	<option value="S">Sim</option>
+			                        	<option value="N">Não</option>
+			                    	</select>							
+								</div>							
+								<div class="form-group col-md-3">														
+									<label for="text_venc_isencaoINSS">Vencimento Isenção de Tributos</label>
+						            <div class="input-group date" id="dtVencIsencaoINSS">
+								       	<input type="text" class="form-control" name="text_venc_isencaoINSS" id="text_venc_isencaoINSS" readonly="readonly"/>	
+								        <span class="input-group-addon">
+								            <span class="fluigicon fluigicon-calendar"></span>
+								        </span>
+								    </div>							
+								</div>																				
+							</div>
+						 </div>
+						</div>					
+				</div>	
+				
+				<div class="panel panel-default" id="panelAnexo">
+					<div class="panel-heading ">
+	    				<h3 class="panel-title">
+							<b>Anexos</b>
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="form-group row">
+							<div class="col-md-4">
+								<label for="text_capacidade_tecnica">Anexo: Atestados Capacidade Técnica</label>
+								<a href="#" data-help-sender-question="" class="fluigicon fluigicon-question-sign fluigicon-sm fs-no-text-underline pull-right" 
+								 			data-toggle="tooltip" data-placement="top" title="O anexo de capacidade técnica é opcional." data-original-title="Plataforma">
+								</a>								
+								<input class="form-control upload" type="file" name="file_capacidade_tecnica" id="file_capacidade_tecnica" data-url="/ecm/upload">
+								<input type="hidden" name="text_capacidade_tecnica" id="text_capacidade_tecnica"/>
+								<input type="hidden" class="docsPublish" name="doc_capacidade_tecnica" id="doc_capacidade_tecnica"/>
+								<div class="labelDocument fs-cursor-pointer"></div>
+							</div>
+							<div class="col-md-4">
+								<label for="text_inscricao_municipal">Anexo: Inscrição Municipal</label>								
+								<input class="form-control upload" type="file" name="file_inscricao_municipal" id="file_inscricao_municipal" data-url="/ecm/upload">
+								<input type="hidden" name="text_inscricao_municipal" id="text_inscricao_municipal"/>
+								<input type="hidden" class="docsPublish" name="doc_inscricao_municipal" id="doc_inscricao_municipal"/>
+								<div class="labelDocument fs-cursor-pointer"></div>
+							</div>
+							<div class="col-md-4">
+								<label for="text_inscricao_estadual">Anexo: Inscrição Estadual</label>								
+								<input class="form-control upload" type="file" name="file_inscricao_estadual" id="file_inscricao_estadual" data-url="/ecm/upload">
+								<input type="hidden" name="text_inscricao_estadual" id="text_inscricao_estadual"/>
+								<input type="hidden" class="docsPublish" name="doc_inscricao_estadual" id="doc_inscricao_estadual"/>
+								<div class="labelDocument fs-cursor-pointer"></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<label for="text_liminar_pis_pased">Anexo: Liminar PIS/PASEP</label>								
+								<input class="form-control upload" type="file" name="file_pis_pasep" id="file_pis_pasep" data-url="/ecm/upload">
+								<input type="hidden" name="text_liminar_pis_pased" id="text_liminar_pis_pased"/>
+								<input type="hidden" class="docsPublish" name="doc_liminar_pis_pased" id="doc_liminar_pis_pased"/>
+								<div class="labelDocument fs-cursor-pointer"></div>
+							</div>
+							<div class="col-md-4">
+								<label for="text_liminar_cofins">Anexo: Liminar COFINS</label>								
+								<input class="form-control upload" type="file" name="file_cofins" id="file_cofins" data-url="/ecm/upload">
+								<input type="hidden" name="text_liminar_cofins" id="text_liminar_cofins"/>
+								<input type="hidden" class="docsPublish" name="doc_liminar_cofins" id="doc_liminar_cofins"/>
+								<div class="labelDocument fs-cursor-pointer"></div>
+							</div>
+							<div class="col-md-4">
+								<label for="text_liminar_csll">Anexo: Liminar CSLL</label>								
+								<input class="form-control upload" type="file" name="file_csll" id="file_csll" data-url="/ecm/upload">
+								<input type="hidden" name="text_liminar_csll" id="text_liminar_csll"/>
+								<input type="hidden" class="docsPublish" name="doc_liminar_csll" id="doc_liminar_csll"/>
+								<div class="labelDocument fs-cursor-pointer"></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<label for="text_irff">Anexo: Liminar IRRF</label>								
+								<input class="form-control upload" type="file" name="file_irrf" id="file_irrf" data-url="/ecm/upload">
+								<input type="hidden" name="text_irff" id="text_irff"/>
+								<input type="hidden" class="docsPublish" name="doc_irff" id="doc_irff"/>
+								<div class="labelDocument fs-cursor-pointer"></div>
+							</div>
+							<div class="col-md-4">
+								<label for="text_iss">Anexo: Liminar ISS</label>								
+								<input class="form-control upload" type="file" name="file_iss" id="file_iss" data-url="/ecm/upload">
+								<input type="hidden" name="text_iss" id="text_iss"/>
+								<input type="hidden" class="docsPublish" name="doc_iss" id="doc_iss"/>
+								<div class="labelDocument fs-cursor-pointer"></div>
+							</div>
+							<div class="col-md-4">
+								<label for="text_inss_file">Anexo: Liminar INSS</label>								
+								<input class="form-control upload" type="file" name="file_inss" id="file_inss" data-url="/ecm/upload">
+								<input type="hidden" name="text_inss_file" id="text_inss_file"/>
+								<input type="hidden" class="docsPublish" name="doc_inss" id="doc_inss"/>
+								<div class="labelDocument fs-cursor-pointer"></div>
+							</div>							
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<label for="text_optante">Anexo: Optante Simples Nacional</label>								
+								<input class="form-control upload" type="file" name="file_optante" id="file_optante" data-url="/ecm/upload">
+								<input type="hidden" name="text_optante" id="text_optante"/>
+								<input type="hidden" class="docsPublish" name="doc_optante" id="doc_optante"/>
+								<div class="labelDocument fs-cursor-pointer"></div>
+							</div>
+							<div class="col-md-4">
+								<label for="text_constituicao">Anexo: Documento Constituição</label>								
+								<input class="form-control upload" type="file" name="file_constituicao" id="file_constituicao" data-url="/ecm/upload">
+								<input type="hidden" name="text_constituicao" id="text_constituicao"/>
+								<input type="hidden" class="docsPublish" name="doc_constituicao" id="doc_constituicao"/>
+								<div class="labelDocument fs-cursor-pointer"></div>
+							</div>
+							<div class="col-md-4">
+								<label for="text_tipo_doc">Anexo: Tipo de Documento (Doc. Ident.)</label>								
+								<input class="form-control upload" type="file" name="file_tipo_doc" id="file_tipo_doc" data-url="/ecm/upload">
+								<input type="hidden" name="text_tipo_doc" id="text_tipo_doc"/>
+								<input type="hidden" class="docsPublish" name="doc_tipo_doc" id="doc_tipo_doc"/>
+								<div class="labelDocument fs-cursor-pointer"></div>
+							</div>							
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<label for="text_cpf_cnpj_file">Anexo: CNPJ / CPF</label>								
+								<input class="form-control upload" type="file" name="file_cpf_cnpj" id="file_cpf_cnpj" data-url="/ecm/upload">
+								<input type="hidden" name="text_cpf_cnpj_file" id="text_cpf_cnpj_file"/>
+								<input type="hidden" class="docsPublish" name="doc_cpf_cnpj_file" id="doc_cpf_cnpj_file"/>
+								<div class="labelDocument fs-cursor-pointer"></div>
+							</div>
+							<!-- <div class="col-md-4">
+								<label for="text_cpf_cnpj_socio_file">Anexo: CNPJ / CPF - S&oacute;cio</label>								
+								<input class="form-control upload" type="file" name="file_cpf_cnpj_socio" id="file_cpf_cnpj_socio" data-url="/ecm/upload">
+								<input type="hidden" name="text_cpf_cnpj_socio_file" id="text_cpf_cnpj_socio_file"/>
+								<input type="hidden" class="docsPublish" name="doc_cpf_cnpj_socio_file" id="doc_cpf_cnpj_socio_file"/>
+								<div class="labelDocument fs-cursor-pointer"></div>
+							</div>						 -->	
+							<div class="col-md-4">
+								<label for="text_endereco_file">Anexo: Endereço</label>								
+								<input class="form-control upload" type="file" name="file_endereco" id="file_endereco" data-url="/ecm/upload">
+								<input type="hidden" name="text_endereco_file" id="text_endereco_file"/>
+								<input type="hidden" class="docsPublish" name="doc_endereco_file" id="doc_endereco_file"/>
+								<div class="labelDocument fs-cursor-pointer"></div>
+							</div>
+						</div>
+						<!-- <div class="row">
+							<div class="col-md-4">
+								<label for="text_endereco_file">Anexo: Endereço - S&oacute;cio</label>								
+								<input class="form-control upload" type="file" name="file_endereco_socio" id="file_endereco_socio" data-url="/ecm/upload">
+								<input type="hidden" name="text_endereco_socio_file" id="text_endereco_socio_file"/>
+								<input type="hidden" class="docsPublish" name="doc_endereco_socio_file" id="doc_endereco_socio_file"/>
+								<div class="labelDocument fs-cursor-pointer"></div>
+							</div>						
+						</div> -->
+					</div>
+				</div>				
+				<div class="panel panel-default" id="panelSocio">
+					<div class="panel-heading ">
+	    				<h3 class="panel-title">
+							<b>Sócio</b>
+						</h3>
+					</div>
+					<div class="panel-body">						
+						<div class="row">
+							<div class="form-group col-md-4">
+								<input type="button" value="Adicionar" name="addSocio" id="addSocio" class="btn btn-primary buttonChild" onclick="javascript: wdkAddChild('socioTable')"/>
+							</div> 
+						</div>
+						<label for="tableSocio" style="visibility:hidden">Sócio</label>
+						<table tablename="socioTable" id="tableSocio" name="tableSocio" class="table table-striped table-hover " noaddbutton="true" nodeletebutton="true">
+								<thead>
+									<tr></tr>
+								</thead>
+	    					<tr>
+	    						<td class="form-group form-group-sm">
+	    							<div class="row">
+										<div class="form-group col-md-4">
+											<label for="text_Atuacao_brasil_soc">Atuante no Brasil?</label>
+			                     			<select class="form-control atuanteSocio" name="text_Atuacao_brasil_soc" id="text_Atuacao_brasil_soc">
+			                     			   <option value=""></option>
+						                       <option value="S">Sim</option>
+						                       <option value="N">Nao</option>
+						                    </select> 													
+										</div>	
+										<div class="form-group col-md-4">							
+									 		<label for="text_tipo_socio" class=>Tipo Pessoa</label>
+						                    <select class="form-control typeSocio" name="text_tipo_socio" id="text_tipo_socio">
+						                    	<option value=""></option>
+						                        <option value="F">Fisica</option>
+						                        <option value="J">Juridica</option>
+						                     </select>                  							
+										</div>											    						
+	    							</div>
+	    							<div class="row">
+		  								<div class="form-group col-md-4">
+											<label for="text_NomeSocio">Nome</label>
+											<input type="text" class="form-control nmSocio" name="text_NomeSocio" id="text_NomeSocio" maxlength="70"/>								
+										</div>
+										<div class="form-group col-md-4">
+											<label for="text_Abreviado_socio">Nome Abreviado</label>
+											<input type="text" class="form-control" name="text_Abreviado_socio" id="text_Abreviado_socio" maxlength="15"/>								
+										</div> 
+	
+									</div>
+									<div class="row">
+										<div class="form-group col-md-4">
+											<label for="text_CPFCNPJ_socio">CPF/CNPJ</label>
+											<input type="text" class="form-control cpfCnpjSocio" name="text_CPFCNPJ_socio" id="text_CPFCNPJ_socio"/>								
+										</div>
+										<div class="form-group col-md-4" id="div_sexo_socio">
+											<label for="text_sexo_socio">Sexo</label>
+											<select class="form-control" name="text_sexo_socio" id="text_sexo_socio">
+											   <option value=""></option>
+						                       <option value="M">Masculino</option>
+						                       <option value="F">Feminino</option>
+						                    </select> 
+					                    </div>
+		  								<div class="form-group col-md-4" style="visibility:hidden">
+											<label for="text_Pessoa_socio">Código Pessoa</label>
+											<input type="text" class="form-control" name="text_Pessoa_socio" id="text_Pessoa_socio" mask="000000" />								
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col-md-4">
+											<label for="text_TipoLogradouro_socio">Tipo Logradouro</label>
+											<select class="form-control" name="text_TipoLogradouro_socio" id="text_TipoLogradouro_socio">
+											   <option value=""></option>
+									           <option value="AVN">Avenida</option>
+									           <option value="EST">Estrada</option>
+									           <option value="TRA">Travessa</option>
+									           <option value="RUA">Rua</option>
+									           <option value="BCO">Beco</option>
+									           <option value="ROD">Rodovia</option>
+									           <option value="PCA">Praça</option>
+									           <option value="LGO">Largo</option>
+									           <option value="PRA">Praia</option>
+									           <option value="QDA">Quadra</option>
+									           <option value="CND">Condomínio</option>
+									           <option value="CPO">Campo</option>
+									           <option value="ALM">Alameda</option>
+									        </select> 
+									    </div>
+										<div class="form-group col-md-4">
+											<label for="text_NomeLogradouro_socio">Endereço</label>
+											<input type="text" class="form-control" name="text_NomeLogradouro_socio" id="text_NomeLogradouro_socio" maxlength="40"/>								
+										</div>
+										<div class="form-group col-md-2" id="div_Numero_socio">
+											<label for="text_Numero_socio">Número</label>
+											<input type="text" class="form-control socioMask" name="text_Numero_socio" id="text_Numero_socio" maxlength="6"/>								
+										</div>
+										<div class="form-group col-md-2">
+											<label for="text_Complemento_socio">Complemento</label>
+											<input type="text" class="form-control" name="text_Complemento_socio" id="text_Complemento_socio" maxlength="15"/>
+										</div>										
+		  							</div>
+		  							<div class="row">
+	  							
+										<div class="form-group col-md-2" id="dEstado">
+											<label for="text_Estado_socio" >Estado</label>   
+											<div class="input-group">
+												<input type="text" class="form-control" name="text_Estado_socio" id="text_Estado_socio" readonly="readonly"/>
+												<span class="input-group-addon fs-cursor-pointer btnZoomEstadoSocio" id="btn_estado_socio">
+													<span class="fluigicon fluigicon-search"></span>
+												</span>	
+											</div>					
+										</div>		
+										<div class="form-group col-md-2" id="dMunicipio">							
+											<label for="text_Cod_MunicipioSocio" >C&#243;d. Munic&#237;pio</label>
+											<div class="input-group">
+												<input type="text" class="form-control quickSearch" name="text_Cod_MunicipioSocio" id="text_Cod_MunicipioSocio"  readonly="readonly"/>
+												<span class="input-group-addon fs-cursor-pointer btnZoomMunicipioSocio" id="btn_cod_municipio">
+													<span class="fluigicon fluigicon-search"></span>
+												</span>
+											</div>							
+										</div>							
+										<div class="form-group col-md-4">							
+											<label for="text_Municipio_socio" class=>Munic&#237;pio</label>                  
+			                     			<input type="text" class="form-control" name="text_Municipio_socio" id="text_Municipio_socio" readonly="readonly" maxlength="15"/>							
+										</div>
+										<div class="form-group col-md-4" id="div_Bairro_socio">
+											<label for="text_Bairro_socio">Bairro</label>
+											<div class="input-group">
+			                     				<input type="hidden" id="cod_Bairro_socio" name="cod_Bairro_socio"/>
+												<input type="text" class="form-control" name="text_Bairro_socio" id="text_Bairro_socio" readonly="readonly"/>
+												<span class="input-group-addon btnZoom fs-cursor-pointer bairroSocio">
+													<span class="fluigicon fluigicon-search"></span>
+												</span>	
+											</div>
+										</div>											
+									</div>
+									<div class="row">
+										<div class="form-group col-md-4">
+											<label for="text_CEP_socio">CEP</label>                  
+											<input type="text" class="form-control cepSocio" name="text_CEP_socio" id="text_CEP_socio" maxlength="8" mask="00000-000" />														
+										</div>
+										<div class="form-group col-md-4">
+											<label for="text_Pais_socio" class=>Pa&#237;s</label>
+											<div class="input-group">
+												<input type="hidden" class="form-control" name="text_Pais_socio_code" id="text_Pais_socio_code"/>
+												<input type="text" class="form-control quickSearch" name="text_Pais_socio" id="text_Pais_socio" readonly="readonly"/>
+												<span class="input-group-addon fs-cursor-pointer btnZoomPaisSocio">
+													<span class="fluigicon fluigicon-search"></span>
+												</span> 
+											</div>						
+										</div>										
+									</div>
+									<div class="row">
+										<div class="form-group col-md-2">
+											<label for="Text_ddi_socio" class=>DDI</label>
+											<div class="input-group">												
+												<input type="text" class="form-control quickSearch" name="Text_ddi_socio" id="Text_ddi_socio" readonly="readonly"/>
+												<span class="input-group-addon fs-cursor-pointer btnCodDdiSocio" id="btn_ddi_socio">
+													<span class="fluigicon fluigicon-search"></span>
+												</span>
+											</div>																		
+										</div>										
+										<div class="form-group col-md-2">
+											<label for="Text_ddd_socio">DDD</label>
+											<input type="text" class="form-control onlyNumber" name="Text_ddd_socio" id="Text_ddd_socio" onkeypress="return SomenteNumero(event);" maxlength="3"/>								
+										</div>
+										<div class="form-group col-md-4">
+											<label for="text_Telefone_socio">Telefone</label>
+											<input type="text" class="form-control" name="text_Telefone_socio" id="text_Telefone_socio" onkeypress="return SomenteNumero(event);" maxlength="12" mask="999999999999"/>								
+										</div>
+										<div class="form-group col-md-4">
+											<label for="text_TelefoneFax_socio">Telefone Fax</label>
+											<input type="text" class="form-control" name="text_TelefoneFax_socio" id="text_TelefoneFax_socio" onkeypress="return SomenteNumero(event);" maxlength="12" mask="999999999999"/>								
+										</div>											
+									</div>
+									<div class="row">
+										<div class="form-group col-md-4">
+											<label for="text_TelefoneAd1_socio">Telefone Adicional 1</label>
+											<input type="text" class="form-control" name="text_TelefoneAd1_socio" id="text_TelefoneAd1_socio" onkeypress="return SomenteNumero(event);" maxlength="12" mask="999999999999"/>								
+										</div>									
+										<div class="form-group col-md-4">
+											<label for="text_TelefoneAd2_socio">Telefone Adicional 2</label>
+											<input type="text" class="form-control" name="text_TelefoneAd2_socio" id="text_TelefoneAd2_socio" onkeypress="return SomenteNumero(event);" maxlength="12" mask="999999999999"/>								
+										</div>
+										<div class="form-group col-md-4">
+											<label for="text_TelefoneAd3_socio">Telefone Adicional 3</label>
+											<input type="text" class="form-control" name="text_TelefoneAd3_socio" id="text_TelefoneAd3_socio" onkeypress="return SomenteNumero(event);" maxlength="12" mask="999999999999"/>								
+										</div>
+
+									</div>
+									<div class="row">
+										<div class="form-group col-md-4">
+											<label for="text_Email_socio">E-mail</label>
+											<input type="text" class="form-control" name="text_Email_socio" id="text_Email_socio" maxlength="60"/>								
+										</div>
+										<div class="form-group col-md-4">
+											<label for="text_EmailAd1_socio">E-mail Adicional 1</label>
+											<input type="text" class="form-control" name="text_EmailAd1_socio" id="text_EmailAd1_socio" maxlength="60"/>								
+										</div>
+										<div class="form-group col-md-4">
+											<label for="text_EmailAd2_socio">E-mail Adicional 2</label>
+											<input type="text" class="form-control" name="text_EmailAd2_socio" id="text_EmailAd2_socio" maxlength="60"/>								
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col-md-4">
+											<label for="text_PaginaInternet_socio">Página Internet</label>
+											<input type="text" class="form-control" name="text_PaginaInternet_socio" id="text_PaginaInternet_socio" maxlength="60"/>								
+										</div>
+									</div>
+									<!--<div class="row">
+										<div class="form-group col-md-4">
+											<label for="text_Atuacao_socio">Atuação Sócio</label>
+			                     			<select class="form-control" name="text_Atuacao_socio" id="text_Atuacao_socio">
+						                       <option value="C">Cadastrado</option>
+						                       <option value="A">Autorizado</option>
+						                       <option value="D">Desautorizado</option>
+						                       <option value="I">Impedido</option>
+						                    </select> 	
+										</div>-->
+
+										<!--<div class="form-group col-md-4">
+											<label for="text_just_analise_soc">Justificativa da análise</label>
+											<input type="text" class="form-control" name="text_just_analise_soc" id="text_just_analise_soc" />								
+										</div>
+									</div>-->
+									<!-- <div class="row">
+										<div class="form-group col-md-4">
+											<label for="text_patrocinio_socio">Patrocinador</label>
+											<select class="form-control" name="text_patrocinio_socio" id="text_patrocinio_socio">
+						                       <option value="N">Não</option>
+						                       <option value="S">Sim</option>
+						                    </select> 								
+										</div>
+									</div> -->
+									<div class="row">
+<!-- 										<div class="col-md-4 col-md-offset-5">
+											<label for="nm_fornecedor_delete">Nome do Fornecedor</label>
+											<input type="text" class="form-control" name="nm_fornecedor_delete" id="nm_fornecedor_delete" readonly="readonly"/>								
+										</div>	 -->								
+	    								<div class="col-md-4 col-md-offset-11">
+											<input type="button" id="deleteSocio" name="deleteSocio" class="btn btn-danger" value="Excluir" onclick="Javascript:fnWdkRemoveChild(this)"/>
+										</div>
+	    							</div>
+	        					</td>
+	        				</tr>
+        				</table>		
+					</div>								
+						
+						</div>	
+					<div class="panel panel-default" id="panelProduto">
+						<div class="panel-heading ">
+		    				<h3 class="panel-title">
+								<b>Produto</b>
+							</h3>
+						</div>
+					<div class="panel-body">						
+						<div class="row">
+							<div class="form-group col-md-4">
+								<input type="button" value="Adicionar" name="addProduto" id="addProduto" class="btn btn-primary" onclick="javascript: wdkAddChild('tableProduto')"/>
+							</div> 
+						</div>
+						<label for="produtoTable" style="visibility:hidden">Produto</label>
+						<table tablename="tableProduto" id="produtoTable" name="produtoTable" class="table table-striped table-hover " noaddbutton="true" nodeletebutton="true">
+					
+	    					<tr class="">
+	    						<td>
+		    						<div class="col-sm-2">
+		    							<strong>Código</strong>
+									</div>
+		    						<div class="col-sm-2">
+		    							<strong>Produto/Serviço</strong>
+									</div>
+									<div class="col-sm-2">
+		    							<strong>Cód. Sub Item</strong>
+									</div>
+									<div class="col-sm-4">
+		    							<strong>Desc. Sub Item</strong>
+									</div>
+									<div class="col-sm-2">
+		    							<strong>CEPOM</strong>
+									</div>
+								</td>
+							</tr>
+	    					<tr>
+	    						<td class="form-group form-group-sm">
+	    							<div class="col-sm-2">
+										<div class="input-group">
+											<input type="text" class="form-control" name="Text_CodProdServico" id="Text_CodProdServico" readonly="readonly"/>
+											<span class="input-group-addon btnZoomProduto fs-cursor-pointer" id="btn_zoom_produto">
+												<span class="fluigicon fluigicon-search"></span>
+											</span>
+										</div>
+	    							</div>
+	    							<div class="col-sm-2">
+	        							<input type="text" class="form-control" name="Text_DescProdServico" id="Text_DescProdServico" readonly="readonly"/>
+	    							</div>
+	    							<div class="col-sm-2">
+	    								<div class="input-group">
+											<input type="text" class="form-control" name="Text_CodSubItem" id="Text_CodSubItem" readonly="readonly"/>
+											<span class="input-group-addon btnZoomSubProduto fs-cursor-pointer" id="btn_zoom_sub_produto">
+												<span class="fluigicon fluigicon-search"></span>
+											</span>
+										</div>
+	    							</div>
+	    							<div class="col-sm-4">
+	        							<input type="text" class="form-control" name="Text_DescSubItem" id="Text_DescSubItem" readonly="readonly" />
+	    							</div>
+	    							<div class="col-sm-1">
+	        							  <select class="form-control" name="text_cepom" id="text_cepom">
+					                        <option value="S">Sim</option>
+					                        <option value="N">Nao</option>
+					                     </select>  
+	    							</div>
+	    							<div class="row">
+	    								<div class="col-md-4 col-md-offset-11">
+											<input type="button" id="deleteProduto" name="deleteProduto" class="btn btn-danger" value="Excluir" onclick="Javascript:fnWdkRemoveChild(this)"/>
+										</div>
+	    							</div>
+	    						</td>
+	    					</tr>
+	    				</table>
+					</div>
+				</div>
+				<div class="panel panel-default" id="panelAprovacaoGesad">
+					<div class="panel-heading ">
+	    				<h3 class="panel-title">
+							<b>Aprovação GESAD</b>
+						</h3>
+					</div>
+					<div class="panel-body">						
+						<div class="row">
+							<div class="col-sm-12 form-group">
+								<label for="obsAprovaGesad">Observação</label>
+								<textarea class="form-control" id="obsAprovaGesad" name="obsAprovaGesad" rows="4"></textarea>
+							</div>
+						</div>
+						<div>
+							<div class="col-sm-4">
+								<label class="radio-inline">
+								    <input type="radio" name="aprovaGsad" id="aprovaSimGesad" value="sim"> Aprovado
+								</label>
+								<label class="radio-inline">
+								    <input type="radio" name="aprovaGsad" id="aprovaNaoGesad" value="nao"> Reprovado
+								</label>
+								<label class="radio-inline">
+								    <input type="radio" name="aprovaGsad" id="aprovaCorrecaoGesad" value="corrigir"> Corrigir
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default" id="panelAprovacaoConfere">
+					<div class="panel-heading ">
+	    				<h3 class="panel-title">
+							<b>Conferência GECON</b>
+						</h3>
+					</div>
+					<div class="panel-body">						
+						<div class="row">
+							<div class="col-sm-12 form-group">
+								<label for="obsAprovaConferencia">Observação</label>
+								<textarea class="form-control" id="obsAprovaConferencia" name="obsAprovaConferencia" rows="4"></textarea>
+							</div>
+						</div>
+						<div>
+							<div class="col-sm-4">
+								<label class="radio-inline">
+								    <input type="radio" name="aprovaConfere" id="aprovaSimConfere" value="sim"> Conferido
+								</label>
+								<label class="radio-inline">
+								    <input type="radio" name="aprovaConfere" id="aprovaNaoConfere" value="nao"> Retornar à GESAD
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default" id="panelAprovacaoGecon">
+					<div class="panel-heading ">
+	    				<h3 class="panel-title">
+							<b>Aprovação GECON</b>
+						</h3>
+					</div>
+					<div class="panel-body">						
+						<div class="row">
+							<div class="col-sm-12 form-group">
+								<label for="obsAprovaGecond">Observação</label>
+								<textarea class="form-control" id="obsAprovaGecond" name="obsAprovaGecond" rows="4"></textarea>
+							</div>
+						</div>
+						<div>
+							<div class="col-sm-4">
+								<label class="radio-inline">
+								    <input type="radio" name="aprovaGecond" id="aprovaSimGecond" value="sim"> Aprovado
+								</label>
+								<label class="radio-inline">
+								    <input type="radio" name="aprovaGecond" id="aprovaNaoGecond" value="nao">  Reprovado - Retornar à GESAD
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default" id="panelSocio">
+				<!-- <div class="panel panel-default" id="panelIntegracao">
+					<div class="panel-heading ">
+	    				<h3 class="panel-title">
+							<b>Integra&#231;&#227;o Protheus</b>
+						</h3>
+					</div>
+					<div class="panel-body">					
+						<div class="grid-12-12">
+							<input type="textarea" class="form-control" name="id_msg_protheus" id="id_msg_protheus" readonly="readonly" />
+						</div>
+					</div>
+				</div> -->											
+						
+				
+					</div>	
+				</div>					
+						 		
+         	</form>
+      </div>
+		<script type="text/javascript" src="jquery.fileupload.js" charset="utf-8"></script>
+ 		<script type="text/javascript" src="custom.js" charset="utf-8"></script>
+		<script type="text/javascript" src="Activities.js" charset="utf-8"></script>
+		<script type="text/javascript" src="enableFields.js" charset="utf-8"></script>
+		<script type="text/javascript" src="requiredFields.js" charset="utf-8"></script>
+		<script type="text/javascript" src="beforeSendValidate.js" charset="utf-8"></script>
+		<script type="text/javascript" src="validateCpf.js" charset="utf-8"></script>
+		<script type="text/javascript" src="validateCnpj.js" charset="utf-8"></script>
+		<script type="text/javascript" src="validateIe.js" charset="utf-8"></script> 
+	</body>
+</html>

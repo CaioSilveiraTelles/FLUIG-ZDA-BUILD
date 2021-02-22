@@ -1,0 +1,4006 @@
+<list>
+  <ProcessDefinition>
+    <processDefinitionPK>
+      <companyId>1</companyId>
+      <processId>Cadastro-fornecedor</processId>
+    </processDefinitionPK>
+    <processDescription>Cadastro de Fornecedor</processDescription>
+    <instruction></instruction>
+    <active>true</active>
+    <publicProcess>false</publicProcess>
+    <volumeId>Default</volumeId>
+    <categoryId>PROCESSOS</categoryId>
+    <managerEngineAllocationId>Associado</managerEngineAllocationId>
+    <managerEngineAllocationConfiguration>&lt;AssociatedController ConditionAssociated=&quot;OR&quot;&gt;&lt;ControlXML TypeAssociated=&quot;Grupo&quot;&gt;&lt;AssignmentController&gt;&lt;Group&gt;3&lt;/Group&gt;&lt;/AssignmentController&gt;&lt;/ControlXML&gt;&lt;ControlXML TypeAssociated=&quot;Grupo&quot;&gt;&lt;AssignmentController&gt;&lt;Group&gt;13&lt;/Group&gt;&lt;/AssignmentController&gt;&lt;/ControlXML&gt;&lt;/AssociatedController&gt;</managerEngineAllocationConfiguration>
+    <snapshotFrequency>0</snapshotFrequency>
+    <baseDay>0</baseDay>
+    <baseMonth>0</baseMonth>
+    <periodId>Default</periodId>
+    <uniqueCardVersion>false</uniqueCardVersion>
+    <keyWord></keyWord>
+    <complementsLevel>0</complementsLevel>
+    <notifyRequisitionerComplements>false</notifyRequisitionerComplements>
+    <notifyManagerComplements>false</notifyManagerComplements>
+    <notifyAuthorityComplements>false</notifyAuthorityComplements>
+  </ProcessDefinition>
+  <ProcessDefinitionVersion>
+    <processDefinitionVersionPK>
+      <companyId>1</companyId>
+      <processId>Cadastro de Fornecedor</processId>
+      <version>2</version>
+    </processDefinitionVersionPK>
+    <versionDescription></versionDescription>
+    <formId>28</formId>
+    <editionMode>true</editionMode>
+    <updateAttachmentsVersion>false</updateAttachmentsVersion>
+    <controlsAttachmentsSecurity>false</controlsAttachmentsSecurity>
+    <active>true</active>
+    <blockedVersion>false</blockedVersion>
+    <counterSign>false</counterSign>
+    <openInstances>0</openInstances>
+    <bpmnVersion>2</bpmnVersion>
+    <processStates/>
+    <favorito>false</favorito>
+    <inheritFormSecurity>false</inheritFormSecurity>
+    <mobileReady>false</mobileReady>
+  </ProcessDefinitionVersion>
+  <list>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <sequence>4</sequence>
+      </processStatePK>
+      <stateName>Início</stateName>
+      <stateDescription>Início</stateDescription>
+      <instruction>O usuário da GESAD ou fornecedor externo, através do Portal Previ deverá preencher as informações do cadastro e anexar os documentos correspondentes. </instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;3&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>true</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>80</positionX>
+      <positionY>44</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>10</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <sequence>5</sequence>
+      </processStatePK>
+      <stateName>GESAD - Conferir Pré-Cadastro</stateName>
+      <stateDescription>GESAD - Conferir Pré-Cadastro</stateDescription>
+      <instruction>Conferência dos dados cadastrais do fornecedor</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Campo Formulário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;poolGesad&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>310</positionX>
+      <positionY>20</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <sequence>11</sequence>
+      </processStatePK>
+      <stateName>Conferência de Dados pela GECON </stateName>
+      <stateDescription>Conferência de Dados pela GECON </stateDescription>
+      <instruction>Conferência dos dados cadastrais do fornecedor</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Campo Formulário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;poolGecon&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>350</positionX>
+      <positionY>171</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <sequence>13</sequence>
+      </processStatePK>
+      <stateName>Aprovação GECON</stateName>
+      <stateDescription>Aprovação GECON</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Campo Formulário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;poolGeconAprov&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>860</positionX>
+      <positionY>178</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <sequence>23</sequence>
+      </processStatePK>
+      <stateName>Definir Responsáveis GESAD</stateName>
+      <stateDescription>Definir Responsáveis GESAD</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>160</positionX>
+      <positionY>20</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <sequence>32</sequence>
+      </processStatePK>
+      <stateName>Definir Responsáveis GECON</stateName>
+      <stateDescription>Definir Responsáveis GECON</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>200</positionX>
+      <positionY>171</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <sequence>41</sequence>
+      </processStatePK>
+      <stateName>Definir Responsáveis GECON Aprovação</stateName>
+      <stateDescription>Definir Responsáveis GECON Aprovação</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>700</positionX>
+      <positionY>164</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <sequence>52</sequence>
+      </processStatePK>
+      <stateName>Corrigir Informações da Solicitação</stateName>
+      <stateDescription>Corrigir Informações da Solicitação</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;4&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>470</positionX>
+      <positionY>20</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <sequence>56</sequence>
+      </processStatePK>
+      <stateName>Integra Pessoa</stateName>
+      <stateDescription>Integra Pessoa</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1140</positionX>
+      <positionY>180</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>82</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>1</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <sequence>63</sequence>
+      </processStatePK>
+      <stateName>Integra Protheus</stateName>
+      <stateDescription>Integra Protheus</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1290</positionX>
+      <positionY>170</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>82</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>1</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <sequence>61</sequence>
+      </processStatePK>
+      <stateName>Intermediário</stateName>
+      <stateDescription>Intermediário</stateDescription>
+      <instruction>Evento intermediário do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>1</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1140</positionX>
+      <positionY>208</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>43</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <parentSequence>56</parentSequence>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <sequence>66</sequence>
+      </processStatePK>
+      <stateName>Intermediário</stateName>
+      <stateDescription>Intermediário</stateDescription>
+      <instruction>Evento intermediário do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>1</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1290</positionX>
+      <positionY>205</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>43</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <parentSequence>63</parentSequence>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <sequence>7</sequence>
+      </processStatePK>
+      <stateName>Aprova?</stateName>
+      <stateDescription>Aprova?</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>100</positionX>
+      <positionY>169</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <sequence>26</sequence>
+      </processStatePK>
+      <stateName>Aprova?</stateName>
+      <stateDescription>Aprova?</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>1020</positionX>
+      <positionY>169</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <sequence>44</sequence>
+      </processStatePK>
+      <stateName>aprova?</stateName>
+      <stateDescription>aprova?</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>540</positionX>
+      <positionY>169</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <sequence>9</sequence>
+      </processStatePK>
+      <stateName>Fim - Reprovado</stateName>
+      <stateDescription>Fim - Reprovado</stateDescription>
+      <instruction>Atividade final do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>40</positionX>
+      <positionY>195</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>60</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <sequence>15</sequence>
+      </processStatePK>
+      <stateName>Fim - Aprovado</stateName>
+      <stateDescription>Fim - Aprovado</stateDescription>
+      <instruction>Atividade final do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1420</positionX>
+      <positionY>190</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>60</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+  </list>
+  <list>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>2</version>
+        <sequence>7</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;aprovaGsad&quot;) == &quot;sim&quot;</condition>
+      <destinationSequenceId>32</destinationSequenceId>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>2</version>
+        <sequence>7</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;aprovaGsad&quot;) == &quot;corrigir&quot;</condition>
+      <destinationSequenceId>52</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;4&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <expressionOrder>3</expressionOrder>
+        <version>2</version>
+        <sequence>7</sequence>
+      </conditionProcessStatePK>
+      <condition>true</condition>
+      <destinationSequenceId>9</destinationSequenceId>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>2</version>
+        <sequence>26</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;aprovaGecond&quot;) == &quot;sim&quot;</condition>
+      <destinationSequenceId>56</destinationSequenceId>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>2</version>
+        <sequence>26</sequence>
+      </conditionProcessStatePK>
+      <condition>true</condition>
+      <destinationSequenceId>5</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;poolGesad&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Campo Formulário</engineAllocationId>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>2</version>
+        <sequence>44</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;aprovaConfere&quot;) == &quot;sim&quot;</condition>
+      <destinationSequenceId>41</destinationSequenceId>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>2</version>
+        <sequence>44</sequence>
+      </conditionProcessStatePK>
+      <condition>true</condition>
+      <destinationSequenceId>5</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;poolGesad&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Campo Formulário</engineAllocationId>
+    </ConditionProcessState>
+  </list>
+  <list>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <linkSequence>22</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>5</initialStateSequence>
+      <finalStateSequence>7</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <linkSequence>27</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>13</initialStateSequence>
+      <finalStateSequence>26</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <linkSequence>33</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>7</initialStateSequence>
+      <finalStateSequence>32</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name>sim</name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <linkSequence>34</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>32</initialStateSequence>
+      <finalStateSequence>11</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <linkSequence>35</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>23</initialStateSequence>
+      <finalStateSequence>5</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <linkSequence>38</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>26</initialStateSequence>
+      <finalStateSequence>5</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name>não</name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <linkSequence>39</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>7</initialStateSequence>
+      <finalStateSequence>9</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name>não</name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <linkSequence>43</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>41</initialStateSequence>
+      <finalStateSequence>13</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <linkSequence>45</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>11</initialStateSequence>
+      <finalStateSequence>44</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <linkSequence>46</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>44</initialStateSequence>
+      <finalStateSequence>41</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name>sim</name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <linkSequence>47</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>44</initialStateSequence>
+      <finalStateSequence>5</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name>não</name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <linkSequence>53</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>7</initialStateSequence>
+      <finalStateSequence>52</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <linkSequence>54</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>52</initialStateSequence>
+      <finalStateSequence>5</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <linkSequence>55</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>4</initialStateSequence>
+      <finalStateSequence>23</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <linkSequence>57</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>26</initialStateSequence>
+      <finalStateSequence>56</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <linkSequence>62</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>61</initialStateSequence>
+      <finalStateSequence>13</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <linkSequence>64</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>56</initialStateSequence>
+      <finalStateSequence>63</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <linkSequence>65</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>63</initialStateSequence>
+      <finalStateSequence>15</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <linkSequence>67</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>66</initialStateSequence>
+      <finalStateSequence>13</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+  </list>
+  <list/>
+  <list>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>addUsersGroup</eventId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function addUsersGroup(listUsers,group){&#xd;
+	log.info(&quot;#addUsersGroup ========================&gt; List:&quot;+listUsers+&quot; Group: &quot; + group);&#xd;
+	var mountPoint = &quot;/public/2.0/groups/addUsers/&quot;+group;&#xd;
+	&#xd;
+	var stringfy = &quot;[&quot;;&#xd;
+	for(var i in listUsers){&#xd;
+		if(listUsers.length-1 == i)&#xd;
+			stringfy += &quot;\&quot;&quot;+listUsers[i]+&quot;\&quot;]&quot;;&#xd;
+		else&#xd;
+			stringfy += &quot;\&quot;&quot;+listUsers[i]+&quot;\&quot;,&quot;;&#xd;
+	}&#xd;
+	&#xd;
+	log.info(&quot;#ADD USERS STRINGHY: &quot; + stringfy);&#xd;
+	&#xd;
+	var c1 = DatasetFactory.createConstraint(&quot;json&quot;,stringfy,stringfy, ConstraintType.MUST);&#xd;
+	var c2 = DatasetFactory.createConstraint(&quot;mountPoint&quot;, mountPoint, mountPoint, ConstraintType.MUST);&#xd;
+	var dataset = DatasetFactory.getDataset(&quot;service_genericRest&quot;, new Array(), new Array(c1,c2), new Array());&#xd;
+	&#xd;
+	if(dataset.getValue(0, &quot;status&quot;) == &quot;ERRO&quot;) throw(&quot;Erro ao inserir os usuários no grupo: &quot; + group);&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>createGED</eventId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function createGED(){
+	try {
+		
+		var gson = new com.google.gson.Gson();
+		
+		var raizPublicacao = getFolder();
+		
+		var cpfcnpj = hAPI.getCardValue(&quot;nm_cpf_cnpj&quot;).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;-&quot;,&quot;&quot;).replace(&quot;/&quot;,&quot;&quot;).replace(&quot;.&quot;,&quot;&quot;);
+		
+		var folderParent = parseInt(raizPublicacao.folder);
+		var pastaForn    = hAPI.getCardValue(&quot;pastaForn&quot;);
+		if(pastaForn == &quot;&quot;){
+			
+			var dto = docAPI.newDocumentDto();
+			dto.setDocumentDescription(cpfcnpj+&quot; - &quot;+hAPI.getCardValue(&quot;text_Nome&quot;));
+			dto.setDocumentType(&quot;1&quot;);
+			dto.setParentDocumentId(folderParent);
+			dto.setDocumentTypeId(&quot;&quot;);
+
+			log.info(&quot;#FOLDER PARENT: &quot; + folderParent);
+			var folder = docAPI.createFolder(dto, null, null);
+			log.info(&quot;#PASTA CRIADA COM O ID :&quot; + folder.getDocumentId());	
+			pastaForn = folder.getDocumentId();
+			
+		}		
+
+		
+		if(pastaForn){
+			var attachments = hAPI.listAttachments();
+			log.info(&quot;#attachments.size() : &quot;+attachments.size());
+	        for (var i = 0; i &lt; attachments.size(); i++) {
+		log.info(&quot;====contador====&quot;+i);
+	            var docDto = attachments.get(i);
+	 			log.info(&quot;docDto.getDocumentId() : &quot;+docDto.getDocumentId());
+	
+				log.info(&quot;#docDto.getDocumentType: &quot; + docDto.getDocumentType());
+	            if (docDto.getDocumentType() == &quot;7&quot; || docDto.getDocumentType() == &quot;2&quot;) {
+	                
+					log.info(&quot;#move documentos para a nova pasta&quot;);
+					
+					var mountPoint = &quot;/public/ecm/document/updateDocumentFolder&quot;;
+					var request = new Object();
+					request.id = docDto.getDocumentId().toString();
+					request.parentId = pastaForn.toString();
+					request = gson.toJson(request);
+					
+					var c1 = DatasetFactory.createConstraint(&quot;json&quot;, request, request, ConstraintType.MUST);
+					var c2 = DatasetFactory.createConstraint(&quot;mountPoint&quot;, mountPoint, mountPoint, ConstraintType.MUST);
+					var dataset = DatasetFactory.getDataset(&quot;service_genericRest&quot;, new Array(), new Array(c1,c2), new Array());
+	
+					if(hAPI.getCardValue(&quot;portal&quot;) == &quot;true&quot;){
+						
+							            docAPI.copyDocumentToUploadArea(docDto.getDocumentId(), docDto.getVersion());
+						         
+						                docDto.setDocumentId(0);
+						                docDto.setParentDocumentId(pastaForn);
+						
+						log.info(&quot;===docDto===&quot;+docDto);
+						         
+						                var attachArray = new java.util.ArrayList();
+						                var mainAttach = docAPI.newAttachment();
+						                mainAttach.setFileName(docDto.getPhisicalFile());
+						                mainAttach.setPrincipal(true);
+						                mainAttach.setAttach(false);
+						                attachArray.add(mainAttach);
+						log.info(&quot;===mainAttach===&quot;+mainAttach);
+						log.info(&quot;===attachArray===&quot;+attachArray);
+						         
+						                var doc = docAPI.createDocument(docDto, attachArray, null, null,null);
+										log.info(&quot;===doc===&quot;+doc);
+						                log.info(&quot;#DOCUMENTO CRIADO COM O ID: &quot; + doc.getDocumentId());						
+						
+					}
+					
+
+	            }
+	        }
+	
+			atualizaPastaForn(pastaForn);
+	
+		}
+	} catch (e) {
+		log.error(&quot;Problemas na criação da pasta/documento: \n&quot; + e);
+	}
+}
+
+function getFolder() {
+	var dataset = DatasetFactory.getDataset(&quot;ds_config&quot;, null, null, null);
+	return { folder : dataset.getValue(0, &quot;pastaForn&quot;) };
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>getFilhosForm</eventId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>/**&#xd;
+ * Método para listar os filhos de um pai x filho&#xd;
+ * @param form: Referência da ficha&#xd;
+ * @param fields: Array dos campos que pertencem ao pai x filho&#xd;
+ * @returns {Array[][]} Array de String com as chaves e valores&#xd;
+ */&#xd;
+function getFilhosForm(form, fields){&#xd;
+	var cardData = new java.util.HashMap(); &#xd;
+	&#xd;
+	//cardData = form.getCardData();&#xd;
+	&#xd;
+	cardData = form;&#xd;
+	&#xd;
+	var it = cardData.keySet().iterator();&#xd;
+	var listaFilho = new Array();&#xd;
+&#xd;
+	while (it.hasNext()) {&#xd;
+		var key = it.next();&#xd;
+ 		var campo = key.split(&quot;___&quot;);&#xd;
+ 		&#xd;
+ 		for (var i = 0; i &lt; fields.length; i++){&#xd;
+ 			&#xd;
+ 			//log.info(&quot;#fields[i]: &quot; + fields[i]+ &quot; campo[0]: &quot; + campo[0] + &quot; key.indexOf(&apos;___&apos;): &quot; + key.indexOf(&apos;___&apos;));&#xd;
+ 			&#xd;
+ 			if (key.indexOf(&apos;___&apos;) &gt;= 0 &amp;&amp; fields[i] == campo[0]) {&#xd;
+ 				listaFilho.push([key, cardData.get(key)]);&#xd;
+	 			log.info(&quot;#GETFILHOS -------- Key = &quot; + key + &quot; - &quot; + cardData.get(key));&#xd;
+	 		}&#xd;
+ 		}&#xd;
+	}&#xd;
+	&#xd;
+	return listaFilho;&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>createGroup</eventId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function createGroup(code, description, isInternal,fieldForm){&#xd;
+	log.info(&quot;#createGroup: &quot; + code);&#xd;
+	&#xd;
+	var mountPoint = &quot;/public/2.0/groups/create&quot;;&#xd;
+	var group = new Object();&#xd;
+	group.code = code;&#xd;
+	group.description = description;&#xd;
+	group.isInternal = isInternal;&#xd;
+	group = JSON.stringify(group);&#xd;
+	&#xd;
+	var c1 = DatasetFactory.createConstraint(&quot;json&quot;, group, group, ConstraintType.MUST);&#xd;
+	var c2 = DatasetFactory.createConstraint(&quot;mountPoint&quot;, mountPoint, mountPoint, ConstraintType.MUST);&#xd;
+	var dataset = DatasetFactory.getDataset(&quot;service_genericRest&quot;, new Array(), new Array(c1,c2), new Array());&#xd;
+	&#xd;
+	try {&#xd;
+		var result = JSON.parse(dataset.getValue(0, &quot;message&quot;));&#xd;
+		log.info(&quot;#result createGroup: &quot; + result);&#xd;
+		&#xd;
+		if(result != &quot;ERRO&quot;){&#xd;
+			log.info(&quot;#groupId &quot; + result.content.id);&#xd;
+			log.info(&quot;#result: &quot; + result.message.message);&#xd;
+			log.info(&quot;#type: &quot; + result.message.type);&#xd;
+			hAPI.setCardValue(fieldForm, code);&#xd;
+			return result.message.message;&#xd;
+		}else throw(&quot;Erro ao criar o grupo. Contate o administrador.&quot;);&#xd;
+		&#xd;
+	} catch (e) {&#xd;
+		throw(&quot;Erro ao criar o grupo. &quot; + e.toString());&#xd;
+	}&#xd;
+	return &quot;NOK&quot;;&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>afterStateEntry</eventId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function afterStateEntry(sequenceId){&#xd;
+	var CURRENT_USER = getValue(&quot;WKUser&quot;);&#xd;
+	var PROCESS = getValue(&quot;WKNumProces&quot;);&#xd;
+	log.info(&quot;#afterStateEntry cadastro-fornecedor | Sequence ID: &quot; + sequenceId+ &quot; Process: &quot; + PROCESS + &quot; USER: &quot;+CURRENT_USER);&#xd;
+	var managementGroups = getManagementGroups();&#xd;
+	&#xd;
+	if(sequenceId == DEFINIR_GESAD){&#xd;
+		var group = PREFIX_GROUP_DEFINIR_GESAD+&quot;_&quot;+PROCESS;&#xd;
+		var resultGroup = createGroup(group, group, &quot;false&quot;, &quot;gesadGroup&quot;);&#xd;
+		&#xd;
+		if(resultGroup == &quot;OK&quot;){&#xd;
+			var GESAD = managementGroups.gesad;&#xd;
+			var listGroup = new Array(managementGroups.analyst2, managementGroups.manager, managementGroups.executive);&#xd;
+			&#xd;
+			var listUsers = createUserList(GESAD, listGroup, CURRENT_USER);&#xd;
+			&#xd;
+			addUsersGroup(listUsers,group);&#xd;
+			&#xd;
+	        var users = new java.util.ArrayList();&#xd;
+	        users.add(&quot;Pool:Group:&quot; + group);&#xd;
+	        hAPI.setAutomaticDecision(GESAD_CONFERIR_PRE_CADASTRO, users, &quot;Criação Dinâmica de Grupo no Fluig&quot;);&#xd;
+		}else&#xd;
+			throw(&quot;Erro ao criar o grupo. Contate o administrador.&quot;);&#xd;
+    }&#xd;
+	&#xd;
+	if(sequenceId == DEFINIR_GECON){&#xd;
+		var POOL_GECON = hAPI.getCardValue(&quot;poolGecon&quot;);&#xd;
+		&#xd;
+		if(POOL_GECON == &quot;&quot;){&#xd;
+			var group = PREFIX_GROUP_DEFINIR_GECON+&quot;_&quot;+PROCESS;&#xd;
+			var resultGroup = createGroup(group, group, &quot;false&quot;, &quot;geconGroup&quot;);&#xd;
+			&#xd;
+			if(resultGroup == &quot;OK&quot;){&#xd;
+				var GECON = managementGroups.gecon;&#xd;
+				var listGroup = new Array(managementGroups.analyst, managementGroups.assistant);&#xd;
+				&#xd;
+				var listUsers = createUserList(GECON, listGroup, CURRENT_USER);&#xd;
+				&#xd;
+				addUsersGroup(listUsers,group);&#xd;
+				&#xd;
+		        var users = new java.util.ArrayList();&#xd;
+		        users.add(&quot;Pool:Group:&quot; + group);&#xd;
+		        hAPI.setAutomaticDecision(NOTIFICAR_GECON_PARA_COMPLEMENTO, users, &quot;Criação Dinâmica de Grupo no Fluig&quot;);&#xd;
+			}else&#xd;
+				throw(&quot;Erro ao criar o grupo. Contate o administrador.&quot;);&#xd;
+		}else{&#xd;
+			var users = new java.util.ArrayList();&#xd;
+			users.add(POOL_GECON);&#xd;
+			&#xd;
+			hAPI.setAutomaticDecision(NOTIFICAR_GECON_PARA_COMPLEMENTO, users, &quot;Criação Dinâmica de Grupo no Fluig&quot;);&#xd;
+		}&#xd;
+		&#xd;
+    }&#xd;
+	&#xd;
+	if(sequenceId == DEFINIR_GECON_APROVACAO){&#xd;
+		var POOL_APROV_GECON = hAPI.getCardValue(&quot;poolGeconAprov&quot;);&#xd;
+		&#xd;
+		if(POOL_APROV_GECON == &quot;&quot;){&#xd;
+			var group = PREFIX_GROUP_DEFINIR_GECON_APROVACAO+&quot;_&quot;+PROCESS;&#xd;
+			var resultGroup = createGroup(group, group, &quot;false&quot;, &quot;geconAprovGroup&quot;);&#xd;
+			&#xd;
+			if(resultGroup == &quot;OK&quot;){&#xd;
+				var GECON = managementGroups.gecon;&#xd;
+				var listGroup = new Array(managementGroups.analyst, managementGroups.analyst2);&#xd;
+				&#xd;
+				var listUsers = createUserList(GECON, listGroup, CURRENT_USER);&#xd;
+				&#xd;
+				addUsersGroup(listUsers,group);&#xd;
+				&#xd;
+		        var users = new java.util.ArrayList();&#xd;
+		        users.add(&quot;Pool:Group:&quot; + group);&#xd;
+		        hAPI.setAutomaticDecision(APROVACAO_GECON, users, &quot;Criação Dinâmica de Grupo no Fluig&quot;);&#xd;
+			}else&#xd;
+				throw(&quot;Erro ao criar o grupo. Contate o administrador.&quot;);&#xd;
+		}else{&#xd;
+			 var users = new java.util.ArrayList();&#xd;
+		     users.add(POOL_APROV_GECON);&#xd;
+		     hAPI.setAutomaticDecision(APROVACAO_GECON, users, &quot;Criação Dinâmica de Grupo no Fluig&quot;);&#xd;
+		}&#xd;
+		&#xd;
+    }&#xd;
+	&#xd;
+	if(sequenceId == FIM_APROVADO){&#xd;
+		sendMail(&quot;aprovada&quot;, hAPI.getCardValue(&quot;text_Email&quot;), &quot;&quot;);&#xd;
+	}&#xd;
+	&#xd;
+	if(sequenceId == FIM_REPROVADO){&#xd;
+		sendMail(&quot;reprovada&quot;, hAPI.getCardValue(&quot;text_Email&quot;), hAPI.getCardValue(&quot;obsAprovaGesad&quot;));&#xd;
+	}&#xd;
+		&#xd;
+}&#xd;
+&#xd;
+function getManagementGroups(){&#xd;
+	var dataset = DatasetFactory.getDataset(&quot;ds_config&quot;, null, null, null);&#xd;
+	return {analyst: dataset.getValue(0, &quot;analista&quot;), analyst2: dataset.getValue(0, &quot;analista2&quot;), assistant : dataset.getValue(0, &quot;assistentes&quot;), manager : dataset.getValue(0, &quot;nucleo&quot;), executive : dataset.getValue(0, &quot;executivo&quot;) , gecon : dataset.getValue(0, &quot;GECON_TRI&quot;) , gesad : dataset.getValue(0, &quot;GESAD&quot;) };&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>afterProcessFinish</eventId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function afterProcessFinish(processId){&#xd;
+	log.info(&quot;#afterProcessFinish processId: &quot;+processId);&#xd;
+	var company = getValue(&quot;WKCompany&quot;);&#xd;
+	deleteGroups(company);&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>beforeTaskSave</eventId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function beforeTaskSave(colleagueId,nextSequenceId,userList){&#xd;
+	&#xd;
+	log.info(&quot;============beforeTaskSave============&quot;);&#xd;
+	&#xd;
+	var ATIVIDADE_COMPLETADA = getValue(&quot;WKCompletTask&quot;);&#xd;
+	var ATIVIDADE_ATUAL      = getValue(&quot;WKNumState&quot;);&#xd;
+	var PROCESS_ID           = getValue(&quot;WKNumProces&quot;)&#xd;
+	&#xd;
+	log.info(&quot;ATIVIDADE_COMPLETADA : &quot;+ATIVIDADE_COMPLETADA);&#xd;
+	log.info(&quot;ATIVIDADE_ATUAL : &quot;+ATIVIDADE_ATUAL);&#xd;
+	log.info(&quot;PROCESS_ID : &quot;+PROCESS_ID);&#xd;
+	log.info(&quot;nextSequenceId : &quot;+nextSequenceId);&#xd;
+	&#xd;
+	if(ATIVIDADE_ATUAL == GESAD_CONFERIR_PRE_CADASTRO &amp;&amp; nextSequenceId == DECISAO_APROVACAO &amp;&amp; ATIVIDADE_COMPLETADA){&#xd;
+		log.info(&quot;PRIMEIRO IF&quot;);&#xd;
+		var informacao = getValue(&quot;WKUserComment&quot;)+&quot; Observação : &quot;+hAPI.getCardValue(&quot;obsAprovaGesad&quot;);&#xd;
+		log.info(&quot;informacao : &quot;+informacao);&#xd;
+		hAPI.setTaskComments(colleagueId, PROCESS_ID, 0, informacao);&#xd;
+		&#xd;
+	}&#xd;
+	&#xd;
+	if(ATIVIDADE_ATUAL == NOTIFICAR_GECON_PARA_COMPLEMENTO &amp;&amp; nextSequenceId == PRIMEIRA_APROVACAO_GECON &amp;&amp; ATIVIDADE_COMPLETADA){&#xd;
+		log.info(&quot;SEGUNDO IF&quot;);&#xd;
+		var informacao = getValue(&quot;WKUserComment&quot;)+&quot; Observação : &quot;+hAPI.getCardValue(&quot;obsAprovaConferencia&quot;);&#xd;
+		log.info(&quot;informacao : &quot;+informacao);&#xd;
+		hAPI.setTaskComments(colleagueId, PROCESS_ID, 0, informacao);&#xd;
+		&#xd;
+	}	&#xd;
+	&#xd;
+	if(ATIVIDADE_ATUAL == APROVACAO_GECON &amp;&amp; nextSequenceId == SEGUNDA_APROVACAO_GECON &amp;&amp; ATIVIDADE_COMPLETADA){&#xd;
+		log.info(&quot;TERCEIRO IF&quot;);&#xd;
+		var informacao = getValue(&quot;WKUserComment&quot;)+&quot; Observação : &quot;+hAPI.getCardValue(&quot;obsAprovaGecond&quot;);&#xd;
+		log.info(&quot;informacao : &quot;+informacao);&#xd;
+		hAPI.setTaskComments(colleagueId, PROCESS_ID, 0, informacao);&#xd;
+		&#xd;
+	}		&#xd;
+	&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>deleteGroups</eventId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function deleteGroups(company){&#xd;
+	log.info(&quot;#INICIANDO A EXCLUSAO DOS GRUPOS DINAMICOS======&quot;);&#xd;
+	var groupList = new Array();&#xd;
+	&#xd;
+	if(hAPI.getCardValue(&quot;gesadGroup&quot;) != &quot;&quot;){&#xd;
+		groupList.push(hAPI.getCardValue(&quot;gesadGroup&quot;));&#xd;
+	}&#xd;
+	&#xd;
+	if(hAPI.getCardValue(&quot;geconGroup&quot;) != &quot;&quot;){&#xd;
+		groupList.push(hAPI.getCardValue(&quot;geconGroup&quot;));	&#xd;
+	}&#xd;
+	&#xd;
+	if(hAPI.getCardValue(&quot;geconAprovGroup&quot;) != &quot;&quot;){&#xd;
+		groupList.push(hAPI.getCardValue(&quot;geconAprovGroup&quot;));&#xd;
+	}&#xd;
+	&#xd;
+	for(var i in groupList){&#xd;
+		var group = groupList[i];&#xd;
+		if(group){&#xd;
+			var c1 = DatasetFactory.createConstraint(&quot;group&quot;, group, group, ConstraintType.MUST);&#xd;
+			var c2 = DatasetFactory.createConstraint(&quot;company&quot;, company, company, ConstraintType.MUST);&#xd;
+			var dataset = DatasetFactory.getDataset(&quot;service_deleteGroupWS&quot;, new Array(), new Array(c1,c2), new Array());&#xd;
+			log.info(&quot;#DELETE GROUP RESULT: &quot; + dataset.getValue(0, &quot;message&quot;));&#xd;
+		}&#xd;
+	}&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>getXmlDate</eventId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function getXmlDate(stringDate){&#xd;
+	var xmlGregorian = &quot;&quot;;&#xd;
+	var date = new java.util.Date();&#xd;
+	&#xd;
+	if(stringDate != &quot;&quot;){&#xd;
+		stringDate = stringDate.split(&quot;/&quot;);&#xd;
+		date.setDate(stringDate[0]);&#xd;
+		date.setMonth(Number(stringDate[1])-1);&#xd;
+		date.setYear(Number(stringDate[2])-1900);&#xd;
+	}	&#xd;
+	&#xd;
+	var calendar = new java.util.GregorianCalendar();&#xd;
+	calendar.setTime(date); &#xd;
+	xmlGregorian = javax.xml.datatype.DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);&#xd;
+&#xd;
+	&#xd;
+	return xmlGregorian;&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>loadAttachemets</eventId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function loadAttachemets(process,company,state,file,userTask){&#xd;
+	&#xd;
+	var loginAdm = &quot;admin&quot;;&#xd;
+	var senhaAdm = &quot;adm&quot;;&#xd;
+	var ServiceWorkflow = &quot;ECMWorkflowEngineService&quot;;&#xd;
+	var completeTask = false;&#xd;
+	&#xd;
+	try {&#xd;
+		var webServiceProvider = ServiceManager.getServiceInstance(ServiceWorkflow);&#xd;
+		var webServiceLocator  = webServiceProvider.instantiate(&quot;com.totvs.technology.ecm.workflow.ws.ECMWorkflowEngineServiceServiceLocator&quot;);&#xd;
+		var webService = webServiceLocator.getWorkflowEngineServicePort();&#xd;
+		&#xd;
+		var StringArrayArray = webServiceProvider.instantiate(&quot;net.java.dev.jaxb.array.StringArrayArray&quot;);&#xd;
+		var StringArray = webServiceProvider.instantiate(&quot;net.java.dev.jaxb.array.StringArray&quot;);&#xd;
+		var ProcessAttachmentDtoArray = webServiceProvider.instantiate(&quot;com.totvs.technology.ecm.workflow.ws.ProcessAttachmentDtoArray&quot;);&#xd;
+		var ProcessTaskAppointmentDtoArray = webServiceProvider.instantiate(&quot;com.totvs.technology.ecm.workflow.ws.ProcessTaskAppointmentDtoArray&quot;);&#xd;
+		var ProcessAttachmentDto = webServiceProvider.instantiate(&quot;com.totvs.technology.ecm.workflow.ws.ProcessAttachmentDto&quot;);&#xd;
+		var Attachment = webServiceProvider.instantiate(&quot;com.totvs.technology.ecm.workflow.ws.Attachment&quot;);&#xd;
+		&#xd;
+		ProcessAttachmentDto.setAttachmentSequence(0);&#xd;
+		ProcessAttachmentDto.setColleagueId(loginAdm);&#xd;
+		ProcessAttachmentDto.setColleagueName(&quot;teste&quot;);&#xd;
+		ProcessAttachmentDto.setCompanyId(company);&#xd;
+		ProcessAttachmentDto.setDeleted(false);&#xd;
+		ProcessAttachmentDto.setDescription(&quot;teste publicado dataset&quot;);&#xd;
+		ProcessAttachmentDto.setDocumentId(0);&#xd;
+		ProcessAttachmentDto.setFileName(file);&#xd;
+		ProcessAttachmentDto.setNewAttach(true);&#xd;
+		ProcessAttachmentDto.setOriginalMovementSequence(state);&#xd;
+		ProcessAttachmentDto.setPermission(&quot;1&quot;);&#xd;
+		ProcessAttachmentDto.setProcessInstanceId(process);&#xd;
+		&#xd;
+		Attachment.setAttach(true);&#xd;
+		Attachment.setDescriptor(true);&#xd;
+		Attachment.setEditing(false);&#xd;
+		Attachment.setFileName(file);&#xd;
+		Attachment.setPrincipal(false);&#xd;
+		&#xd;
+		ProcessAttachmentDto.setAttachments([Attachment]);&#xd;
+		ProcessAttachmentDtoArray.setItem([ProcessAttachmentDto]);&#xd;
+		&#xd;
+		&#xd;
+		&#xd;
+		StringArray.setItem([&quot;adm7&quot;]);&#xd;
+		var threads = hAPI.getActiveStates();&#xd;
+		&#xd;
+		var responsavel = webService.getAvailableUsers(loginAdm,senhaAdm,company,process,state,threads.get(0));&#xd;
+		&#xd;
+		for(var i in responsavel.getItem()){&#xd;
+			log.info(&quot;#===========: &quot; + i);&#xd;
+		}&#xd;
+		&#xd;
+		var result = webService.saveAndSendTask(loginAdm,senhaAdm,company,process,state,StringArray,&#xd;
+									&quot;comentarios&quot;,userTask,completeTask,ProcessAttachmentDtoArray,StringArrayArray,&#xd;
+									ProcessTaskAppointmentDtoArray,false,threads.get(0));&#xd;
+		&#xd;
+		log.info(&quot;#load attachemets ok ============================&gt; &quot; + result);&#xd;
+		&#xd;
+		&#xd;
+	} catch (e) {&#xd;
+		log.error(&quot;#ERRO -----------&gt;: &quot; + e.toString());&#xd;
+	}&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>servicetask56</eventId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function servicetask56(attempt, message) {
+	try {
+		//if(hAPI.getCardValue(&quot;text_codigo_pessoa&quot;) == &quot;&quot;){
+			log.info(&quot;#=============================== INICIO INTEGRACAO PESSOA ================================&quot;);
+			var user = getValue(&quot;WKUser&quot;);
+			var cardData = hAPI.getCardData(getValue(&quot;WKNumProces&quot;));
+			var serviceFluig = ServiceManager.getService(&apos;PESSOA-FORNECEDOR&apos;);
+			var serviceHelper = serviceFluig.getBean();
+			var serviceLocator = serviceHelper.instantiate(&apos;br.com.previ.coi.ws.pessoa.ManterFornecedor&apos;);
+			var service = serviceLocator.getFornecedorWSPort();
+			var fornecedor = serviceHelper.instantiate(&apos;br.com.previ.coi.ws.pessoa.InFornecedorWS&apos;);
+			var socios = serviceHelper.instantiate(&apos;br.com.previ.coi.ws.pessoa.InFornecedorWS$Socios&apos;);
+			var data = new Date();
+			var formatoData = new java.text.SimpleDateFormat(&quot;dd/MM/yyyy&quot;);
+	
+			var properties = {};
+			properties[&quot;disable.chunking&quot;] = &quot;true&quot;;
+			properties[&quot;log.soap.messages&quot;] = &quot;true&quot;;	
+			
+			var customClient = serviceFluig.getCustomClient(service, &quot;br.com.previ.coi.ws.pessoa.FornecedorWS&quot;, properties);			
+	
+			var detail = getFilhosForm(cardData, new Array(&quot;TEXT_TIPO_SOCIO&quot;));
+	
+			log.info(&quot;#Quantidade de socios: &quot; + detail.length);
+	
+			for(var i = 0; i &lt; detail.length; i++){
+				var index = detail[i][0].split(&quot;___&quot;)[1];
+				log.info(&quot;#indice pai-filho: &quot; + index);								
+	
+				//var socio = serviceHelper.instantiate(&apos;br.com.previ.coi.ws.pessoa.InBaseFornecedorSocioWS&apos;);
+				var socio = serviceHelper.instantiate(&apos;br.com.previ.coi.ws.pessoa.InSocioFornecedorWS&apos;);
+	
+	
+/*				if(hAPI.getCardValue(&quot;text_Pessoa_socio___&quot;+index) != &quot;&quot;){
+					socio.setCodPessoa(new java.lang.Integer(hAPI.getCardValue(&quot;text_Pessoa_socio___&quot;+index)));
+				}*/
+				socio.setCodUsuIncl(getLogin(user));
+								
+				if(hAPI.getCardValue(&quot;text_Estado_socio___&quot;+index) != &quot;EX&quot;){
+					socio.setSigUf(hAPI.getCardValue(&quot;text_Estado_socio___&quot;+index));
+				}else{
+					socio.setSigUf(&quot;&quot;);
+				}
+				
+				socio.setNomEmail(hAPI.getCardValue(&quot;text_Email_socio___&quot;+index));
+	
+				if(hAPI.getCardValue(&quot;text_Numero_socio___&quot;+index) != &quot;&quot;){
+					socio.setNumLogrd(new java.lang.Integer(hAPI.getCardValue(&quot;text_Numero_socio___&quot;+index)));
+				}
+	
+				socio.setNomPessoa(hAPI.getCardValue(&quot;text_NomeSocio___&quot;+index));
+				socio.setNomBairro(hAPI.getCardValue(&quot;text_Bairro_socio___&quot;+index));
+				socio.setNomLogrd(hAPI.getCardValue(&quot;text_NomeLogradouro_socio___&quot;+index));
+				socio.setNomHomePage(hAPI.getCardValue(&quot;text_PaginaInternet_socio___&quot;+index));
+				socio.setIndSexo(hAPI.getCardValue(&quot;text_sexo_socio___&quot;+index));
+				socio.setIndTipoLogrd(hAPI.getCardValue(&quot;text_TipoLogradouro_socio___&quot;+index));
+				socio.setCodTipoPessoa(hAPI.getCardValue(&quot;text_tipo_socio___&quot;+index)  == &quot;F&quot; ? &quot;PF&quot; : &quot;PJ&quot;);
+				socio.setCodPais(hAPI.getCardValue(&quot;text_Pais_socio_code___&quot;+index));
+				socio.setNomEmailAdic2(hAPI.getCardValue(&quot;text_EmailAd2_socio___&quot;+index));
+				socio.setNomEmailAdic1(hAPI.getCardValue(&quot;text_EmailAd1_socio___&quot;+index));
+				socio.setCodMunic(hAPI.getCardValue(&quot;text_Cod_MunicipioSocio___&quot;+index));
+				socio.setNomAbrevPessoa(hAPI.getCardValue(&quot;text_Abreviado_socio___&quot;+index));
+				socio.setDscComplLogrd(hAPI.getCardValue(&quot;text_Complemento_socio___&quot;+index));
+	
+				if(hAPI.getCardValue(&quot;text_TelefoneAd2_socio___&quot;+index) != &quot;&quot;){
+					socio.setNumTelAdic2(new java.lang.Long(hAPI.getCardValue(&quot;text_TelefoneAd2_socio___&quot;+index)));
+				}
+	
+				if(hAPI.getCardValue(&quot;text_TelefoneAd3_socio___&quot;+index) != &quot;&quot;){
+					socio.setNumTelAdic3(new java.lang.Long(hAPI.getCardValue(&quot;text_TelefoneAd3_socio___&quot;+index)));
+				}
+	
+				if(hAPI.getCardValue(&quot;text_TelefoneAd1_socio___&quot;+index) != &quot;&quot;){
+					socio.setNumTelAdic1(new java.lang.Long(hAPI.getCardValue(&quot;text_TelefoneAd1_socio___&quot;+index)));
+				}
+	
+				if(hAPI.getCardValue(&quot;text_Telefone_socio___&quot;+index) != &quot;&quot;){
+					socio.setNumTelLogrd(new java.lang.Long(hAPI.getCardValue(&quot;text_Telefone_socio___&quot;+index)));
+				}
+	
+				if(hAPI.getCardValue(&quot;text_TelefoneFax_socio___&quot;+index) != &quot;&quot;){
+					socio.setNumFaxLogrd(new java.lang.Long(hAPI.getCardValue(&quot;text_TelefoneFax_socio___&quot;+index)));
+				}
+	
+				if(hAPI.getCardValue(&quot;text_CEP_socio___&quot;+index) != &quot;&quot;){
+					socio.setNumCepLogrd(new java.lang.Integer(hAPI.getCardValue(&quot;text_CEP_socio___&quot;+index).replace(&quot;-&quot;,&quot;&quot;)));
+				}
+	
+				socio.setNomUsuAnalisPessoa(hAPI.getCardValue(&quot;text_user_gesad&quot;));
+				
+				if(hAPI.getCardValue(&quot;text_data_analise&quot;) == &quot;&quot;){
+					socio.setDatAnalisPessoa(null);	
+				}else{
+					socio.setDatAnalisPessoa(getXmlDate(hAPI.getCardValue(&quot;text_data_analise&quot;)));
+				}
+				
+				socio.setIndStatusAtuaPessoa(&quot;A&quot;);
+				//socio.setIndPatroc(hAPI.getCardValue(&quot;text_patrocinio_socio___&quot;+index));
+				socio.setIndPessoaBras(hAPI.getCardValue(&quot;text_Atuacao_brasil_soc___&quot;+index));
+				socio.setDscMotivoAnalis(hAPI.getCardValue(&quot;text_just_analise_soc___&quot;+index));
+				
+				if(hAPI.getCardValue(&quot;text_CPFCNPJ_socio___&quot;+index) != &quot;&quot;){
+					socio.setNumCic(new java.lang.Long(hAPI.getCardValue(&quot;text_CPFCNPJ_socio___&quot;+index).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;-&quot;,&quot;&quot;).replace(&quot;/&quot;,&quot;&quot;).replace(&quot;.&quot;,&quot;&quot;)));
+				}	
+	
+				log.info(&quot;#===================== OBJETO SOCIO NR: &quot; + index + &quot; ================&quot;);
+				log.info(&quot;#getNumCic: &quot;+socio.getNumCic());
+				log.info(&quot;#getCodTipoPessoa: &quot;+socio.getCodTipoPessoa());
+				log.info(&quot;#getCodUsuIncl: &quot;+socio.getCodUsuIncl());
+				log.info(&quot;#getNomBairro: &quot;+socio.getNomBairro());
+				log.info(&quot;#getCodMunic: &quot;+socio.getCodMunic());
+				log.info(&quot;#getSigUf: &quot;+socio.getSigUf());
+				log.info(&quot;#getIndPessoaBras: &quot;+socio.getIndPessoaBras());
+				log.info(&quot;#getNomLogrd: &quot;+socio.getNomLogrd());
+				log.info(&quot;#getIndStatusAtuaPessoa: &quot;+socio.getIndStatusAtuaPessoa());
+				log.info(&quot;#getClass: &quot;+socio.getClass());
+				log.info(&quot;#getDatAnalisPessoa: &quot;+socio.getDatAnalisPessoa());
+				log.info(&quot;#getNumTelLogrd: &quot;+socio.getNumTelLogrd());
+				log.info(&quot;#getNumLogrd: &quot;+socio.getNumLogrd());
+				log.info(&quot;#getCodPessoa: &quot;+socio.getCodPessoa());
+				log.info(&quot;#getNumCepLogrd: &quot;+socio.getNumCepLogrd());
+				log.info(&quot;#getCodPais: &quot;+socio.getCodPais());
+				log.info(&quot;#getNomUsuAnalisPessoa: &quot;+socio.getNomUsuAnalisPessoa());
+				log.info(&quot;#getNomPessoa: &quot;+socio.getNomPessoa());
+				log.info(&quot;#getIndSexo: &quot;+socio.getIndSexo());
+				log.info(&quot;#getIndTipoLogrd: &quot;+socio.getIndTipoLogrd());
+				log.info(&quot;#getNomAbrevPessoa: &quot;+socio.getNomAbrevPessoa());
+				log.info(&quot;#getDscMotivoAnalis: &quot;+socio.getDscMotivoAnalis());
+				log.info(&quot;#getNomEmailAdic1: &quot;+socio.getNomEmailAdic1());
+				log.info(&quot;#getNomEmailAdic2: &quot;+socio.getNomEmailAdic2());
+				log.info(&quot;#getNomHomePage: &quot;+socio.getNomHomePage());
+				log.info(&quot;#getNumTelAdic2: &quot;+socio.getNumTelAdic2());
+				log.info(&quot;#getNumTelAdic3: &quot;+socio.getNumTelAdic3());
+				log.info(&quot;#getNumTelAdic1: &quot;+socio.getNumTelAdic1());
+				log.info(&quot;#getIndPatroc: &quot;+socio.getIndPatroc());
+				log.info(&quot;#getDscComplLogrd: &quot;+socio.getDscComplLogrd());
+				log.info(&quot;#getNumFaxLogrd: &quot;+socio.getNumFaxLogrd());
+				log.info(&quot;#getNomEmail: &quot;+socio.getNomEmail());
+	
+				//Adiciona o sócio na lista
+				socios.getSocio().add(socio);
+			}
+	
+			log.info(&quot;#Adiciona a lista de sócios ao objeto fornecedor&quot;);
+			//Adiciona a lista de sócios ao objeto fornecedor
+			fornecedor.setSocios(socios);
+	
+	
+			if(hAPI.getCardValue(&quot;cod_ativEconomica&quot;) != &quot;&quot; &amp;&amp; hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;) == &quot;J&quot;){
+				fornecedor.setCodCnae(new java.lang.Integer(hAPI.getCardValue(&quot;cod_ativEconomica&quot;)));
+			}
+	
+			if(hAPI.getCardValue(&quot;text_Conta&quot;) != &quot;&quot;){
+				fornecedor.setNumContaCorren(new java.lang.Long(hAPI.getCardValue(&quot;text_Conta&quot;)));
+			}
+	
+			fornecedor.setNumInscrMunic(hAPI.getCardValue(&quot;id_ins_municipal&quot;));
+	
+			if(hAPI.getCardValue(&quot;text_tipoDoc&quot;) != &quot;&quot; &amp;&amp; hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;) == &quot;F&quot;){
+				fornecedor.setIndTipoDocIdent(new java.lang.Integer(hAPI.getCardValue(&quot;text_tipoDoc&quot;)));
+			}
+	
+			fornecedor.setNomUsuAnalisPessoa(hAPI.getCardValue(&quot;text_user_gesad&quot;));
+			fornecedor.setNumRG(hAPI.getCardValue(&quot;text_ID&quot;));
+			if(hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;) == &quot;J&quot;){
+				fornecedor.setIndIsentoCofins(hAPI.getCardValue(&quot;text_isencaoCOFINS&quot;));
+			}
+			if(hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;) == &quot;J&quot;){
+				fornecedor.setIndIsentoPisPasep(hAPI.getCardValue(&quot;text_isencaoPIS&quot;));
+			}
+			fornecedor.setNomPessoa(hAPI.getCardValue(&quot;text_Nome&quot;));
+			fornecedor.setDscOrgaoEmiss(hAPI.getCardValue(&quot;text_ORGEmis&quot;));
+			fornecedor.setNomPai(hAPI.getCardValue(&quot;text_Pai&quot;));
+			fornecedor.setNomLogrd(hAPI.getCardValue(&quot;text_NomeLogradouro&quot;));
+			if(hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;) == &quot;F&quot;){
+				fornecedor.setIndEstadoCivil(hAPI.getCardValue(&quot;text_EstadoCivil&quot;));
+			}
+			
+			if(hAPI.getCardValue(&quot;text_DataFinalValidade&quot;) == &quot;&quot;){
+				fornecedor.setDatFimValid(null);
+			}else{
+				fornecedor.setDatFimValid(getXmlDate(hAPI.getCardValue(&quot;text_DataFinalValidade&quot;)));	
+			}
+			
+			if(hAPI.getCardValue(&quot;text_DataInicioValidade&quot;) == &quot;&quot;){
+				fornecedor.setDatInicValid(null);
+			}else{
+				fornecedor.setDatInicValid(getXmlDate(hAPI.getCardValue(&quot;text_DataInicioValidade&quot;)));
+			}
+			
+			fornecedor.setCodDvContaCorren(hAPI.getCardValue(&quot;text_dv_conta&quot;));
+			log.info(&quot;text_DataSerasa : &quot;+hAPI.getCardValue(&quot;text_DataSerasa&quot;));
+			if(hAPI.getCardValue(&quot;text_DataSerasa&quot;) == &quot;&quot;){
+				fornecedor.setDatPesquisaSerasa(null);
+			}else{
+				fornecedor.setDatPesquisaSerasa(getXmlDate(hAPI.getCardValue(&quot;text_DataSerasa&quot;)));	
+			}
+			
+			if(hAPI.getCardValue(&quot;text_data_analise&quot;) == &quot;&quot;){
+				fornecedor.setDatAnalisPessoa(null);
+			}else{
+				fornecedor.setDatAnalisPessoa(getXmlDate(hAPI.getCardValue(&quot;text_data_analise&quot;)));
+			}			
+	
+			if(hAPI.getCardValue(&quot;text_TelefoneFax&quot;) != &quot;&quot;){
+				fornecedor.setNumFaxLogrd(new java.lang.Long(hAPI.getCardValue(&quot;text_TelefoneFax&quot;)));
+			}
+	
+			if(hAPI.getCardValue(&quot;text_CEP&quot;) != &quot;&quot;){
+				fornecedor.setNumCepLogrd(new java.lang.Integer(hAPI.getCardValue(&quot;text_CEP&quot;).replace(&quot;-&quot;,&quot;&quot;)));
+			}
+	
+			if(hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;) == &quot;F&quot;){
+				fornecedor.setIndSexo(hAPI.getCardValue(&quot;text_sexo&quot;));
+				fornecedor.setCodPais(hAPI.getCardValue(&quot;cod_nacionalidade&quot;));
+			}
+	
+			fornecedor.setCodTipoPessoa(hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;) == &quot;F&quot; ? &quot;PF&quot; : &quot;PJ&quot;);			
+			fornecedor.setNumInscrEstadu(hAPI.getCardValue(&quot;id_insc_estadual&quot;));
+			fornecedor.setNomEmailAdic2(hAPI.getCardValue(&quot;text_EmailAd2&quot;));
+			fornecedor.setNomEmailAdic1(hAPI.getCardValue(&quot;text_EmailAd1&quot;));
+			fornecedor.setCodMunic(hAPI.getCardValue(&quot;text_Cod_Municipio&quot;));
+	
+			if(hAPI.getCardValue(&quot;numAgenc&quot;) != &quot;&quot;){
+				fornecedor.setCodAgencBncria(new java.lang.Integer(hAPI.getCardValue(&quot;numAgenc&quot;)));
+			}
+	
+			fornecedor.setCodUsuIncl(user);
+			fornecedor.setSigUf(hAPI.getCardValue(&quot;nm_estado&quot;));
+			fornecedor.setNomEmail(hAPI.getCardValue(&quot;text_Email&quot;));
+	
+	
+			if(hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;) == &quot;J&quot;){
+				fornecedor.setIndCoopTrabal(hAPI.getCardValue(&quot;Select_cooperativa&quot;));
+				fornecedor.setNumNire(hAPI.getCardValue(&quot;text_NIRE&quot;));
+				fornecedor.setIndIsentoCsll(hAPI.getCardValue(&quot;text_isencaoCSLL&quot;));
+				fornecedor.setNomFantas(hAPI.getCardValue(&quot;nm_nome_fantasia&quot;));
+				if(hAPI.getCardValue(&quot;text_CapSocial&quot;) == &quot;&quot;){
+					fornecedor.setDatAtualzCapitlSocial(null);
+				}else{
+					fornecedor.setDatAtualzCapitlSocial(getXmlDate(hAPI.getCardValue(&quot;text_CapSocial&quot;)));	
+				}
+				
+			}
+	
+	
+			if(hAPI.getCardValue(&quot;text_Numero&quot;) != &quot;&quot;){
+				fornecedor.setNumLogrd(new java.lang.Integer(hAPI.getCardValue(&quot;text_Numero&quot;)));
+			}
+	
+			fornecedor.setCodIdentFiscal(hAPI.getCardValue(&quot;text_IdentificaoFiscalExterior&quot;));
+			fornecedor.setNomBairro(hAPI.getCardValue(&quot;text_Bairro&quot;));
+			fornecedor.setDscNatur(hAPI.getCardValue(&quot;text_Naturalidade&quot;));
+	
+			if(hAPI.getCardValue(&quot;text_TelefoneAd2&quot;) != &quot;&quot;){
+				fornecedor.setNumTelAdic2(new java.lang.Long(hAPI.getCardValue(&quot;text_TelefoneAd2&quot;)));
+			}
+	
+			if(hAPI.getCardValue(&quot;text_TelefoneAd3&quot;) != &quot;&quot;){
+				fornecedor.setNumTelAdic3(new java.lang.Long(hAPI.getCardValue(&quot;text_TelefoneAd3&quot;)));
+			}
+	
+			if(hAPI.getCardValue(&quot;text_TelefoneAd1&quot;) != &quot;&quot;){
+				fornecedor.setNumTelAdic1(new java.lang.Long(hAPI.getCardValue(&quot;text_TelefoneAd1&quot;)));
+			}
+	
+			if(hAPI.getCardValue(&quot;cod_Banco&quot;) != &quot;&quot;){
+				fornecedor.setCodBanco(new java.lang.Integer(hAPI.getCardValue(&quot;cod_Banco&quot;)));
+			}
+	
+			if(hAPI.getCardValue(&quot;text_Telefone&quot;) != &quot;&quot;){
+				fornecedor.setNumTelLogrd(new java.lang.Long(hAPI.getCardValue(&quot;text_Telefone&quot;).replace(&quot;(&quot;,&quot;&quot;).replace(&quot;)&quot;,&quot;&quot;).replace(&quot;-&quot;,&quot;&quot;)));
+			}
+	
+			fornecedor.setCodPaisLogrd(hAPI.getCardValue(&quot;text_codPais&quot;));
+			fornecedor.setDscObservSerasa(hAPI.getCardValue(&quot;text_ObservaoSerasa&quot;));
+			fornecedor.setNomConjug(hAPI.getCardValue(&quot;text_Conjuge&quot;));
+	
+			if(hAPI.getCardValue(&quot;text_INSS&quot;) != &quot;&quot;){
+				fornecedor.setNumInscrInss(new java.lang.Long(hAPI.getCardValue(&quot;text_INSS&quot;)));
+			}
+	
+			fornecedor.setNomHomePage(hAPI.getCardValue(&quot;text_PaginaInternet&quot;));
+	
+			if(hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;) == &quot;F&quot; &amp;&amp; hAPI.getCardValue(&quot;text_DtNascimento&quot;) != &quot;&quot;){
+				fornecedor.setDatNasc(getXmlDate(hAPI.getCardValue(&quot;text_DtNascimento&quot;)));
+			}
+	
+			fornecedor.setIndTipoLogrd(hAPI.getCardValue(&quot;text_TpLogradouro&quot;));
+			fornecedor.setNomMae(hAPI.getCardValue(&quot;text_Mae&quot;));
+			fornecedor.setNomAbrevPessoa(hAPI.getCardValue(&quot;nm_nome_abreviado&quot;));
+			fornecedor.setDscComplLogrd(hAPI.getCardValue(&quot;text_Complemento&quot;));
+	
+			if(hAPI.getCardValue(&quot;text_DtEmis&quot;) != &quot;&quot; &amp;&amp; hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;) == &quot;F&quot;){
+				fornecedor.setDatEmissRG(getXmlDate(hAPI.getCardValue(&quot;text_DtEmis&quot;)));
+			}
+	
+			if(hAPI.getCardValue(&quot;text_codigo_pessoa&quot;) != &quot;&quot; &amp;&amp; hAPI.getCardValue(&quot;text_codigo_pessoa&quot;) != &quot;0&quot;){
+				fornecedor.setCodPessoa(new java.lang.Integer(hAPI.getCardValue(&quot;text_codigo_pessoa&quot;)));
+			}	
+	
+			fornecedor.setNumCic(hAPI.getCardValue(&quot;nm_cpf_cnpj&quot;).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;-&quot;,&quot;&quot;).replace(&quot;/&quot;,&quot;&quot;).replace(&quot;.&quot;,&quot;&quot;));
+			fornecedor.setIndStatusAtuaPessoa(&quot;A&quot;); 
+			fornecedor.setIndPessoaBras(hAPI.getCardValue(&quot;text_Atuacao_brasil&quot;));
+			//fornecedor.setDscMotivoAnalis(hAPI.getCardValue(&quot;text_justificativa&quot;)); 
+			if(hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;) == &quot;J&quot;){
+				fornecedor.setDscInstrmAlterCadast(hAPI.getCardValue(&quot;text_DocConstituicao&quot;));
+				
+				if(hAPI.getCardValue(&quot;text_ValorCapSocial&quot;) != &quot;&quot;){
+					fornecedor.setValCapitlSocial(new java.lang.Double(hAPI.getCardValue(&quot;text_ValorCapSocial&quot;).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;,&quot;,&quot;.&quot;)));
+				}				
+				
+			}
+			fornecedor.setDscContaCorrenNaoExist(hAPI.getCardValue(&quot;text_JustDomicilio&quot;));
+			//fornecedor.setIndPatroc(hAPI.getCardValue(&quot;text_patrocinio&quot;)); 
+	
+	
+			log.info(&quot;#================ OBJETO FORNECEDOR ========================&quot;);
+			log.info(&quot;#getCodTipoPessoa: &quot; +fornecedor.getCodTipoPessoa());
+			log.info(&quot;#getCodCnae: &quot; +fornecedor.getCodCnae());
+			log.info(&quot;#getDscInstrmAlterCadast: &quot;+fornecedor.getDscInstrmAlterCadast());
+			log.info(&quot;#getCodUsuIncl: &quot;+fornecedor.getCodUsuIncl());
+			log.info(&quot;#getNomBairro: &quot;+fornecedor.getNomBairro());
+			log.info(&quot;#getDatEmissRG: &quot;+fornecedor.getDatEmissRG());
+			log.info(&quot;#getSigUf: &quot;+fornecedor.getSigUf());
+			log.info(&quot;#getValCapitlSocial: &quot;+fornecedor.getValCapitlSocial());
+			log.info(&quot;#getCodBanco: &quot;+fornecedor.getCodBanco());
+			log.info(&quot;#getIndIsentoCsll: &quot;+fornecedor.getIndIsentoCsll());
+			log.info(&quot;#getIndStatusAtuaPessoa: &quot;+fornecedor.getIndStatusAtuaPessoa());
+			log.info(&quot;#getClass: &quot;+fornecedor.getClass());
+			log.info(&quot;#getNumContaCorren: &quot;+fornecedor.getNumContaCorren());
+			log.info(&quot;#getNumTelLogrd: &quot;+fornecedor.getNumTelLogrd());
+			log.info(&quot;#getNumLogrd: &quot;+fornecedor.getNumLogrd());
+			log.info(&quot;#getNumCepLogrd: &quot;+fornecedor.getNumCepLogrd());
+			log.info(&quot;#getNumNire: &quot;+fornecedor.getNumNire());
+			log.info(&quot;#getIndCoopTrabal: &quot;+fornecedor.getIndCoopTrabal());
+			log.info(&quot;#getNumInscrMunic: &quot;+fornecedor.getNumInscrMunic());
+			log.info(&quot;#getIndTipoLogrd: &quot;+fornecedor.getIndTipoLogrd());
+			log.info(&quot;#getIndEstadoCivil: &quot;+fornecedor.getIndEstadoCivil());
+			log.info(&quot;#getCodAgencBncria: &quot;+fornecedor.getCodAgencBncria());
+			log.info(&quot;#getNumCic: &quot;+fornecedor.getNumCic());
+			log.info(&quot;#getNomAbrevPessoa: &quot;+fornecedor.getNomAbrevPessoa());
+			log.info(&quot;#getSocios: &quot;+fornecedor.getSocios());
+			log.info(&quot;#getNumTelAdic2: &quot;+fornecedor.getNumTelAdic2());
+			log.info(&quot;#getNumTelAdic3: &quot;+fornecedor.getNumTelAdic3());
+			log.info(&quot;#getNumTelAdic1: &quot;+fornecedor.getNumTelAdic1());
+			log.info(&quot;#getCodPaisLogrd: &quot;+fornecedor.getCodPaisLogrd());
+			log.info(&quot;#getIndPatroc: &quot;+fornecedor.getIndPatroc());
+			log.info(&quot;#getDatPesquisaSerasa: &quot;+fornecedor.getDatPesquisaSerasa());
+			log.info(&quot;#getDscObservSerasa: &quot;+fornecedor.getDscObservSerasa());
+			log.info(&quot;#getIndTipoDocIdent: &quot;+fornecedor.getIndTipoDocIdent());
+			log.info(&quot;#getNumInscrEstadu: &quot;+fornecedor.getNumInscrEstadu());
+			log.info(&quot;#getDscNatur: &quot;+fornecedor.getDscNatur());
+			log.info(&quot;#getCodMunic: &quot;+fornecedor.getCodMunic());
+			log.info(&quot;#getIndPessoaBras: &quot;+fornecedor.getIndPessoaBras());
+			log.info(&quot;#getNomLogrd: &quot;+fornecedor.getNomLogrd());
+			log.info(&quot;#getDatNasc: &quot;+fornecedor.getDatNasc());
+			log.info(&quot;#getDatInicValid: &quot;+fornecedor.getDatInicValid());
+			log.info(&quot;#getDatAnalisPessoa: &quot;+fornecedor.getDatAnalisPessoa());
+			log.info(&quot;#getCodPessoa: &quot;+fornecedor.getCodPessoa());
+			log.info(&quot;#getCodIdentFiscal: &quot;+fornecedor.getCodIdentFiscal());
+			log.info(&quot;#getCodPais: &quot;+fornecedor.getCodPais());
+			log.info(&quot;#getDscOrgaoEmiss: &quot;+fornecedor.getDscOrgaoEmiss());
+			log.info(&quot;#getNomUsuAnalisPessoa: &quot;+fornecedor.getNomUsuAnalisPessoa());
+			log.info(&quot;#getNomPessoa: &quot;+fornecedor.getNomPessoa());
+			log.info(&quot;#getIndIsentoPisPasep: &quot;+fornecedor.getIndIsentoPisPasep());
+			log.info(&quot;#getNomMae: &quot;+fornecedor.getNomMae());
+			log.info(&quot;#getNumInscrInss: &quot;+fornecedor.getNumInscrInss());
+			log.info(&quot;#getIndSexo: &quot;+fornecedor.getIndSexo());
+			log.info(&quot;#getNomPai: &quot;+fornecedor.getNomPai());
+			log.info(&quot;#getDatAtualzCapitlSocial: &quot;+fornecedor.getDatAtualzCapitlSocial());
+			log.info(&quot;#getDatFimValid: &quot;+fornecedor.getDatFimValid());
+			log.info(&quot;#getCodDvContaCorren: &quot;+fornecedor.getCodDvContaCorren());
+			log.info(&quot;#getNomConjug: &quot;+fornecedor.getNomConjug());
+			log.info(&quot;#getNomEmailAdic1: &quot;+fornecedor.getNomEmailAdic1());
+			log.info(&quot;#getDscMotivoAnalis: &quot;+fornecedor.getDscMotivoAnalis());
+			log.info(&quot;#getNomEmailAdic2: &quot;+fornecedor.getNomEmailAdic2());
+			log.info(&quot;#getNomHomePage: &quot;+fornecedor.getNomHomePage());
+			log.info(&quot;#getNumRG: &quot;+fornecedor.getNumRG());
+			log.info(&quot;#getNomFantas: &quot;+fornecedor.getNomFantas());
+			log.info(&quot;#getDscContaCorrenNaoExist: &quot;+fornecedor.getDscContaCorrenNaoExist());
+			log.info(&quot;#getDscComplLogrd: &quot;+fornecedor.getDscComplLogrd());
+			log.info(&quot;#getNumFaxLogrd: &quot;+fornecedor.getNumFaxLogrd());
+			log.info(&quot;#getNomEmail: &quot;+fornecedor.getNomEmail());
+			log.info(&quot;#getIndIsentoCofins: &quot;+fornecedor.getIndIsentoCofins());
+	
+	
+	
+	
+			log.info(&quot;#call method service.manterFornecedor&quot;);
+	
+			//var result = service.manterFornecedor(fornecedor);
+			var result = customClient.manterFornecedor(fornecedor);
+	
+			log.info(&quot;#=========================INTEGRACAO DE FORNECEDOR PESSOA RESULTS==========================&quot;);
+			log.info(&quot;#STATUS: &quot; +result.getCodigoRetorno() + &quot; RESULT: &quot;+result.getDescricaoRetorno());
+	
+	
+			if(result.getCodigoRetorno() == 1){
+				throw(result.getDescricaoRetorno());
+			}else{
+				hAPI.setCardValue(&quot;codPessoa&quot;, result.getCodPessoa());
+				hAPI.setCardValue(&quot;text_codigo_pessoa&quot;, result.getCodPessoa());
+				log.info(&quot;#Código do pessoa: &quot; + hAPI.getCardValue(&quot;text_codigo_pessoa&quot;));
+			}
+/*		}else{
+			log.info(&quot;#Pessoa já integrado. Código: &quot; + hAPI.getCardValue(&quot;codPessoa&quot;));
+		}*/
+	} catch(error) { 
+		log.error(error);
+		throw error;
+	}
+}
+
+function getLogin(IdUser){
+	var c1 = DatasetFactory.createConstraint(&quot;colleaguePK.colleagueId&quot;, IdUser, IdUser, ConstraintType.MUST);
+	var user = DatasetFactory.getDataset(&quot;colleague&quot;, null, new Array(c1), null);
+	return user.getValue(0, &quot;login&quot;);
+}
+
+/**
+ * Método para listar os filhos de um pai x filho
+ * @param form: Referência da ficha
+ * @param fields: Array dos campos que pertencem ao pai x filho
+ * @returns {Array[][]} Array de String com as chaves e valores
+ */
+function getFilhosForm(form, fields){
+	var cardData = new java.util.HashMap(); 
+	
+	//cardData = form.getCardData();
+	
+	cardData = form;
+	
+	var it = cardData.keySet().iterator();
+	var listaFilho = new Array();
+
+	while (it.hasNext()) {
+		var key = it.next();
+ 		var campo = key.split(&quot;___&quot;);
+ 		
+ 		for (var i = 0; i &lt; fields.length; i++){
+ 			
+ 			//log.info(&quot;#fields[i]: &quot; + fields[i]+ &quot; campo[0]: &quot; + campo[0] + &quot; key.indexOf(&apos;___&apos;): &quot; + key.indexOf(&apos;___&apos;));
+ 			
+ 			if (key.indexOf(&apos;___&apos;) &gt;= 0 &amp;&amp; fields[i] == campo[0]) {
+ 				listaFilho.push([key, cardData.get(key)]);
+	 			log.info(&quot;#GETFILHOS -------- Key = &quot; + key + &quot; - &quot; + cardData.get(key));
+	 		}
+ 		}
+	}
+	
+	return listaFilho;
+}
+
+
+function getXmlDate(stringDate){
+	var xmlGregorian = &quot;&quot;;
+	var date = new java.util.Date();
+	
+	if(stringDate != &quot;&quot;){
+		stringDate = stringDate.split(&quot;/&quot;);
+		date.setDate(stringDate[0]);
+		date.setMonth(Number(stringDate[1])-1);
+		date.setYear(Number(stringDate[2])-1900);
+	}	
+	
+	var calendar = new java.util.GregorianCalendar();
+	calendar.setTime(date); 
+	xmlGregorian = javax.xml.datatype.DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+
+	
+	return xmlGregorian;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>manterFornecedorPessoa</eventId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function manterFornecedorPessoa(){
+	var integrado = false;
+	log.info(&quot;#=============================== INICIO INTEGRACAO PESSOA ================================&quot;);
+	try {
+		var user = getValue(&quot;WKUser&quot;);
+		var cardData = hAPI.getCardData(getValue(&quot;WKNumProces&quot;));
+		var serviceFluig = ServiceManager.getService(&apos;PESSOA-FORNECEDOR&apos;);
+		var serviceHelper = serviceFluig.getBean();
+		var serviceLocator = serviceHelper.instantiate(&apos;br.com.previ.coi.ws.pessoa.ManterFornecedor&apos;);
+		var service = serviceLocator.getFornecedorWSPort();
+		var fornecedor = serviceHelper.instantiate(&apos;br.com.previ.coi.ws.pessoa.InFornecedorWS&apos;);
+		var socios = serviceHelper.instantiate(&apos;br.com.previ.coi.ws.pessoa.InFornecedorWS$Socios&apos;);
+		var data = new Date();
+		var formatoData = new java.text.SimpleDateFormat(&quot;dd/MM/yyyy&quot;);
+		
+		var properties = {};
+		properties[&quot;disable.chunking&quot;] = &quot;true&quot;;
+		properties[&quot;log.soap.messages&quot;] = &quot;true&quot;;	
+		
+		var customClient = serviceFluig.getCustomClient(service, &quot;br.com.previ.coi.ws.pessoa.FornecedorWS&quot;, properties);
+		
+		var detail = getFilhosForm(cardData, new Array(&quot;TEXT_TIPO_SOCIO&quot;));
+		
+		log.info(&quot;#Quantidade de socios: &quot; + detail.length);
+		
+		for(var i = 0; i &lt; detail.length; i++){
+			var index = detail[i][0].split(&quot;___&quot;)[1];
+			log.info(&quot;#indice pai-filho: &quot; + index);					
+		
+			//var socio = serviceHelper.instantiate(&apos;br.com.previ.coi.ws.pessoa.InBaseFornecedorSocioWS&apos;);
+			var socio = serviceHelper.instantiate(&apos;br.com.previ.coi.ws.pessoa.InSocioFornecedorWS&apos;);
+			
+			
+/*			if(hAPI.getCardValue(&quot;text_Pessoa_socio___&quot;+index) != &quot;&quot;){
+				socio.setCodPessoa(new java.lang.Integer(hAPI.getCardValue(&quot;text_Pessoa_socio___&quot;+index)));
+			}*/
+			socio.setCodUsuIncl(getLogin(user));
+			if(hAPI.getCardValue(&quot;text_Estado_socio___&quot;+index) != &quot;EX&quot;){
+				socio.setSigUf(hAPI.getCardValue(&quot;text_Estado_socio___&quot;+index));
+			}else{
+				socio.setSigUf(&quot;&quot;);
+			}
+			
+			socio.setNomEmail(hAPI.getCardValue(&quot;text_Email_socio___&quot;+index));
+			
+			if(hAPI.getCardValue(&quot;text_Numero_socio___&quot;+index) != &quot;&quot;){
+				socio.setNumLogrd(new java.lang.Integer(hAPI.getCardValue(&quot;text_Numero_socio___&quot;+index)));
+			}
+		
+			socio.setNomPessoa(hAPI.getCardValue(&quot;text_NomeSocio___&quot;+index));
+			socio.setNomBairro(hAPI.getCardValue(&quot;text_Bairro_socio___&quot;+index));
+			socio.setNomLogrd(hAPI.getCardValue(&quot;text_NomeLogradouro_socio___&quot;+index));
+			socio.setNomHomePage(hAPI.getCardValue(&quot;text_PaginaInternet_socio___&quot;+index));
+			socio.setIndSexo(hAPI.getCardValue(&quot;text_sexo_socio___&quot;+index));
+			socio.setIndTipoLogrd(hAPI.getCardValue(&quot;text_TipoLogradouro_socio___&quot;+index));
+			socio.setCodTipoPessoa(hAPI.getCardValue(&quot;text_tipo_socio___&quot;+index)  == &quot;F&quot; ? &quot;PF&quot; : &quot;PJ&quot;);
+			socio.setCodPais(hAPI.getCardValue(&quot;text_Pais_socio_code___&quot;+index));
+			socio.setNomEmailAdic2(hAPI.getCardValue(&quot;text_EmailAd2_socio___&quot;+index));
+			socio.setNomEmailAdic1(hAPI.getCardValue(&quot;text_EmailAd1_socio___&quot;+index));
+			socio.setCodMunic(hAPI.getCardValue(&quot;text_Cod_MunicipioSocio___&quot;+index));
+			socio.setNomAbrevPessoa(hAPI.getCardValue(&quot;text_Abreviado_socio___&quot;+index));
+			socio.setDscComplLogrd(hAPI.getCardValue(&quot;text_Complemento_socio___&quot;+index));
+			
+			if(hAPI.getCardValue(&quot;text_TelefoneAd2_socio___&quot;+index) != &quot;&quot;){
+				socio.setNumTelAdic2(new java.lang.Long(hAPI.getCardValue(&quot;text_TelefoneAd2_socio___&quot;+index)));
+			}
+
+			if(hAPI.getCardValue(&quot;text_TelefoneAd3_socio___&quot;+index) != &quot;&quot;){
+				socio.setNumTelAdic3(new java.lang.Long(hAPI.getCardValue(&quot;text_TelefoneAd3_socio___&quot;+index)));
+			}
+
+			if(hAPI.getCardValue(&quot;text_TelefoneAd1_socio___&quot;+index) != &quot;&quot;){
+				socio.setNumTelAdic1(new java.lang.Long(hAPI.getCardValue(&quot;text_TelefoneAd1_socio___&quot;+index)));
+			}
+			
+			if(hAPI.getCardValue(&quot;text_Telefone_socio___&quot;+index) != &quot;&quot;){
+				socio.setNumTelLogrd(new java.lang.Long(hAPI.getCardValue(&quot;text_Telefone_socio___&quot;+index)));
+			}
+			
+			if(hAPI.getCardValue(&quot;text_TelefoneFax_socio___&quot;+index) != &quot;&quot;){
+				socio.setNumFaxLogrd(new java.lang.Long(hAPI.getCardValue(&quot;text_TelefoneFax_socio___&quot;+index)));
+			}
+
+			if(hAPI.getCardValue(&quot;text_CEP_socio___&quot;+index) != &quot;&quot;){
+				socio.setNumCepLogrd(new java.lang.Integer(hAPI.getCardValue(&quot;text_CEP_socio___&quot;+index).replace(&quot;-&quot;,&quot;&quot;)));
+			}
+			
+			socio.setNomUsuAnalisPessoa(hAPI.getCardValue(&quot;text_user_gesad&quot;));
+			
+			if(hAPI.getCardValue(&quot;text_data_analise&quot;) == &quot;&quot;){
+				socio.setDatAnalisPessoa(null);	
+			}else{
+				socio.setDatAnalisPessoa(getXmlDate(hAPI.getCardValue(&quot;text_data_analise&quot;)));
+			}
+			
+			socio.setIndStatusAtuaPessoa(&quot;A&quot;);
+			//socio.setIndPatroc(hAPI.getCardValue(&quot;text_patrocinio_socio___&quot;+index));
+			socio.setIndPessoaBras(hAPI.getCardValue(&quot;text_Atuacao_brasil_soc___&quot;+index));
+			socio.setDscMotivoAnalis(hAPI.getCardValue(&quot;text_just_analise_soc___&quot;+index));
+			
+			if(hAPI.getCardValue(&quot;text_CPFCNPJ_socio___&quot;+index) != &quot;&quot;){
+				socio.setNumCic(new java.lang.Long(hAPI.getCardValue(&quot;text_CPFCNPJ_socio___&quot;+index).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;-&quot;,&quot;&quot;).replace(&quot;/&quot;,&quot;&quot;).replace(&quot;.&quot;,&quot;&quot;)));
+			}
+			
+			
+			log.info(&quot;#===================== OBJETO SOCIO NR: &quot; + index + &quot; ================&quot;);
+			log.info(&quot;#getNumCic: &quot;+socio.getNumCic());
+			log.info(&quot;#getCodTipoPessoa: &quot;+socio.getCodTipoPessoa());
+			log.info(&quot;#getCodUsuIncl: &quot;+socio.getCodUsuIncl());
+			log.info(&quot;#getNomBairro: &quot;+socio.getNomBairro());
+			log.info(&quot;#getCodMunic: &quot;+socio.getCodMunic());
+			log.info(&quot;#getSigUf: &quot;+socio.getSigUf());
+			log.info(&quot;#getIndPessoaBras: &quot;+socio.getIndPessoaBras());
+			log.info(&quot;#getNomLogrd: &quot;+socio.getNomLogrd());
+			log.info(&quot;#getIndStatusAtuaPessoa: &quot;+socio.getIndStatusAtuaPessoa());
+			log.info(&quot;#getClass: &quot;+socio.getClass());
+			log.info(&quot;#getDatAnalisPessoa: &quot;+socio.getDatAnalisPessoa());
+			log.info(&quot;#getNumTelLogrd: &quot;+socio.getNumTelLogrd());
+			log.info(&quot;#getNumLogrd: &quot;+socio.getNumLogrd());
+			log.info(&quot;#getCodPessoa: &quot;+socio.getCodPessoa());
+			log.info(&quot;#getNumCepLogrd: &quot;+socio.getNumCepLogrd());
+			log.info(&quot;#getCodPais: &quot;+socio.getCodPais());
+			log.info(&quot;#getNomUsuAnalisPessoa: &quot;+socio.getNomUsuAnalisPessoa());
+			log.info(&quot;#getNomPessoa: &quot;+socio.getNomPessoa());
+			log.info(&quot;#getIndSexo: &quot;+socio.getIndSexo());
+			log.info(&quot;#getIndTipoLogrd: &quot;+socio.getIndTipoLogrd());
+			log.info(&quot;#getNomAbrevPessoa: &quot;+socio.getNomAbrevPessoa());
+			log.info(&quot;#getDscMotivoAnalis: &quot;+socio.getDscMotivoAnalis());
+			log.info(&quot;#getNomEmailAdic1: &quot;+socio.getNomEmailAdic1());
+			log.info(&quot;#getNomEmailAdic2: &quot;+socio.getNomEmailAdic2());
+			log.info(&quot;#getNomHomePage: &quot;+socio.getNomHomePage());
+			log.info(&quot;#getNumTelAdic2: &quot;+socio.getNumTelAdic2());
+			log.info(&quot;#getNumTelAdic3: &quot;+socio.getNumTelAdic3());
+			log.info(&quot;#getNumTelAdic1: &quot;+socio.getNumTelAdic1());
+			log.info(&quot;#getIndPatroc: &quot;+socio.getIndPatroc());
+			log.info(&quot;#getDscComplLogrd: &quot;+socio.getDscComplLogrd());
+			log.info(&quot;#getNumFaxLogrd: &quot;+socio.getNumFaxLogrd());
+			log.info(&quot;#getNomEmail: &quot;+socio.getNomEmail());
+		
+			//Adiciona o sócio na lista
+			socios.getSocio().add(socio);
+		}
+		
+		log.info(&quot;#Adiciona a lista de sócios ao objeto fornecedor&quot;);
+		//Adiciona a lista de sócios ao objeto fornecedor
+		fornecedor.setSocios(socios);
+		
+
+		if(hAPI.getCardValue(&quot;cod_ativEconomica&quot;) != &quot;&quot; &amp;&amp; hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;) == &quot;J&quot;){
+			fornecedor.setCodCnae(new java.lang.Integer(hAPI.getCardValue(&quot;cod_ativEconomica&quot;)));
+		}
+		
+		if(hAPI.getCardValue(&quot;text_Conta&quot;) != &quot;&quot;){
+			fornecedor.setNumContaCorren(new java.lang.Long(hAPI.getCardValue(&quot;text_Conta&quot;)));
+		}
+		
+		fornecedor.setNumInscrMunic(hAPI.getCardValue(&quot;id_ins_municipal&quot;));
+		
+		if(hAPI.getCardValue(&quot;text_tipoDoc&quot;) != &quot;&quot; &amp;&amp; hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;) == &quot;F&quot;){
+			fornecedor.setIndTipoDocIdent(new java.lang.Integer(hAPI.getCardValue(&quot;text_tipoDoc&quot;)));
+		}
+		
+		fornecedor.setNomUsuAnalisPessoa(hAPI.getCardValue(&quot;text_user_gesad&quot;));
+		fornecedor.setNumRG(hAPI.getCardValue(&quot;text_ID&quot;));
+		if(hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;) == &quot;J&quot;){
+			fornecedor.setIndIsentoCofins(hAPI.getCardValue(&quot;text_isencaoCOFINS&quot;) == &quot;1&quot; ? &quot;S&quot; : &quot;N&quot;);
+		}
+		if(hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;) == &quot;J&quot;){
+			fornecedor.setIndIsentoPisPasep(hAPI.getCardValue(&quot;text_isencaoPIS&quot;) == &quot;1&quot; ? &quot;S&quot; : &quot;N&quot;);
+		}
+		fornecedor.setNomPessoa(hAPI.getCardValue(&quot;text_Nome&quot;));
+		fornecedor.setDscOrgaoEmiss(hAPI.getCardValue(&quot;text_ORGEmis&quot;));
+		fornecedor.setNomPai(hAPI.getCardValue(&quot;text_Pai&quot;));
+		fornecedor.setNomLogrd(hAPI.getCardValue(&quot;text_NomeLogradouro&quot;));
+		if(hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;) == &quot;F&quot;){
+			fornecedor.setIndEstadoCivil(hAPI.getCardValue(&quot;text_EstadoCivil&quot;));
+		}
+		
+		if(hAPI.getCardValue(&quot;text_DataFinalValidade&quot;) == &quot;&quot;){
+			fornecedor.setDatFimValid(null);
+		}else{
+			fornecedor.setDatFimValid(getXmlDate(hAPI.getCardValue(&quot;text_DataFinalValidade&quot;)));	
+		}
+		
+		if(hAPI.getCardValue(&quot;text_DataInicioValidade&quot;) == &quot;&quot;){
+			fornecedor.setDatInicValid(null);
+		}else{
+			fornecedor.setDatInicValid(getXmlDate(hAPI.getCardValue(&quot;text_DataInicioValidade&quot;)));
+		}		
+		
+		fornecedor.setCodDvContaCorren(hAPI.getCardValue(&quot;text_dv_conta&quot;));
+		log.info(&quot;text_DataSerasa : &quot;+hAPI.getCardValue(&quot;text_DataSerasa&quot;));
+		
+		if(hAPI.getCardValue(&quot;text_DataSerasa&quot;) == &quot;&quot;){
+			fornecedor.setDatPesquisaSerasa(&quot;&quot;);
+		}else{
+			fornecedor.setDatPesquisaSerasa(getXmlDate(hAPI.getCardValue(&quot;text_DataSerasa&quot;)));	
+		}
+		
+		if(hAPI.getCardValue(&quot;text_data_analise&quot;) == &quot;&quot;){
+			fornecedor.setDatAnalisPessoa(null);
+		}else{
+			fornecedor.setDatAnalisPessoa(getXmlDate(hAPI.getCardValue(&quot;text_data_analise&quot;)));
+		}			
+		
+		if(hAPI.getCardValue(&quot;text_TelefoneFax&quot;) != &quot;&quot;){
+			fornecedor.setNumFaxLogrd(new java.lang.Long(hAPI.getCardValue(&quot;text_TelefoneFax&quot;)));
+		}
+
+		if(hAPI.getCardValue(&quot;text_CEP&quot;) != &quot;&quot;){
+			fornecedor.setNumCepLogrd(new java.lang.Integer(hAPI.getCardValue(&quot;text_CEP&quot;).replace(&quot;-&quot;,&quot;&quot;)));
+		}
+	
+		if(hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;) == &quot;F&quot;){
+			fornecedor.setIndSexo(hAPI.getCardValue(&quot;text_sexo&quot;));
+			fornecedor.setCodPais(hAPI.getCardValue(&quot;cod_nacionalidade&quot;));
+		}
+		
+		fornecedor.setCodTipoPessoa(hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;) == &quot;F&quot; ? &quot;PF&quot; : &quot;PJ&quot;);			
+		
+		fornecedor.setNumInscrEstadu(hAPI.getCardValue(&quot;id_insc_estadual&quot;));
+		fornecedor.setNomEmailAdic2(hAPI.getCardValue(&quot;text_EmailAd2&quot;));
+		fornecedor.setNomEmailAdic1(hAPI.getCardValue(&quot;text_EmailAd1&quot;));
+		fornecedor.setCodMunic(hAPI.getCardValue(&quot;text_Cod_Municipio&quot;));
+		
+		if(hAPI.getCardValue(&quot;numAgenc&quot;) != &quot;&quot;){
+			fornecedor.setCodAgencBncria(new java.lang.Integer(hAPI.getCardValue(&quot;numAgenc&quot;)));
+		}
+
+		fornecedor.setCodUsuIncl(user);
+		fornecedor.setSigUf(hAPI.getCardValue(&quot;nm_estado&quot;));
+		fornecedor.setNomEmail(hAPI.getCardValue(&quot;text_Email&quot;));
+		
+		
+		if(hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;) == &quot;J&quot;){
+			fornecedor.setIndCoopTrabal(hAPI.getCardValue(&quot;Select_cooperativa&quot;));
+			fornecedor.setNumNire(hAPI.getCardValue(&quot;text_NIRE&quot;));
+			fornecedor.setIndIsentoCsll(hAPI.getCardValue(&quot;text_isencaoCSLL&quot;) == &quot;1&quot; ? &quot;S&quot; : &quot;N&quot;);
+			fornecedor.setNomFantas(hAPI.getCardValue(&quot;nm_nome_fantasia&quot;));
+			
+			if(hAPI.getCardValue(&quot;text_CapSocial&quot;) == &quot;&quot;){
+				fornecedor.setDatAtualzCapitlSocial(null);
+			}else{
+				fornecedor.setDatAtualzCapitlSocial(getXmlDate(hAPI.getCardValue(&quot;text_CapSocial&quot;)));	
+			}
+			
+		}
+	
+		
+		if(hAPI.getCardValue(&quot;text_Numero&quot;) != &quot;&quot;){
+			fornecedor.setNumLogrd(new java.lang.Integer(hAPI.getCardValue(&quot;text_Numero&quot;)));
+		}
+
+		fornecedor.setCodIdentFiscal(hAPI.getCardValue(&quot;text_IdentificaoFiscalExterior&quot;));
+		fornecedor.setNomBairro(hAPI.getCardValue(&quot;text_Bairro&quot;));
+		fornecedor.setDscNatur(hAPI.getCardValue(&quot;text_Naturalidade&quot;));
+		
+		if(hAPI.getCardValue(&quot;text_TelefoneAd2&quot;) != &quot;&quot;){
+			fornecedor.setNumTelAdic2(new java.lang.Long(hAPI.getCardValue(&quot;text_TelefoneAd2&quot;)));
+		}
+		
+		if(hAPI.getCardValue(&quot;text_TelefoneAd3&quot;) != &quot;&quot;){
+			fornecedor.setNumTelAdic3(new java.lang.Long(hAPI.getCardValue(&quot;text_TelefoneAd3&quot;)));
+		}
+	
+		if(hAPI.getCardValue(&quot;text_TelefoneAd1&quot;) != &quot;&quot;){
+			fornecedor.setNumTelAdic1(new java.lang.Long(hAPI.getCardValue(&quot;text_TelefoneAd1&quot;)));
+		}
+		
+		if(hAPI.getCardValue(&quot;cod_Banco&quot;) != &quot;&quot;){
+			fornecedor.setCodBanco(new java.lang.Integer(hAPI.getCardValue(&quot;cod_Banco&quot;)));
+		}
+
+		if(hAPI.getCardValue(&quot;text_Telefone&quot;) != &quot;&quot;){
+			fornecedor.setNumTelLogrd(new java.lang.Long(hAPI.getCardValue(&quot;text_Telefone&quot;).replace(&quot;(&quot;,&quot;&quot;).replace(&quot;)&quot;,&quot;&quot;).replace(&quot;-&quot;,&quot;&quot;)));
+		}
+
+		fornecedor.setCodPaisLogrd(hAPI.getCardValue(&quot;text_codPais&quot;));
+		fornecedor.setDscObservSerasa(hAPI.getCardValue(&quot;text_ObservaoSerasa&quot;));
+		fornecedor.setNomConjug(hAPI.getCardValue(&quot;text_Conjuge&quot;));
+		
+		if(hAPI.getCardValue(&quot;text_INSS&quot;) != &quot;&quot;){
+			fornecedor.setNumInscrInss(new java.lang.Long(hAPI.getCardValue(&quot;text_INSS&quot;)));
+		}
+	
+		fornecedor.setNomHomePage(hAPI.getCardValue(&quot;text_PaginaInternet&quot;));
+		
+		if(hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;) == &quot;F&quot; &amp;&amp; hAPI.getCardValue(&quot;text_DtNascimento&quot;) != &quot;&quot;){
+			fornecedor.setDatNasc(getXmlDate(hAPI.getCardValue(&quot;text_DtNascimento&quot;)));
+		}
+	
+		fornecedor.setIndTipoLogrd(hAPI.getCardValue(&quot;text_TpLogradouro&quot;));
+		fornecedor.setNomMae(hAPI.getCardValue(&quot;text_Mae&quot;));
+		fornecedor.setNomAbrevPessoa(hAPI.getCardValue(&quot;nm_nome_abreviado&quot;));
+		fornecedor.setDscComplLogrd(hAPI.getCardValue(&quot;text_Complemento&quot;));
+		
+		if(hAPI.getCardValue(&quot;text_DtEmis&quot;) != &quot;&quot; &amp;&amp; hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;) == &quot;F&quot;){
+			fornecedor.setDatEmissRG(getXmlDate(hAPI.getCardValue(&quot;text_DtEmis&quot;)));
+		}
+		
+		if(hAPI.getCardValue(&quot;codPessoa&quot;) != &quot;&quot;){
+			fornecedor.setCodPessoa(new java.lang.Integer(hAPI.getCardValue(&quot;codPessoa&quot;)));
+		}
+		
+		fornecedor.setNumCic(hAPI.getCardValue(&quot;nm_cpf_cnpj&quot;).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;-&quot;,&quot;&quot;).replace(&quot;/&quot;,&quot;&quot;).replace(&quot;.&quot;,&quot;&quot;));
+		fornecedor.setIndStatusAtuaPessoa(&quot;A&quot;); 
+		fornecedor.setIndPessoaBras(hAPI.getCardValue(&quot;text_Atuacao_brasil&quot;));
+		//fornecedor.setDscMotivoAnalis(hAPI.getCardValue(&quot;text_justificativa&quot;)); 
+		if(hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;) == &quot;J&quot;){
+			fornecedor.setDscInstrmAlterCadast(hAPI.getCardValue(&quot;text_DocConstituicao&quot;));
+			
+			if(hAPI.getCardValue(&quot;text_ValorCapSocial&quot;) != &quot;&quot;){
+				fornecedor.setValCapitlSocial(new java.lang.Double(hAPI.getCardValue(&quot;text_ValorCapSocial&quot;).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;,&quot;,&quot;.&quot;)));
+			}			
+			
+		}
+		fornecedor.setDscContaCorrenNaoExist(hAPI.getCardValue(&quot;text_JustDomicilio&quot;));
+		//fornecedor.setIndPatroc(hAPI.getCardValue(&quot;text_patrocinio&quot;)); 
+		
+		
+		log.info(&quot;#================ OBJETO FORNECEDOR ========================&quot;);
+		log.info(&quot;#getCodTipoPessoa: &quot; +fornecedor.getCodTipoPessoa());
+		log.info(&quot;#getCodCnae: &quot; +fornecedor.getCodCnae());
+		log.info(&quot;#getDscInstrmAlterCadast: &quot;+fornecedor.getDscInstrmAlterCadast());
+		log.info(&quot;#getCodUsuIncl: &quot;+fornecedor.getCodUsuIncl());
+		log.info(&quot;#getNomBairro: &quot;+fornecedor.getNomBairro());
+		log.info(&quot;#getDatEmissRG: &quot;+fornecedor.getDatEmissRG());
+		log.info(&quot;#getSigUf: &quot;+fornecedor.getSigUf());
+		log.info(&quot;#getValCapitlSocial: &quot;+fornecedor.getValCapitlSocial());
+		log.info(&quot;#getCodBanco: &quot;+fornecedor.getCodBanco());
+		log.info(&quot;#getIndIsentoCsll: &quot;+fornecedor.getIndIsentoCsll());
+		log.info(&quot;#getIndStatusAtuaPessoa: &quot;+fornecedor.getIndStatusAtuaPessoa());
+		log.info(&quot;#getClass: &quot;+fornecedor.getClass());
+		log.info(&quot;#getNumContaCorren: &quot;+fornecedor.getNumContaCorren());
+		log.info(&quot;#getNumTelLogrd: &quot;+fornecedor.getNumTelLogrd());
+		log.info(&quot;#getNumLogrd: &quot;+fornecedor.getNumLogrd());
+		log.info(&quot;#getNumCepLogrd: &quot;+fornecedor.getNumCepLogrd());
+		log.info(&quot;#getNumNire: &quot;+fornecedor.getNumNire());
+		log.info(&quot;#getIndCoopTrabal: &quot;+fornecedor.getIndCoopTrabal());
+		log.info(&quot;#getNumInscrMunic: &quot;+fornecedor.getNumInscrMunic());
+		log.info(&quot;#getIndTipoLogrd: &quot;+fornecedor.getIndTipoLogrd());
+		log.info(&quot;#getIndEstadoCivil: &quot;+fornecedor.getIndEstadoCivil());
+		log.info(&quot;#getCodAgencBncria: &quot;+fornecedor.getCodAgencBncria());
+		log.info(&quot;#getNumCic: &quot;+fornecedor.getNumCic());
+		log.info(&quot;#getNomAbrevPessoa: &quot;+fornecedor.getNomAbrevPessoa());
+		log.info(&quot;#getSocios: &quot;+fornecedor.getSocios());
+		log.info(&quot;#getNumTelAdic2: &quot;+fornecedor.getNumTelAdic2());
+		log.info(&quot;#getNumTelAdic3: &quot;+fornecedor.getNumTelAdic3());
+		log.info(&quot;#getNumTelAdic1: &quot;+fornecedor.getNumTelAdic1());
+		log.info(&quot;#getCodPaisLogrd: &quot;+fornecedor.getCodPaisLogrd());
+		log.info(&quot;#getIndPatroc: &quot;+fornecedor.getIndPatroc());
+		log.info(&quot;#getDatPesquisaSerasa: &quot;+fornecedor.getDatPesquisaSerasa());
+		log.info(&quot;#getDscObservSerasa: &quot;+fornecedor.getDscObservSerasa());
+		log.info(&quot;#getIndTipoDocIdent: &quot;+fornecedor.getIndTipoDocIdent());
+		log.info(&quot;#getNumInscrEstadu: &quot;+fornecedor.getNumInscrEstadu());
+		log.info(&quot;#getDscNatur: &quot;+fornecedor.getDscNatur());
+		log.info(&quot;#getCodMunic: &quot;+fornecedor.getCodMunic());
+		log.info(&quot;#getIndPessoaBras: &quot;+fornecedor.getIndPessoaBras());
+		log.info(&quot;#getNomLogrd: &quot;+fornecedor.getNomLogrd());
+		log.info(&quot;#getDatNasc: &quot;+fornecedor.getDatNasc());
+		log.info(&quot;#getDatInicValid: &quot;+fornecedor.getDatInicValid());
+		log.info(&quot;#getDatAnalisPessoa: &quot;+fornecedor.getDatAnalisPessoa());
+		log.info(&quot;#getCodPessoa: &quot;+fornecedor.getCodPessoa());
+		log.info(&quot;#getCodIdentFiscal: &quot;+fornecedor.getCodIdentFiscal());
+		log.info(&quot;#getCodPais: &quot;+fornecedor.getCodPais());
+		log.info(&quot;#getDscOrgaoEmiss: &quot;+fornecedor.getDscOrgaoEmiss());
+		log.info(&quot;#getNomUsuAnalisPessoa: &quot;+fornecedor.getNomUsuAnalisPessoa());
+		log.info(&quot;#getNomPessoa: &quot;+fornecedor.getNomPessoa());
+		log.info(&quot;#getIndIsentoPisPasep: &quot;+fornecedor.getIndIsentoPisPasep());
+		log.info(&quot;#getNomMae: &quot;+fornecedor.getNomMae());
+		log.info(&quot;#getNumInscrInss: &quot;+fornecedor.getNumInscrInss());
+		log.info(&quot;#getIndSexo: &quot;+fornecedor.getIndSexo());
+		log.info(&quot;#getNomPai: &quot;+fornecedor.getNomPai());
+		log.info(&quot;#getDatAtualzCapitlSocial: &quot;+fornecedor.getDatAtualzCapitlSocial());
+		log.info(&quot;#getDatFimValid: &quot;+fornecedor.getDatFimValid());
+		log.info(&quot;#getCodDvContaCorren: &quot;+fornecedor.getCodDvContaCorren());
+		log.info(&quot;#getNomConjug: &quot;+fornecedor.getNomConjug());
+		log.info(&quot;#getNomEmailAdic1: &quot;+fornecedor.getNomEmailAdic1());
+		log.info(&quot;#getDscMotivoAnalis: &quot;+fornecedor.getDscMotivoAnalis());
+		log.info(&quot;#getNomEmailAdic2: &quot;+fornecedor.getNomEmailAdic2());
+		log.info(&quot;#getNomHomePage: &quot;+fornecedor.getNomHomePage());
+		log.info(&quot;#getNumRG: &quot;+fornecedor.getNumRG());
+		log.info(&quot;#getNomFantas: &quot;+fornecedor.getNomFantas());
+		log.info(&quot;#getDscContaCorrenNaoExist: &quot;+fornecedor.getDscContaCorrenNaoExist());
+		log.info(&quot;#getDscComplLogrd: &quot;+fornecedor.getDscComplLogrd());
+		log.info(&quot;#getNumFaxLogrd: &quot;+fornecedor.getNumFaxLogrd());
+		log.info(&quot;#getNomEmail: &quot;+fornecedor.getNomEmail());
+		log.info(&quot;#getIndIsentoCofins: &quot;+fornecedor.getIndIsentoCofins());
+		
+		
+		
+		
+		log.info(&quot;#call method service.manterFornecedor&quot;);
+		
+		//var result = service.manterFornecedor(fornecedor);
+		var result = customClient.manterFornecedor(fornecedor);
+		
+		log.info(&quot;#=========================INTEGRACAO DE FORNECEDOR PESSOA RESULTS==========================&quot;);
+		log.info(&quot;#STATUS: &quot; +result.getCodigoRetorno() + &quot; RESULT: &quot;+result.getDescricaoRetorno());
+		
+		
+		if(result.getCodigoRetorno() == 1){
+			throw(result.getDescricaoRetorno());
+		}else{
+			hAPI.setCardValue(&quot;codPessoa&quot;, result.getCodPessoa());
+			hAPI.setCardValue(&quot;text_codigo_pessoa&quot;, result.getCodPessoa());
+			log.info(&quot;#Código do pessoa: &quot; + hAPI.getCardValue(&quot;text_codigo_pessoa&quot;));
+			integrado = true;
+		}
+
+		return integrado;
+	}catch (e){
+		throw(&quot;ERRO AO INCLUIR FORNECEDOR (PESSOA): &quot; +e.toString());
+	}
+}
+
+function getLogin(IdUser){
+	var c1 = DatasetFactory.createConstraint(&quot;colleaguePK.colleagueId&quot;, IdUser, IdUser, ConstraintType.MUST);
+	var user = DatasetFactory.getDataset(&quot;colleague&quot;, null, new Array(c1), null);
+	return user.getValue(0, &quot;login&quot;);
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>manterFornecedorProtheus</eventId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function manterFornecedorProtheus(){
+	log.info(&quot;#=============================== INICIO INTEGRACAO PROTHEUS ================================&quot;);
+	try {
+		var user = getValue(&quot;WKUser&quot;);
+		var processId = getValue(&quot;WKNumProces&quot;);
+		var cardData = hAPI.getCardData(processId);
+		var auth = getUserProtheus();
+		var serviceHelper = serviceFluig.getBean();
+		var serviceLocator = serviceHelper.instantiate(&apos;com.totvs.PREWS005Locator&apos;);			        
+		var service = serviceLocator.getPREWS005SOAP();
+		var fornecedor = serviceHelper.instantiate(&apos;com.totvs.TFORNECEDOR&apos;);
+		var arrayProdutos = serviceHelper.instantiate(&apos;com.totvs.ARRAYOFOPRODUTOS&apos;);
+		var produtos = [];
+		var arrayContatos = serviceHelper.instantiate(&apos;com.totvs.ARRAYOFOCONTATO&apos;);
+		var contatos = [];
+		log.info(&quot;#===============================  INTEGRACAO PROTHEUS ================================&quot;);
+		
+		var properties = {};
+		properties[&quot;disable.chunking&quot;] = &quot;true&quot;;
+		properties[&quot;log.soap.messages&quot;] = &quot;true&quot;;	
+		
+		//var customClient = serviceFluig.getCustomClient(service, &quot;com.totvs.PREWS005&quot;, properties);
+		
+		/**
+		 * LISTA DE PRODUTOS
+		 */
+		var detailProduto = getFilhosForm(cardData, new Array(&quot;TEXT_CODPRODSERVICO&quot;));
+		
+		
+		for(var i = 0; i &lt; detailProduto.length; i++){
+			var index = detailProduto[i][0].split(&quot;___&quot;)[1];
+		
+			var produto = serviceHelper.instantiate(&apos;com.totvs.OPRODUTOS&apos;);
+			produto.setCDESCRICAO(hAPI.getCardValue(&quot;Text_DescSubItem___&quot;+index));
+			produto.setCCODIGO(hAPI.getCardValue(&quot;Text_CodSubItem___&quot;+index));
+			produto.setCREGCEPOM(hAPI.getCardValue(&quot;text_cepom___&quot;+index));
+	
+			produtos.push(produto)
+		}
+		log.info(&quot;#===============================  INTEGRACAO PROTHEUS 2================================&quot;);
+		arrayProdutos.setOPRODUTOS(produtos);
+		fornecedor.setAPRODUTOS(arrayProdutos);
+		
+		/**
+		 * LISTA DE SÓCIO
+		 */
+		log.info(&quot;###################### OCONTATO ################&quot;);
+		var detailSocio = getFilhosForm(cardData, new Array(&quot;TEXT_TIPO_SOCIO&quot;));
+		log.info(&quot;detailSocio : &quot;+detailSocio);
+/*		if(detailSocio.length == 0){
+			var contato = serviceHelper.instantiate(&apos;com.totvs.OCONTATO&apos;);
+			contatos.push(contato);
+		}*/			
+		
+		for(var i = 0; i &lt; detailSocio.length; i++){
+			var index = detailSocio[i][0].split(&quot;___&quot;)[1];	
+			log.info(&quot;#===================== OBJETO OCONTATO NR: &quot; + index + &quot; ================&quot;);
+			var contato = serviceHelper.instantiate(&apos;com.totvs.OCONTATO&apos;);
+			contato.setCTIPOSOC(hAPI.getCardValue(&quot;text_tipo_socio___&quot;+index));
+			contato.setCENDERSOC(hAPI.getCardValue(&quot;text_NomeLogradouro_socio___&quot;+index));
+			contato.setCTELADIC2SOC(hAPI.getCardValue(&quot;text_TelefoneAd2_socio___&quot;+index));
+			contato.setCNOMEABREVSOC(hAPI.getCardValue(&quot;text_Abreviado_socio___&quot;+index));
+			contato.setCMUNICIPIOSOC(hAPI.getCardValue(&quot;text_Municipio_socio___&quot;+index));
+			contato.setCCOMPLEMSOC(hAPI.getCardValue(&quot;text_Complemento_socio___&quot;+index));
+			contato.setCTPLOGSOC(hAPI.getCardValue(&quot;text_TipoLogradouro_socio___&quot;+index));
+			contato.setCBAIRROSOC(hAPI.getCardValue(&quot;text_Bairro_socio___&quot;+index));
+			//contato.setCESTADOSOC(hAPI.getCardValue(&quot;text_Estado_socio___&quot;+index));
+			contato.setCESTADOSOC(hAPI.getCardValue(&quot;text_Estado_socio___&quot;+index) == &quot;&quot; ? &quot;EX&quot; : hAPI.getCardValue(&quot;text_Estado_socio___&quot;+index));
+			contato.setCHOMPAGESOC(hAPI.getCardValue(&quot;text_PaginaInternet_socio___&quot;+index));
+			contato.setCNOMESOC(hAPI.getCardValue(&quot;text_NomeSocio___&quot;+index));
+			contato.setCCODSOCIO(hAPI.getCardValue(&quot;text_Pessoa_socio___&quot;+index));
+			contato.setCCODPAISSOC(hAPI.getCardValue(&quot;text_Pais_socio_code___&quot;+index));
+			contato.setCPAISSOC(hAPI.getCardValue(&quot;text_Pais_socio___&quot;+index));
+			contato.setCNUMEROSOC(hAPI.getCardValue(&quot;text_Numero_socio___&quot;+index));
+			contato.setCEMAILADIC2SOC(hAPI.getCardValue(&quot;text_EmailAd2_socio___&quot;+index));
+			contato.setCTELADIC1SOC(hAPI.getCardValue(&quot;text_TelefoneAd1_socio___&quot;+index));
+			contato.setCTELEFONESOC(hAPI.getCardValue(&quot;text_Telefone_socio___&quot;+index));
+			contato.setCCEPSOC(hAPI.getCardValue(&quot;text_CEP_socio___&quot;+index).replace(&quot;-&quot;,&quot;&quot;));
+			contato.setCCODMUNICIOSOC(hAPI.getCardValue(&quot;text_Cod_MunicipioSocio___&quot;+index));
+			contato.setCEMAILADIC1SOC(hAPI.getCardValue(&quot;text_EmailAd1_socio___&quot;+index));
+			contato.setCTELADIC3SOC(hAPI.getCardValue(&quot;text_TelefoneAd3_socio___&quot;+index));
+			contato.setCSEXOSOC(hAPI.getCardValue(&quot;text_sexo_socio___&quot;+index));
+			contato.setCDDI(hAPI.getCardValue(&quot;Text_ddi_socio___&quot;+index).replace(&quot;&amp;nbsp;&quot;,&quot;&quot;));
+			contato.setCDDD(hAPI.getCardValue(&quot;Text_ddd_socio___&quot;+index));
+			contato.setCFAXSOC(hAPI.getCardValue(&quot;text_TelefoneFax_socio___&quot;+index));
+			contato.setCCNPJCPFSOC(hAPI.getCardValue(&quot;text_CPFCNPJ_socio___&quot;+index).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;-&quot;,&quot;&quot;).replace(&quot;/&quot;,&quot;&quot;).replace(&quot;.&quot;,&quot;&quot;));
+			contato.setCEMAILSOC(hAPI.getCardValue(&quot;text_Email_socio___&quot;+index));
+			log.info(&quot;contato : &quot;+contato);
+			contatos.push(contato);
+			log.info(&quot;contatos : &quot;+contatos);
+		}		
+		arrayContatos.setOCONTATO(contatos);
+		log.info(&quot;arrayContatos : &quot;+arrayContatos);
+		fornecedor.setACONTATOS(arrayContatos);
+		
+		/**
+		 * CADASTRO GERAL
+		 */
+		
+		fornecedor.setCPASSWORD(hAPI.getCardValue(&quot;Text_Senha_Fornecedor_Portal&quot;));
+		fornecedor.setCBAIRRO(hAPI.getCardValue(&quot;text_Bairro&quot;));
+		//fornecedor.setDDATCAPS2(getJavaDate(&quot;17/08/2016&quot;));
+		fornecedor.setCISENTOISS(hAPI.getCardValue(&quot;text_isencaoISS&quot;));
+		fornecedor.setCINSMUNIC(hAPI.getCardValue(&quot;id_ins_municipal&quot;));
+		fornecedor.setCINSESTAD(hAPI.getCardValue(&quot;id_insc_estadual&quot;));
+		fornecedor.setCCODMUNIC(hAPI.getCardValue(&quot;text_Cod_Municipio&quot;));
+		fornecedor.setCTELADIC1(hAPI.getCardValue(&quot;text_TelefoneAd1&quot;));
+		fornecedor.setCTELADIC2(hAPI.getCardValue(&quot;text_TelefoneAd2&quot;));
+		fornecedor.setCTELADIC3(hAPI.getCardValue(&quot;text_TelefoneAd3&quot;));		
+		fornecedor.setDVALIDLIMINARINSS(hAPI.getCardValue(&quot;text_venc_isencaoISS&quot;));
+		fornecedor.setCCOOPERATIVA(hAPI.getCardValue(&quot;Select_cooperativa&quot;));
+		//fornecedor.setCINSESTAD2(&quot;&quot;);
+		fornecedor.setDVALIDLIMINARPIS(hAPI.getCardValue(&quot;text_venc_isencaoPIS&quot;));
+		fornecedor.setCCEP(hAPI.getCardValue(&quot;text_CEP&quot;).replace(&quot;-&quot;,&quot;&quot;));
+		fornecedor.setCNOMEABREVIADO(hAPI.getCardValue(&quot;nm_nome_abreviado&quot;));
+		fornecedor.setCORGEMIS(hAPI.getCardValue(&quot;text_ORGEmis&quot;));
+		fornecedor.setCLIMINARCSLL(hAPI.getCardValue(&quot;text_liminarisencaoCSLL&quot;));
+		fornecedor.setCMUNICIPIO(hAPI.getCardValue(&quot;text_Municipio&quot;)== &quot;&quot; ? &quot;EX&quot; : hAPI.getCardValue(&quot;text_Municipio&quot;));
+		fornecedor.setCESTADO(hAPI.getCardValue(&quot;nm_estado&quot;) == &quot;&quot; ? &quot;EX&quot; : hAPI.getCardValue(&quot;nm_estado&quot;));
+		fornecedor.setCLIMINARISS(hAPI.getCardValue(&quot;text_liminarisencaoISS&quot;));
+		fornecedor.setCRAZAOSOCIAL(hAPI.getCardValue(&quot;text_Nome&quot;));
+		fornecedor.setCOPTSIMP(hAPI.getCardValue(&quot;Text_OptSimp&quot;) == &quot;&quot; ? &quot;2&quot; : hAPI.getCardValue(&quot;Text_OptSimp&quot;));
+		//fornecedor.setCOBSSER2(&quot;&quot;);
+		fornecedor.setCPAIS(hAPI.getCardValue(&quot;text_Pais&quot;));		
+		fornecedor.setDVALIDLIMINARIRFF(hAPI.getCardValue(&quot;text_venc_isencaoIRRF&quot;));
+		fornecedor.setCSEXO(hAPI.getCardValue(&quot;text_sexo&quot;));
+		fornecedor.setCLIMINARCSLLINDETERMINADO(hAPI.getCardValue(&quot;Text_venc_csll_indeterminado&quot;));
+		fornecedor.setCISENTOINSS(hAPI.getCardValue(&quot;text_isencaoINSS&quot;));
+		log.info(&quot;#####text_ValorCapSocial&quot;+hAPI.getCardValue(&quot;text_ValorCapSocial&quot;));
+		if(hAPI.getCardValue(&quot;text_ValorCapSocial&quot;) != &quot;&quot; &amp;&amp; hAPI.getCardValue(&quot;text_ValorCapSocial&quot;) != null){
+			log.info(&quot;### text_ValorCapSocial&quot;+hAPI.getCardValue(&quot;text_ValorCapSocial&quot;).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;,&quot;,&quot;.&quot;));
+			fornecedor.setNVALCAPS(hAPI.getCardValue(&quot;text_ValorCapSocial&quot;).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;,&quot;,&quot;.&quot;));
+		}else{
+			fornecedor.setNVALCAPS(&quot;&quot;);
+		}
+		fornecedor.setCLIMINARIRFF(hAPI.getCardValue(&quot;text_liminarisencaoIRRF&quot;));
+		fornecedor.setCEMAIL(hAPI.getCardValue(&quot;text_Email&quot;));
+		fornecedor.setCHOMEPAGE(hAPI.getCardValue(&quot;text_PaginaInternet&quot;));
+		fornecedor.setCLIMINARCOF(hAPI.getCardValue(&quot;text_liminarisencaoCOFINS&quot;));
+		fornecedor.setCISENTOCOF(hAPI.getCardValue(&quot;text_isencaoCOFINS&quot;));
+		fornecedor.setCNFANTASIA(hAPI.getCardValue(&quot;nm_nome_fantasia&quot;));
+		fornecedor.setCDDI(hAPI.getCardValue(&quot;text_DDI&quot;).replace(&quot;&amp;nbsp;&quot;,&quot;&quot;));
+		fornecedor.setDDATASER(hAPI.getCardValue(&quot;text_DataSerasa&quot;));
+		//fornecedor.setCNIRE2(&quot;&quot;);
+		fornecedor.setCDDD(hAPI.getCardValue(&quot;text_DDD&quot;));
+		fornecedor.setCEMAILADIC1(hAPI.getCardValue(&quot;text_EmailAd1&quot;));
+		fornecedor.setCEMAILADIC2(hAPI.getCardValue(&quot;text_EmailAd2&quot;));
+		//fornecedor.setCINSMUNIC2(&quot;&quot;);
+		fornecedor.setCLIMINARINSS(hAPI.getCardValue(&quot;text_liminarisencaoINSS&quot;));
+		fornecedor.setDDATCAPS(hAPI.getCardValue(&quot;text_CapSocial&quot;));
+		//fornecedor.setNVALCAPS2(new java.lang.Float(&quot;10.00&quot;));
+		fornecedor.setDVALIDLIMINARCOF(hAPI.getCardValue(&quot;text_venc_isencaoCOFINS&quot;));
+		fornecedor.setCISENTOIRFF(hAPI.getCardValue(&quot;text_isencaoIRRF&quot;));
+		fornecedor.setCTIPO(hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;));
+		fornecedor.setCCODPAIS(hAPI.getCardValue(&quot;text_codPais&quot;));
+		fornecedor.setCNIRE(hAPI.getCardValue(&quot;text_NIRE&quot;));
+		fornecedor.setCTIPODOC(hAPI.getCardValue(&quot;text_tipoDoc&quot;));
+		fornecedor.setCISENTOPIS(hAPI.getCardValue(&quot;text_isencaoPIS&quot;));
+		fornecedor.setCLIMINARPIS(hAPI.getCardValue(&quot;text_liminarisencaoPIS&quot;));
+		fornecedor.setCTELEFONE(hAPI.getCardValue(&quot;text_Telefone&quot;));
+		fornecedor.setCISENTOCSLL(hAPI.getCardValue(&quot;text_isencaoCSLL&quot;));
+		fornecedor.setCCODIGOPESSOA(hAPI.getCardValue(&quot;codPessoa&quot;));
+		fornecedor.setDVALIDLIMINARCSLL(hAPI.getCardValue(&quot;text_venc_isencaoCSLL&quot;));
+		fornecedor.setDDTEMIS(hAPI.getCardValue(&quot;text_DtEmis&quot;));
+		fornecedor.setCLIMINARINSSINDETERMINADO(hAPI.getCardValue(&quot;Text_venc_inss_indeterminado&quot;));
+		fornecedor.setCLIMINARISSINDETERMINADO(hAPI.getCardValue(&quot;Text_venc_iss_indeterminado&quot;));
+		fornecedor.setCOBSSER(hAPI.getCardValue(&quot;text_ObservaoSerasa&quot;));
+		//fornecedor.setDDATASER2(&quot;&quot;);
+		fornecedor.setCDOCCONSTITUICAO(hAPI.getCardValue(&quot;text_DocConstituicao&quot;));
+		fornecedor.setCLIMINARCOFINSINDETERMINADO(hAPI.getCardValue(&quot;Text_venc_cofins_indeterminado&quot;));
+		fornecedor.setDVALIDLIMINARISS(hAPI.getCardValue(&quot;text_venc_isencaoISS&quot;));
+		fornecedor.setCFAX(hAPI.getCardValue(&quot;text_TelefoneFax&quot;));
+		fornecedor.setCLIMINARPISINDETERMINADO(hAPI.getCardValue(&quot;Text_venc_pis_indeterminado&quot;));
+		fornecedor.setCATIVECO(hAPI.getCardValue(&quot;cod_ativEconomica&quot;));
+		fornecedor.setCNUMDOC(hAPI.getCardValue(&quot;text_ID&quot;));
+		fornecedor.setCLIMINARIRFFINDETERMINADO(hAPI.getCardValue(&quot;Text_venc_irrf_indeterminado&quot;));
+		fornecedor.setCCNPJCPF(hAPI.getCardValue(&quot;nm_cpf_cnpj&quot;).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;-&quot;,&quot;&quot;).replace(&quot;/&quot;,&quot;&quot;).replace(&quot;.&quot;,&quot;&quot;));
+		
+		fornecedor.setCESTCIVIL(hAPI.getCardValue(&quot;text_EstadoCivil&quot;));		
+		fornecedor.setCCONJUGE(hAPI.getCardValue(&quot;text_Conjuge&quot;));
+		fornecedor.setCPAI(hAPI.getCardValue(&quot;text_Pai&quot;));
+		fornecedor.setCMAE(hAPI.getCardValue(&quot;text_Mae&quot;));
+		//if(hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;) == &quot;F&quot;){
+			fornecedor.setCNACIONALIDADE(hAPI.getCardValue(&quot;cod_nacionalidade&quot;));
+			fornecedor.setCNATURALIDADE(hAPI.getCardValue(&quot;text_Naturalidade&quot;));			
+		//}
+
+		fornecedor.setCINSS(hAPI.getCardValue(&quot;text_INSS&quot;));
+		fornecedor.setDDTNASC(hAPI.getCardValue(&quot;text_DtNascimento&quot;));
+		fornecedor.setCIDENTEXT(hAPI.getCardValue(&quot;text_IdentificaoFiscalExterior&quot;));
+		fornecedor.setDINICIDENTEXT(hAPI.getCardValue(&quot;text_DataInicioValidade&quot;));
+		fornecedor.setDFIMIDENTEXT(hAPI.getCardValue(&quot;text_DataFinalValidade&quot;));
+		fornecedor.setCBANCO(hAPI.getCardValue(&quot;cod_Banco&quot;));
+		fornecedor.setCAGENCIA(hAPI.getCardValue(&quot;numAgenc&quot;));
+		fornecedor.setCCONTA(hAPI.getCardValue(&quot;text_Conta&quot;));
+		fornecedor.setCDVAGE(hAPI.getCardValue(&quot;codDvAgenc&quot;));
+		fornecedor.setCDVCONTA(hAPI.getCardValue(&quot;text_dv_conta&quot;));
+		fornecedor.setCJUSTIFNCADBCO(hAPI.getCardValue(&quot;text_JustDomicilio&quot;));
+		fornecedor.setCTPLOG(hAPI.getCardValue(&quot;text_TpLogradouro&quot;));
+		fornecedor.setCENDERECO(hAPI.getCardValue(&quot;text_NomeLogradouro&quot;));
+		fornecedor.setCNUMERO(hAPI.getCardValue(&quot;text_Numero&quot;));
+		fornecedor.setCCOMPLEMENTO(hAPI.getCardValue(&quot;text_Complemento&quot;));
+		
+		fornecedor.setLPORTAL(hAPI.getCardValue(&quot;portal&quot;) == &quot;true&quot; ? true : false);
+		
+		
+		log.info(&quot;#=================== FORNECEDOR VALUES ========================&quot;);
+		log.info(&quot;#getCESTCIVIL: &quot;+fornecedor.getCESTCIVIL());
+		log.info(&quot;#getCOBSSER: &quot;+fornecedor.getCOBSSER());
+		log.info(&quot;#getCESTADO: &quot;+fornecedor.getCESTADO());
+		log.info(&quot;#getDDTNASC: &quot;+fornecedor.getDDTNASC());
+		log.info(&quot;#getCTELADIC1: &quot;+fornecedor.getCTELADIC1());
+		log.info(&quot;#getCTELADIC2: &quot;+fornecedor.getCTELADIC2());
+		log.info(&quot;#getCRAZAOSOCIAL: &quot;+fornecedor.getCRAZAOSOCIAL());
+		log.info(&quot;#getCTELADIC3: &quot;+fornecedor.getCTELADIC3());
+		log.info(&quot;#getCDVAGE: &quot;+fornecedor.getCDVAGE());
+		log.info(&quot;#getCTELEFONE: &quot;+fornecedor.getCTELEFONE());
+		log.info(&quot;#getCISENTOCOF: &quot;+fornecedor.getCISENTOCOF());
+		log.info(&quot;#getCINSS: &quot;+fornecedor.getCINSS());
+		log.info(&quot;#getCISENTOCSLL: &quot;+fornecedor.getCISENTOCSLL());
+		log.info(&quot;#getCSEXO: &quot;+fornecedor.getCSEXO());
+		//log.info(&quot;#getCNIRE2: &quot;+fornecedor.getCNIRE2());
+		log.info(&quot;#getClass: &quot;+fornecedor.getClass());
+		log.info(&quot;#getCINSMUNIC: &quot;+fornecedor.getCINSMUNIC());
+		log.info(&quot;#getCNFANTASIA: &quot;+fornecedor.getCNFANTASIA());
+		log.info(&quot;#getCLIMINARCOF: &quot;+fornecedor.getCLIMINARCOF());
+		log.info(&quot;#getCBAIRRO: &quot;+fornecedor.getCBAIRRO());
+		log.info(&quot;#getCLIMINARISSINDETERMINADO: &quot;+fornecedor.getCLIMINARISSINDETERMINADO());
+		log.info(&quot;#getCDVCONTA: &quot;+fornecedor.getCDVCONTA());
+		log.info(&quot;#getCLIMINARINSS: &quot;+fornecedor.getCLIMINARINSS());
+		log.info(&quot;#getAPRODUTOS: &quot;+fornecedor.getAPRODUTOS());
+		log.info(&quot;#getCTPLOG: &quot;+fornecedor.getCTPLOG());
+		log.info(&quot;#getCAGENCIA: &quot;+fornecedor.getCAGENCIA());
+		log.info(&quot;#getNVALCAPS: &quot;+fornecedor.getNVALCAPS());
+		log.info(&quot;#getCNUMERO: &quot;+fornecedor.getCNUMERO());
+		//log.info(&quot;#getNVALCAPS2: &quot;+fornecedor.getNVALCAPS2());
+		//log.info(&quot;#getDDATASER2: &quot;+fornecedor.getDDATASER2());
+		log.info(&quot;#getDFIMIDENTEXT: &quot;+fornecedor.getDFIMIDENTEXT());
+		log.info(&quot;#getCISENTOIRFF: &quot;+fornecedor.getCISENTOIRFF());
+		log.info(&quot;#getCCOMPLEMENTO: &quot;+fornecedor.getCCOMPLEMENTO());
+		log.info(&quot;#getCCONTA: &quot;+fornecedor.getCCONTA());
+		//log.info(&quot;#getCOBSSER2: &quot;+fornecedor.getCOBSSER2());
+		log.info(&quot;#getCDOCCONSTITUICAO: &quot;+fornecedor.getCDOCCONSTITUICAO());
+		log.info(&quot;#getCISENTOINSS: &quot;+fornecedor.getCISENTOINSS());
+		log.info(&quot;#getCNATURALIDADE: &quot;+fornecedor.getCNATURALIDADE());
+		log.info(&quot;#getCLIMINARIRFF: &quot;+fornecedor.getCLIMINARIRFF());
+		log.info(&quot;#getCISENTOISS: &quot;+fornecedor.getCISENTOISS());
+		log.info(&quot;#getCTIPO: &quot;+fornecedor.getCTIPO());
+		log.info(&quot;#getCEMAILADIC2: &quot;+fornecedor.getCEMAILADIC2());
+		log.info(&quot;#getCEMAILADIC1: &quot;+fornecedor.getCEMAILADIC1());
+		log.info(&quot;#getCMUNICIPIO: &quot;+fornecedor.getCMUNICIPIO());
+		log.info(&quot;#getCNIRE: &quot;+fornecedor.getCNIRE());
+		log.info(&quot;#getCMAE: &quot;+fornecedor.getCMAE());
+		log.info(&quot;#getCLIMINARIRFFINDETERMINADO: &quot;+fornecedor.getCLIMINARIRFFINDETERMINADO());
+		log.info(&quot;#getACONTATOS: &quot;+fornecedor.getACONTATOS());
+		log.info(&quot;#getCLIMINARCSLLINDETERMINADO: &quot;+fornecedor.getCLIMINARCSLLINDETERMINADO());
+		log.info(&quot;#getCLIMINARPIS: &quot;+fornecedor.getCLIMINARPIS());
+		log.info(&quot;#getCNUMDOC: &quot;+fornecedor.getCNUMDOC());
+		log.info(&quot;#getCNACIONALIDADE: &quot;+fornecedor.getCNACIONALIDADE());
+		log.info(&quot;#getCPAIS: &quot;+fornecedor.getCPAIS());
+		log.info(&quot;#getDVALIDLIMINARPIS: &quot;+fornecedor.getDVALIDLIMINARPIS());
+		log.info(&quot;#getCORGEMIS: &quot;+fornecedor.getCORGEMIS());
+		log.info(&quot;#getCCODIGOPESSOA: &quot;+fornecedor.getCCODIGOPESSOA());
+		log.info(&quot;#getCLIMINARCSLL: &quot;+fornecedor.getCLIMINARCSLL());
+		log.info(&quot;#getCCONJUGE: &quot;+fornecedor.getCCONJUGE());
+		log.info(&quot;#getCNOMEABREVIADO: &quot;+fornecedor.getCNOMEABREVIADO());
+		log.info(&quot;#getCCODPAIS: &quot;+fornecedor.getCCODPAIS());
+		log.info(&quot;#getDVALIDLIMINARINSS: &quot;+fornecedor.getDVALIDLIMINARINSS());
+		log.info(&quot;#getDDATASER: &quot;+fornecedor.getDDATASER());
+		log.info(&quot;#getCDDI: &quot;+fornecedor.getCDDI());
+		log.info(&quot;#getCENDERECO: &quot;+fornecedor.getCENDERECO());
+		log.info(&quot;#getCDDD: &quot;+fornecedor.getCDDD());
+		log.info(&quot;#getCEMAIL: &quot;+fornecedor.getCEMAIL());
+		log.info(&quot;#getDVALIDLIMINARCOF: &quot;+fornecedor.getDVALIDLIMINARCOF());
+		log.info(&quot;#getCLIMINARCOFINSINDETERMINADO: &quot;+fornecedor.getCLIMINARCOFINSINDETERMINADO());
+		log.info(&quot;#getDVALIDLIMINARISS: &quot;+fornecedor.getDVALIDLIMINARISS());
+		log.info(&quot;#getDVALIDLIMINARCSLL: &quot;+fornecedor.getDVALIDLIMINARCSLL());
+		log.info(&quot;#getDDATCAPS: &quot;+fornecedor.getDDATCAPS());
+		log.info(&quot;#getCINSESTAD: &quot;+fornecedor.getCINSESTAD());
+		//log.info(&quot;#getCINSMUNIC2: &quot;+fornecedor.getCINSMUNIC2());
+		log.info(&quot;#getCCOOPERATIVA: &quot;+fornecedor.getCCOOPERATIVA());
+		log.info(&quot;#getDINICIDENTEXT: &quot;+fornecedor.getDINICIDENTEXT());
+		log.info(&quot;#getCISENTOPIS: &quot;+fornecedor.getCISENTOPIS());
+		log.info(&quot;#getCJUSTIFNCADBCO: &quot;+fornecedor.getCJUSTIFNCADBCO());
+		log.info(&quot;#getCLIMINARISS: &quot;+fornecedor.getCLIMINARISS());
+		log.info(&quot;#getDDTEMIS: &quot;+fornecedor.getDDTEMIS());
+		log.info(&quot;#getDVALIDLIMINARIRFF: &quot;+fornecedor.getDVALIDLIMINARIRFF());
+		//log.info(&quot;#getCINSESTAD2: &quot;+fornecedor.getCINSESTAD2());
+		log.info(&quot;#getCIDENTEXT: &quot;+fornecedor.getCIDENTEXT());
+		log.info(&quot;#getCPAI: &quot;+fornecedor.getCPAI());
+		log.info(&quot;#getCFAX: &quot;+fornecedor.getCFAX());
+		//log.info(&quot;#getDDATCAPS2: &quot;+fornecedor.getDDATCAPS2());
+		log.info(&quot;#getCCNPJCPF: &quot;+fornecedor.getCCNPJCPF());
+		log.info(&quot;#getCLIMINARPISINDETERMINADO: &quot;+fornecedor.getCLIMINARPISINDETERMINADO());
+		log.info(&quot;#getCTIPODOC: &quot;+fornecedor.getCTIPODOC());
+		log.info(&quot;#getCATIVECO: &quot;+fornecedor.getCATIVECO());
+		log.info(&quot;#getCHOMEPAGE: &quot;+fornecedor.getCHOMEPAGE());
+		log.info(&quot;#getCOPTSIMP: &quot;+fornecedor.getCOPTSIMP());
+		log.info(&quot;#getCBANCO: &quot;+fornecedor.getCBANCO());
+		log.info(&quot;#getCCEP: &quot;+fornecedor.getCCEP());
+		log.info(&quot;#getCLIMINARINSSINDETERMINADO: &quot;+fornecedor.getCLIMINARINSSINDETERMINADO());
+		log.info(&quot;#getCCODMUNIC: &quot;+fornecedor.getCCODMUNIC());
+		
+		
+		log.info(&quot;#objects ok, go call method&quot;);
+		var result = service.PREWS005H(hAPI.getCardValue(&quot;id_grupoempresa&quot;),hAPI.getCardValue(&quot;id_empresafilial&quot;),auth.user, auth.pass,fornecedor);
+		//var result = customClient.PREWS005H(hAPI.getCardValue(&quot;id_grupoempresa&quot;),hAPI.getCardValue(&quot;id_empresafilial&quot;),auth.user, auth.pass,fornecedor);
+		log.info(&quot;#=========================INTEGRACAO DE FORNECEDOR PROTHEUS RESULTS==========================&quot;);
+		log.info(&quot;#webservice message: &quot; + result);
+		
+		if(result.substring(0,3).trim() == &quot;NOK&quot;){
+			throw(result);
+		}
+		
+		
+	} catch (e) {
+		throw(e.toString());
+	}
+	
+}
+
+function getUserProtheus(){
+	var dataset = DatasetFactory.getDataset(&quot;ds_config&quot;, null, null, null);
+	return {user : dataset.getValue(0, &quot;usuario&quot;), pass : dataset.getValue(0, &quot;senha&quot;)}; 
+}
+
+function getJavaDate(stringDate){
+	var date = new java.util.Date();
+	var retorno = &quot;&quot;;
+	if(stringDate == &quot;&quot;){
+		date.setDate(&quot;00&quot;);
+		date.setMonth(&quot;00&quot;);
+		date.setYear(&quot;0000&quot;);		
+		retorno = date;
+	}else{
+		stringDate = stringDate.split(&quot;/&quot;);
+		date.setDate(stringDate[0]);
+		date.setMonth(Number(stringDate[1])-1);
+		date.setYear(Number(stringDate[2])-1900);
+		
+		retorno = date;
+	}
+	log.info(&quot;###retorno : &quot;+retorno);
+	return retorno;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>sendMail</eventId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function sendMail(STATUS,TO, MOTIVO){&#xd;
+	log.info(&quot;#send email: &quot; + STATUS);&#xd;
+	&#xd;
+	var gson = new com.google.gson.Gson();&#xd;
+	var mountPoint = &quot;/public/alert/customEmailSender&quot;;&#xd;
+	var param = new Object();	&#xd;
+	param.STATUS = STATUS;&#xd;
+	&#xd;
+	if(MOTIVO != &quot;&quot;){&#xd;
+		param.MOTIVO = &quot;Motivo : &quot;+MOTIVO;&#xd;
+	}else{&#xd;
+		param.MOTIVO = &quot;&quot;;&#xd;
+	}&#xd;
+		&#xd;
+	&#xd;
+	var data = new Date();&#xd;
+	&#xd;
+	dia = data.getDate();&#xd;
+	&#xd;
+	if(dia.toString().length == 1)&#xd;
+	param.dia = &quot;0&quot;+dia.toString();&#xd;
+	&#xd;
+	param.dia = dia.toString();&#xd;
+	&#xd;
+	var mes = data.getMonth().toString();&#xd;
+	param.mes = getMesExtenso(mes);	&#xd;
+	param.ano = data.getFullYear().toString();	&#xd;
+	&#xd;
+	var mail = new Object();&#xd;
+	mail.to = TO;&#xd;
+	mail.from = &quot;naoresponda@previ.com.br&quot;;&#xd;
+	mail.templateId = &quot;TPL_FORNECEDOR&quot;;&#xd;
+	mail.subject = &quot;Solicitação de Cadastro: &quot;+STATUS;&#xd;
+	mail.dialectId = &quot;pt_BR&quot;;&#xd;
+	mail.param = param;&#xd;
+	mail = gson.toJson(mail);&#xd;
+	&#xd;
+	var c1 = DatasetFactory.createConstraint(&quot;json&quot;, mail, mail, ConstraintType.MUST);&#xd;
+	var c2 = DatasetFactory.createConstraint(&quot;mountPoint&quot;, mountPoint, mountPoint, ConstraintType.MUST);&#xd;
+	var dataset = DatasetFactory.getDataset(&quot;service_genericRest&quot;, new Array(), new Array(c1,c2), new Array());&#xd;
+&#xd;
+	log.info(&quot;#result send mail: &quot; + dataset.getValue(0, &quot;message&quot;));&#xd;
+}&#xd;
+&#xd;
+function getMesExtenso(mes){&#xd;
+	&#xd;
+	var mesExtenso;&#xd;
+	&#xd;
+	if(mes == &quot;0&quot;){&#xd;
+		mesExtenso = &quot;Janeiro&quot;;&#xd;
+	}else if(mes == &quot;1&quot;){&#xd;
+		mesExtenso = &quot;Fevereiro&quot;&#xd;
+	}else if(mes == &quot;2&quot;) {&#xd;
+		mesExtenso = &quot;Março&quot;;&#xd;
+	}&#xd;
+	else if(mes == &quot;3&quot;){&#xd;
+		mesExtenso = &quot;Abril&quot;;&#xd;
+	}&#xd;
+	else if(mes == &quot;4&quot;){ &#xd;
+		mesExtenso = &quot;Maio&quot; ;&#xd;
+	}&#xd;
+	else if(mes == &quot;5&quot;){&#xd;
+		mesExtenso = &quot;Junho&quot;;&#xd;
+	}&#xd;
+	else if(mes == &quot;6&quot;){ &#xd;
+		mesExtenso = &quot;Julho&quot;;&#xd;
+	}&#xd;
+	else if(mes == &quot;7&quot;){&#xd;
+		mesExtenso = &quot;Agosto&quot;;&#xd;
+	}&#xd;
+	else if(mes == &quot;8&quot;){&#xd;
+		mesExtenso = &quot;Setembro&quot;;&#xd;
+	}&#xd;
+	else if(mes == &quot;9&quot;){&#xd;
+		mesExtenso = &quot;Outubro&quot;;&#xd;
+	}&#xd;
+	else if(mes == &quot;10&quot;){&#xd;
+		mesExtenso = &quot;Novembro&quot;;&#xd;
+	}&#xd;
+	else if(mes == &quot;11&quot;){&#xd;
+		mesExtenso = &quot;Dezembro&quot;;&#xd;
+	}&#xd;
+	return mesExtenso;&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>servicetask63</eventId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function servicetask63(attempt, message) {
+	try {
+		log.info(&quot;#=============================== INICIO INTEGRACAO PROTHEUS ================================&quot;);
+		
+		var user = getValue(&quot;WKUser&quot;);
+		var processId = getValue(&quot;WKNumProces&quot;);
+		var cardData = hAPI.getCardData(processId);
+		var auth = getUserProtheus();
+		var serviceFluig = ServiceManager.getService(&apos;PREWS005AXIS&apos;);
+		var serviceHelper = serviceFluig.getBean();
+		var serviceLocator = serviceHelper.instantiate(&apos;com.totvs.PREWS005Locator&apos;);			        
+		var service = serviceLocator.getPREWS005SOAP();
+		var fornecedor = serviceHelper.instantiate(&apos;com.totvs.TFORNECEDOR&apos;);
+		var arrayProdutos = serviceHelper.instantiate(&apos;com.totvs.ARRAYOFOPRODUTOS&apos;);
+		var produtos = [];
+		var arrayContatos = serviceHelper.instantiate(&apos;com.totvs.ARRAYOFOCONTATO&apos;);
+		var contatos = [];
+		log.info(&quot;#===============================  INTEGRACAO PROTHEUS ================================&quot;);
+		
+		var properties = {};
+		properties[&quot;disable.chunking&quot;] = &quot;true&quot;;
+		properties[&quot;log.soap.messages&quot;] = &quot;true&quot;;	
+		
+		//var customClient = serviceFluig.getCustomClient(service, &quot;com.totvs.PREWS005&quot;, properties);			
+		
+		/**
+		 * LISTA DE PRODUTOS
+		 */
+		var detailProduto = getFilhosForm(cardData, new Array(&quot;TEXT_CODPRODSERVICO&quot;));
+		
+		
+		for(var i = 0; i &lt; detailProduto.length; i++){
+			var index = detailProduto[i][0].split(&quot;___&quot;)[1];
+		
+			var produto = serviceHelper.instantiate(&apos;com.totvs.OPRODUTOS&apos;);
+			produto.setCDESCRICAO(hAPI.getCardValue(&quot;Text_DescSubItem___&quot;+index));
+			produto.setCCODIGO(hAPI.getCardValue(&quot;Text_CodSubItem___&quot;+index));
+			produto.setCREGCEPOM(hAPI.getCardValue(&quot;text_cepom___&quot;+index));
+	
+			produtos.push(produto)
+		}
+		log.info(&quot;#===============================  INTEGRACAO PROTHEUS 2================================&quot;);
+		arrayProdutos.setOPRODUTOS(produtos);
+		fornecedor.setAPRODUTOS(arrayProdutos);
+		
+		/**
+		 * LISTA DE SÓCIO
+		 */
+		log.info(&quot;###################### OCONTATO ################&quot;);
+		var detailSocio = getFilhosForm(cardData, new Array(&quot;TEXT_TIPO_SOCIO&quot;));
+		log.info(&quot;detailSocio : &quot;+detailSocio);
+/*		if(detailSocio.length == 0){
+			var contato = serviceHelper.instantiate(&apos;com.totvs.OCONTATO&apos;);
+			contatos.push(contato);
+		}	*/				
+		
+		for(var i = 0; i &lt; detailSocio.length; i++){
+			var index = detailSocio[i][0].split(&quot;___&quot;)[1];	
+			log.info(&quot;#===================== OBJETO OCONTATO NR: &quot; + index + &quot; ================&quot;);
+			var contato = serviceHelper.instantiate(&apos;com.totvs.OCONTATO&apos;);
+			contato.setCTIPOSOC(hAPI.getCardValue(&quot;text_tipo_socio___&quot;+index));
+			contato.setCENDERSOC(hAPI.getCardValue(&quot;text_NomeLogradouro_socio___&quot;+index));
+			contato.setCTELADIC2SOC(hAPI.getCardValue(&quot;text_TelefoneAd2_socio___&quot;+index));
+			contato.setCNOMEABREVSOC(hAPI.getCardValue(&quot;text_Abreviado_socio___&quot;+index));
+			contato.setCMUNICIPIOSOC(hAPI.getCardValue(&quot;text_Municipio_socio___&quot;+index));
+			contato.setCCOMPLEMSOC(hAPI.getCardValue(&quot;text_Complemento_socio___&quot;+index));
+			contato.setCTPLOGSOC(hAPI.getCardValue(&quot;text_TipoLogradouro_socio___&quot;+index));
+			contato.setCBAIRROSOC(hAPI.getCardValue(&quot;text_Bairro_socio___&quot;+index));
+			//contato.setCESTADOSOC(hAPI.getCardValue(&quot;text_Estado_socio___&quot;+index));
+			contato.setCESTADOSOC(hAPI.getCardValue(&quot;text_Estado_socio___&quot;+index) == &quot;&quot; ? &quot;EX&quot; : hAPI.getCardValue(&quot;text_Estado_socio___&quot;+index));
+			contato.setCHOMPAGESOC(hAPI.getCardValue(&quot;text_PaginaInternet_socio___&quot;+index));
+			contato.setCNOMESOC(hAPI.getCardValue(&quot;text_NomeSocio___&quot;+index));
+			contato.setCCODSOCIO(hAPI.getCardValue(&quot;text_Pessoa_socio___&quot;+index));
+			contato.setCCODPAISSOC(hAPI.getCardValue(&quot;text_Pais_socio_code___&quot;+index));
+			contato.setCPAISSOC(hAPI.getCardValue(&quot;text_Pais_socio___&quot;+index));
+			contato.setCNUMEROSOC(hAPI.getCardValue(&quot;text_Numero_socio___&quot;+index));
+			contato.setCEMAILADIC2SOC(hAPI.getCardValue(&quot;text_EmailAd2_socio___&quot;+index));
+			contato.setCTELADIC1SOC(hAPI.getCardValue(&quot;text_TelefoneAd1_socio___&quot;+index));
+			contato.setCTELEFONESOC(hAPI.getCardValue(&quot;text_Telefone_socio___&quot;+index));
+			contato.setCCEPSOC(hAPI.getCardValue(&quot;text_CEP_socio___&quot;+index).replace(&quot;-&quot;,&quot;&quot;));
+			contato.setCCODMUNICIOSOC(hAPI.getCardValue(&quot;text_Cod_MunicipioSocio___&quot;+index));
+			contato.setCEMAILADIC1SOC(hAPI.getCardValue(&quot;text_EmailAd1_socio___&quot;+index));
+			contato.setCTELADIC3SOC(hAPI.getCardValue(&quot;text_TelefoneAd3_socio___&quot;+index));
+			contato.setCSEXOSOC(hAPI.getCardValue(&quot;text_sexo_socio___&quot;+index));
+			contato.setCDDI(hAPI.getCardValue(&quot;Text_ddi_socio___&quot;+index).replace(&quot;&amp;nbsp;&quot;,&quot;&quot;));
+			contato.setCDDD(hAPI.getCardValue(&quot;Text_ddd_socio___&quot;+index));
+			contato.setCFAXSOC(hAPI.getCardValue(&quot;text_TelefoneFax_socio___&quot;+index));
+			contato.setCCNPJCPFSOC(hAPI.getCardValue(&quot;text_CPFCNPJ_socio___&quot;+index).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;-&quot;,&quot;&quot;).replace(&quot;/&quot;,&quot;&quot;).replace(&quot;.&quot;,&quot;&quot;));
+			contato.setCEMAILSOC(hAPI.getCardValue(&quot;text_Email_socio___&quot;+index));
+			log.info(&quot;contato : &quot;+contato);
+			contatos.push(contato);
+			log.info(&quot;contatos : &quot;+contatos);
+		}		
+		arrayContatos.setOCONTATO(contatos);
+		log.info(&quot;arrayContatos : &quot;+arrayContatos);
+		fornecedor.setACONTATOS(arrayContatos);
+		
+		/**
+		 * CADASTRO GERAL
+		 */
+		
+		fornecedor.setCPASSWORD(hAPI.getCardValue(&quot;Text_Senha_Fornecedor_Portal&quot;));
+		fornecedor.setCBAIRRO(hAPI.getCardValue(&quot;text_Bairro&quot;));
+		//fornecedor.setDDATCAPS2(getJavaDate(&quot;17/08/2016&quot;));
+		fornecedor.setCISENTOISS(hAPI.getCardValue(&quot;text_isencaoISS&quot;));
+		fornecedor.setCINSMUNIC(hAPI.getCardValue(&quot;id_ins_municipal&quot;));
+		fornecedor.setCINSESTAD(hAPI.getCardValue(&quot;id_insc_estadual&quot;));
+		fornecedor.setCCODMUNIC(hAPI.getCardValue(&quot;text_Cod_Municipio&quot;));
+		fornecedor.setCTELADIC1(hAPI.getCardValue(&quot;text_TelefoneAd1&quot;));
+		fornecedor.setCTELADIC2(hAPI.getCardValue(&quot;text_TelefoneAd2&quot;));
+		fornecedor.setCTELADIC3(hAPI.getCardValue(&quot;text_TelefoneAd3&quot;));		
+		fornecedor.setDVALIDLIMINARINSS(hAPI.getCardValue(&quot;text_venc_isencaoISS&quot;));
+		fornecedor.setCCOOPERATIVA(hAPI.getCardValue(&quot;Select_cooperativa&quot;));
+		//fornecedor.setCINSESTAD2(&quot;&quot;);
+		fornecedor.setDVALIDLIMINARPIS(hAPI.getCardValue(&quot;text_venc_isencaoPIS&quot;));
+		fornecedor.setCCEP(hAPI.getCardValue(&quot;text_CEP&quot;).replace(&quot;-&quot;,&quot;&quot;));
+		fornecedor.setCNOMEABREVIADO(hAPI.getCardValue(&quot;nm_nome_abreviado&quot;));
+		fornecedor.setCORGEMIS(hAPI.getCardValue(&quot;text_ORGEmis&quot;));
+		fornecedor.setCLIMINARCSLL(hAPI.getCardValue(&quot;text_liminarisencaoCSLL&quot;));
+		fornecedor.setCMUNICIPIO(hAPI.getCardValue(&quot;text_Municipio&quot;)== &quot;&quot; ? &quot;EX&quot; : hAPI.getCardValue(&quot;text_Municipio&quot;));
+		fornecedor.setCESTADO(hAPI.getCardValue(&quot;nm_estado&quot;) == &quot;&quot; ? &quot;EX&quot; : hAPI.getCardValue(&quot;nm_estado&quot;));
+		fornecedor.setCLIMINARISS(hAPI.getCardValue(&quot;text_liminarisencaoISS&quot;));
+		fornecedor.setCRAZAOSOCIAL(hAPI.getCardValue(&quot;text_Nome&quot;));
+		fornecedor.setCOPTSIMP(hAPI.getCardValue(&quot;Text_OptSimp&quot;) == &quot;&quot; ? &quot;2&quot; : hAPI.getCardValue(&quot;Text_OptSimp&quot;));
+		//fornecedor.setCOBSSER2(&quot;&quot;);
+		fornecedor.setCPAIS(hAPI.getCardValue(&quot;text_Pais&quot;));
+		fornecedor.setDVALIDLIMINARIRFF(hAPI.getCardValue(&quot;text_venc_isencaoIRRF&quot;));
+		fornecedor.setCSEXO(hAPI.getCardValue(&quot;text_sexo&quot;));
+		fornecedor.setCLIMINARCSLLINDETERMINADO(hAPI.getCardValue(&quot;Text_venc_csll_indeterminado&quot;));
+		fornecedor.setCISENTOINSS(hAPI.getCardValue(&quot;text_isencaoINSS&quot;));
+		log.info(&quot;#####text_ValorCapSocial&quot;+hAPI.getCardValue(&quot;text_ValorCapSocial&quot;));
+		if(hAPI.getCardValue(&quot;text_ValorCapSocial&quot;) != &quot;&quot; &amp;&amp; hAPI.getCardValue(&quot;text_ValorCapSocial&quot;) != null){
+			log.info(&quot;### text_ValorCapSocial&quot;+hAPI.getCardValue(&quot;text_ValorCapSocial&quot;).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;,&quot;,&quot;.&quot;));
+			fornecedor.setNVALCAPS(hAPI.getCardValue(&quot;text_ValorCapSocial&quot;).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;,&quot;,&quot;.&quot;));
+		}else{
+			fornecedor.setNVALCAPS(&quot;&quot;);
+		}
+		fornecedor.setCLIMINARIRFF(hAPI.getCardValue(&quot;text_liminarisencaoIRRF&quot;));
+		fornecedor.setCEMAIL(hAPI.getCardValue(&quot;text_Email&quot;));
+		fornecedor.setCHOMEPAGE(hAPI.getCardValue(&quot;text_PaginaInternet&quot;));
+		fornecedor.setCLIMINARCOF(hAPI.getCardValue(&quot;text_liminarisencaoCOFINS&quot;));
+		fornecedor.setCISENTOCOF(hAPI.getCardValue(&quot;text_isencaoCOFINS&quot;));
+		fornecedor.setCNFANTASIA(hAPI.getCardValue(&quot;nm_nome_fantasia&quot;));
+		fornecedor.setCDDI(hAPI.getCardValue(&quot;text_DDI&quot;).replace(&quot;&amp;nbsp;&quot;,&quot;&quot;));
+		fornecedor.setDDATASER(hAPI.getCardValue(&quot;text_DataSerasa&quot;));
+		//fornecedor.setCNIRE2(&quot;&quot;);
+		fornecedor.setCDDD(hAPI.getCardValue(&quot;text_DDD&quot;));
+		fornecedor.setCEMAILADIC1(hAPI.getCardValue(&quot;text_EmailAd1&quot;));
+		fornecedor.setCEMAILADIC2(hAPI.getCardValue(&quot;text_EmailAd2&quot;));
+		//fornecedor.setCINSMUNIC2(&quot;&quot;);
+		fornecedor.setCLIMINARINSS(hAPI.getCardValue(&quot;text_liminarisencaoINSS&quot;));
+		fornecedor.setDDATCAPS(hAPI.getCardValue(&quot;text_CapSocial&quot;));
+		//fornecedor.setNVALCAPS2(new java.lang.Float(&quot;10.00&quot;));
+		fornecedor.setDVALIDLIMINARCOF(hAPI.getCardValue(&quot;text_venc_isencaoCOFINS&quot;));
+		fornecedor.setCISENTOIRFF(hAPI.getCardValue(&quot;text_isencaoIRRF&quot;));
+		fornecedor.setCTIPO(hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;));
+		fornecedor.setCCODPAIS(hAPI.getCardValue(&quot;text_codPais&quot;));
+		fornecedor.setCNIRE(hAPI.getCardValue(&quot;text_NIRE&quot;));
+		fornecedor.setCTIPODOC(hAPI.getCardValue(&quot;text_tipoDoc&quot;));
+		fornecedor.setCISENTOPIS(hAPI.getCardValue(&quot;text_isencaoPIS&quot;));
+		fornecedor.setCLIMINARPIS(hAPI.getCardValue(&quot;text_liminarisencaoPIS&quot;));
+		fornecedor.setCTELEFONE(hAPI.getCardValue(&quot;text_Telefone&quot;));
+		fornecedor.setCISENTOCSLL(hAPI.getCardValue(&quot;text_isencaoCSLL&quot;));
+		fornecedor.setCCODIGOPESSOA(hAPI.getCardValue(&quot;codPessoa&quot;));
+		fornecedor.setDVALIDLIMINARCSLL(hAPI.getCardValue(&quot;text_venc_isencaoCSLL&quot;));
+		fornecedor.setDDTEMIS(hAPI.getCardValue(&quot;text_DtEmis&quot;));
+		fornecedor.setCLIMINARINSSINDETERMINADO(hAPI.getCardValue(&quot;Text_venc_inss_indeterminado&quot;));
+		fornecedor.setCLIMINARISSINDETERMINADO(hAPI.getCardValue(&quot;Text_venc_iss_indeterminado&quot;));
+		fornecedor.setCOBSSER(hAPI.getCardValue(&quot;text_ObservaoSerasa&quot;));
+		//fornecedor.setDDATASER2(&quot;&quot;);
+		fornecedor.setCDOCCONSTITUICAO(hAPI.getCardValue(&quot;text_DocConstituicao&quot;));
+		fornecedor.setCLIMINARCOFINSINDETERMINADO(hAPI.getCardValue(&quot;Text_venc_cofins_indeterminado&quot;));
+		fornecedor.setDVALIDLIMINARISS(hAPI.getCardValue(&quot;text_venc_isencaoISS&quot;));
+		fornecedor.setCFAX(hAPI.getCardValue(&quot;text_TelefoneFax&quot;));
+		fornecedor.setCLIMINARPISINDETERMINADO(hAPI.getCardValue(&quot;Text_venc_pis_indeterminado&quot;));
+		fornecedor.setCATIVECO(hAPI.getCardValue(&quot;cod_ativEconomica&quot;));
+		fornecedor.setCNUMDOC(hAPI.getCardValue(&quot;text_ID&quot;));
+		fornecedor.setCLIMINARIRFFINDETERMINADO(hAPI.getCardValue(&quot;Text_venc_irrf_indeterminado&quot;));
+		fornecedor.setCCNPJCPF(hAPI.getCardValue(&quot;nm_cpf_cnpj&quot;).replace(&quot;.&quot;,&quot;&quot;).replace(&quot;-&quot;,&quot;&quot;).replace(&quot;/&quot;,&quot;&quot;).replace(&quot;.&quot;,&quot;&quot;));
+		
+		fornecedor.setCESTCIVIL(hAPI.getCardValue(&quot;text_EstadoCivil&quot;));		
+		fornecedor.setCCONJUGE(hAPI.getCardValue(&quot;text_Conjuge&quot;));
+		fornecedor.setCPAI(hAPI.getCardValue(&quot;text_Pai&quot;));
+		fornecedor.setCMAE(hAPI.getCardValue(&quot;text_Mae&quot;));
+		//if(hAPI.getCardValue(&quot;nm_tipo_fornecedor&quot;) == &quot;F&quot;){
+			fornecedor.setCNACIONALIDADE(hAPI.getCardValue(&quot;cod_nacionalidade&quot;));
+			fornecedor.setCNATURALIDADE(hAPI.getCardValue(&quot;text_Naturalidade&quot;));			
+		//}
+		fornecedor.setCINSS(hAPI.getCardValue(&quot;text_INSS&quot;));
+		fornecedor.setDDTNASC(hAPI.getCardValue(&quot;text_DtNascimento&quot;));
+		fornecedor.setCIDENTEXT(hAPI.getCardValue(&quot;text_IdentificaoFiscalExterior&quot;));
+		fornecedor.setDINICIDENTEXT(hAPI.getCardValue(&quot;text_DataInicioValidade&quot;));
+		fornecedor.setDFIMIDENTEXT(hAPI.getCardValue(&quot;text_DataFinalValidade&quot;));
+		fornecedor.setCBANCO(hAPI.getCardValue(&quot;cod_Banco&quot;));
+		fornecedor.setCAGENCIA(hAPI.getCardValue(&quot;numAgenc&quot;));
+		fornecedor.setCCONTA(hAPI.getCardValue(&quot;text_Conta&quot;));
+		fornecedor.setCDVAGE(hAPI.getCardValue(&quot;codDvAgenc&quot;));
+		fornecedor.setCDVCONTA(hAPI.getCardValue(&quot;text_dv_conta&quot;));
+		fornecedor.setCJUSTIFNCADBCO(hAPI.getCardValue(&quot;text_JustDomicilio&quot;));
+		fornecedor.setCTPLOG(hAPI.getCardValue(&quot;text_TpLogradouro&quot;));
+		fornecedor.setCENDERECO(hAPI.getCardValue(&quot;text_NomeLogradouro&quot;));
+		fornecedor.setCNUMERO(hAPI.getCardValue(&quot;text_Numero&quot;));
+		fornecedor.setCCOMPLEMENTO(hAPI.getCardValue(&quot;text_Complemento&quot;));
+		fornecedor.setLPORTAL(hAPI.getCardValue(&quot;portal&quot;) == &quot;true&quot; ? true : false);
+		
+		log.info(&quot;#=================== FORNECEDOR VALUES ========================&quot;);
+		log.info(&quot;#getCESTCIVIL: &quot;+fornecedor.getCESTCIVIL());
+		log.info(&quot;#getCOBSSER: &quot;+fornecedor.getCOBSSER());
+		log.info(&quot;#getCESTADO: &quot;+fornecedor.getCESTADO());
+		log.info(&quot;#getDDTNASC: &quot;+fornecedor.getDDTNASC());
+		log.info(&quot;#getCTELADIC1: &quot;+fornecedor.getCTELADIC1());
+		log.info(&quot;#getCTELADIC2: &quot;+fornecedor.getCTELADIC2());
+		log.info(&quot;#getCRAZAOSOCIAL: &quot;+fornecedor.getCRAZAOSOCIAL());
+		log.info(&quot;#getCTELADIC3: &quot;+fornecedor.getCTELADIC3());
+		log.info(&quot;#getCDVAGE: &quot;+fornecedor.getCDVAGE());
+		log.info(&quot;#getCTELEFONE: &quot;+fornecedor.getCTELEFONE());
+		log.info(&quot;#getCISENTOCOF: &quot;+fornecedor.getCISENTOCOF());
+		log.info(&quot;#getCINSS: &quot;+fornecedor.getCINSS());
+		log.info(&quot;#getCISENTOCSLL: &quot;+fornecedor.getCISENTOCSLL());
+		log.info(&quot;#getCSEXO: &quot;+fornecedor.getCSEXO());
+		//log.info(&quot;#getCNIRE2: &quot;+fornecedor.getCNIRE2());
+		log.info(&quot;#getClass: &quot;+fornecedor.getClass());
+		log.info(&quot;#getCINSMUNIC: &quot;+fornecedor.getCINSMUNIC());
+		log.info(&quot;#getCNFANTASIA: &quot;+fornecedor.getCNFANTASIA());
+		log.info(&quot;#getCLIMINARCOF: &quot;+fornecedor.getCLIMINARCOF());
+		log.info(&quot;#getCBAIRRO: &quot;+fornecedor.getCBAIRRO());
+		log.info(&quot;#getCLIMINARISSINDETERMINADO: &quot;+fornecedor.getCLIMINARISSINDETERMINADO());
+		log.info(&quot;#getCDVCONTA: &quot;+fornecedor.getCDVCONTA());
+		log.info(&quot;#getCLIMINARINSS: &quot;+fornecedor.getCLIMINARINSS());
+		log.info(&quot;#getAPRODUTOS: &quot;+fornecedor.getAPRODUTOS());
+		log.info(&quot;#getCTPLOG: &quot;+fornecedor.getCTPLOG());
+		log.info(&quot;#getCAGENCIA: &quot;+fornecedor.getCAGENCIA());
+		log.info(&quot;#getNVALCAPS: &quot;+fornecedor.getNVALCAPS());
+		log.info(&quot;#getCNUMERO: &quot;+fornecedor.getCNUMERO());
+		//log.info(&quot;#getNVALCAPS2: &quot;+fornecedor.getNVALCAPS2());
+		//log.info(&quot;#getDDATASER2: &quot;+fornecedor.getDDATASER2());
+		log.info(&quot;#getDFIMIDENTEXT: &quot;+fornecedor.getDFIMIDENTEXT());
+		log.info(&quot;#getCISENTOIRFF: &quot;+fornecedor.getCISENTOIRFF());
+		log.info(&quot;#getCCOMPLEMENTO: &quot;+fornecedor.getCCOMPLEMENTO());
+		log.info(&quot;#getCCONTA: &quot;+fornecedor.getCCONTA());
+		//log.info(&quot;#getCOBSSER2: &quot;+fornecedor.getCOBSSER2());
+		log.info(&quot;#getCDOCCONSTITUICAO: &quot;+fornecedor.getCDOCCONSTITUICAO());
+		log.info(&quot;#getCISENTOINSS: &quot;+fornecedor.getCISENTOINSS());
+		log.info(&quot;#getCNATURALIDADE: &quot;+fornecedor.getCNATURALIDADE());
+		log.info(&quot;#getCLIMINARIRFF: &quot;+fornecedor.getCLIMINARIRFF());
+		log.info(&quot;#getCISENTOISS: &quot;+fornecedor.getCISENTOISS());
+		log.info(&quot;#getCTIPO: &quot;+fornecedor.getCTIPO());
+		log.info(&quot;#getCEMAILADIC2: &quot;+fornecedor.getCEMAILADIC2());
+		log.info(&quot;#getCEMAILADIC1: &quot;+fornecedor.getCEMAILADIC1());
+		log.info(&quot;#getCMUNICIPIO: &quot;+fornecedor.getCMUNICIPIO());
+		log.info(&quot;#getCNIRE: &quot;+fornecedor.getCNIRE());
+		log.info(&quot;#getCMAE: &quot;+fornecedor.getCMAE());
+		log.info(&quot;#getCLIMINARIRFFINDETERMINADO: &quot;+fornecedor.getCLIMINARIRFFINDETERMINADO());
+		log.info(&quot;#getACONTATOS: &quot;+fornecedor.getACONTATOS());
+		log.info(&quot;#getCLIMINARCSLLINDETERMINADO: &quot;+fornecedor.getCLIMINARCSLLINDETERMINADO());
+		log.info(&quot;#getCLIMINARPIS: &quot;+fornecedor.getCLIMINARPIS());
+		log.info(&quot;#getCNUMDOC: &quot;+fornecedor.getCNUMDOC());
+		log.info(&quot;#getCNACIONALIDADE: &quot;+fornecedor.getCNACIONALIDADE());
+		log.info(&quot;#getCPAIS: &quot;+fornecedor.getCPAIS());
+		log.info(&quot;#getDVALIDLIMINARPIS: &quot;+fornecedor.getDVALIDLIMINARPIS());
+		log.info(&quot;#getCORGEMIS: &quot;+fornecedor.getCORGEMIS());
+		log.info(&quot;#getCCODIGOPESSOA: &quot;+fornecedor.getCCODIGOPESSOA());
+		log.info(&quot;#getCLIMINARCSLL: &quot;+fornecedor.getCLIMINARCSLL());
+		log.info(&quot;#getCCONJUGE: &quot;+fornecedor.getCCONJUGE());
+		log.info(&quot;#getCNOMEABREVIADO: &quot;+fornecedor.getCNOMEABREVIADO());
+		log.info(&quot;#getCCODPAIS: &quot;+fornecedor.getCCODPAIS());
+		log.info(&quot;#getDVALIDLIMINARINSS: &quot;+fornecedor.getDVALIDLIMINARINSS());
+		log.info(&quot;#getDDATASER: &quot;+fornecedor.getDDATASER());
+		log.info(&quot;#getCDDI: &quot;+fornecedor.getCDDI());
+		log.info(&quot;#getCENDERECO: &quot;+fornecedor.getCENDERECO());
+		log.info(&quot;#getCDDD: &quot;+fornecedor.getCDDD());
+		log.info(&quot;#getCEMAIL: &quot;+fornecedor.getCEMAIL());
+		log.info(&quot;#getDVALIDLIMINARCOF: &quot;+fornecedor.getDVALIDLIMINARCOF());
+		log.info(&quot;#getCLIMINARCOFINSINDETERMINADO: &quot;+fornecedor.getCLIMINARCOFINSINDETERMINADO());
+		log.info(&quot;#getDVALIDLIMINARISS: &quot;+fornecedor.getDVALIDLIMINARISS());
+		log.info(&quot;#getDVALIDLIMINARCSLL: &quot;+fornecedor.getDVALIDLIMINARCSLL());
+		log.info(&quot;#getDDATCAPS: &quot;+fornecedor.getDDATCAPS());
+		log.info(&quot;#getCINSESTAD: &quot;+fornecedor.getCINSESTAD());
+		//log.info(&quot;#getCINSMUNIC2: &quot;+fornecedor.getCINSMUNIC2());
+		log.info(&quot;#getCCOOPERATIVA: &quot;+fornecedor.getCCOOPERATIVA());
+		log.info(&quot;#getDINICIDENTEXT: &quot;+fornecedor.getDINICIDENTEXT());
+		log.info(&quot;#getCISENTOPIS: &quot;+fornecedor.getCISENTOPIS());
+		log.info(&quot;#getCJUSTIFNCADBCO: &quot;+fornecedor.getCJUSTIFNCADBCO());
+		log.info(&quot;#getCLIMINARISS: &quot;+fornecedor.getCLIMINARISS());
+		log.info(&quot;#getDDTEMIS: &quot;+fornecedor.getDDTEMIS());
+		log.info(&quot;#getDVALIDLIMINARIRFF: &quot;+fornecedor.getDVALIDLIMINARIRFF());
+		//log.info(&quot;#getCINSESTAD2: &quot;+fornecedor.getCINSESTAD2());
+		log.info(&quot;#getCIDENTEXT: &quot;+fornecedor.getCIDENTEXT());
+		log.info(&quot;#getCPAI: &quot;+fornecedor.getCPAI());
+		log.info(&quot;#getCFAX: &quot;+fornecedor.getCFAX());
+		//log.info(&quot;#getDDATCAPS2: &quot;+fornecedor.getDDATCAPS2());
+		log.info(&quot;#getCCNPJCPF: &quot;+fornecedor.getCCNPJCPF());
+		log.info(&quot;#getCLIMINARPISINDETERMINADO: &quot;+fornecedor.getCLIMINARPISINDETERMINADO());
+		log.info(&quot;#getCTIPODOC: &quot;+fornecedor.getCTIPODOC());
+		log.info(&quot;#getCATIVECO: &quot;+fornecedor.getCATIVECO());
+		log.info(&quot;#getCHOMEPAGE: &quot;+fornecedor.getCHOMEPAGE());
+		log.info(&quot;#getCOPTSIMP: &quot;+fornecedor.getCOPTSIMP());
+		log.info(&quot;#getCBANCO: &quot;+fornecedor.getCBANCO());
+		log.info(&quot;#getCCEP: &quot;+fornecedor.getCCEP());
+		log.info(&quot;#getCLIMINARINSSINDETERMINADO: &quot;+fornecedor.getCLIMINARINSSINDETERMINADO());
+		log.info(&quot;#getCCODMUNIC: &quot;+fornecedor.getCCODMUNIC());
+		
+		
+		log.info(&quot;#objects ok, go call method&quot;);
+		var result = service.PREWS005H(hAPI.getCardValue(&quot;id_grupoempresa&quot;),hAPI.getCardValue(&quot;id_empresafilial&quot;),auth.user, auth.pass,fornecedor);
+		//var result = customClient.PREWS005H(hAPI.getCardValue(&quot;id_grupoempresa&quot;),hAPI.getCardValue(&quot;id_empresafilial&quot;),auth.user, auth.pass,fornecedor);
+		log.info(&quot;#=========================INTEGRACAO DE FORNECEDOR PROTHEUS RESULTS==========================&quot;);
+		log.info(&quot;#webservice message: &quot; + result);
+		
+		if(result.substring(0,3).trim() == &quot;NOK&quot;){
+			throw(result);
+		}
+		
+	} catch(error) { 
+		log.error(error);
+		throw error;
+	}
+}
+
+
+function getUserProtheus(){
+	var dataset = DatasetFactory.getDataset(&quot;ds_config&quot;, null, null, null);
+	return {user : dataset.getValue(0, &quot;usuario&quot;), pass : dataset.getValue(0, &quot;senha&quot;)}; 
+}
+
+function getJavaDate(stringDate){
+	log.info(&quot;#### getJavaDate ####&quot;);
+	var date = new java.util.Date();
+	var retorno = &quot;&quot;;
+	if(stringDate == &quot;&quot;){
+		log.info(&quot;#### stringDate vazio : &quot;+stringDate);
+		date.setDate(&quot;00&quot;);
+		date.setMonth(&quot;00&quot;);
+		date.setYear(&quot;0000&quot;);		
+		retorno = date;
+	}else{
+		log.info(&quot;#### stringDate preenchido : &quot;+stringDate);
+		stringDate = stringDate.split(&quot;/&quot;);
+		date.setDate(stringDate[0]);
+		date.setMonth(Number(stringDate[1])-1);
+		date.setYear(Number(stringDate[2])-1900);
+		
+		retorno = date;
+	}
+	log.info(&quot;###retorno : &quot;+retorno);
+	return retorno;
+}
+
+/**
+ * Método para listar os filhos de um pai x filho
+ * @param form: Referência da ficha
+ * @param fields: Array dos campos que pertencem ao pai x filho
+ * @returns {Array[][]} Array de String com as chaves e valores
+ */
+function getFilhosForm(form, fields){
+	var cardData = new java.util.HashMap(); 
+	
+	//cardData = form.getCardData();
+	
+	cardData = form;
+	
+	var it = cardData.keySet().iterator();
+	var listaFilho = new Array();
+
+	while (it.hasNext()) {
+		var key = it.next();
+ 		var campo = key.split(&quot;___&quot;);
+ 		
+ 		for (var i = 0; i &lt; fields.length; i++){
+ 			
+ 			//log.info(&quot;#fields[i]: &quot; + fields[i]+ &quot; campo[0]: &quot; + campo[0] + &quot; key.indexOf(&apos;___&apos;): &quot; + key.indexOf(&apos;___&apos;));
+ 			
+ 			if (key.indexOf(&apos;___&apos;) &gt;= 0 &amp;&amp; fields[i] == campo[0]) {
+ 				listaFilho.push([key, cardData.get(key)]);
+	 			log.info(&quot;#GETFILHOS -------- Key = &quot; + key + &quot; - &quot; + cardData.get(key));
+	 		}
+ 		}
+	}
+	
+	return listaFilho;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>afterProcessCreate</eventId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function afterProcessCreate(processId){&#xd;
+	log.info(&quot;#afterProcessCreate: &quot; + processId);&#xd;
+	&#xd;
+    var data = new Date();&#xd;
+    var formatoData = new java.text.SimpleDateFormat(&quot;dd/MM/yyyy&quot;);&#xd;
+    hAPI.setCardValue(&quot;dtAbertura&quot;, formatoData.format(data));&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>createUserList</eventId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function createUserList(gesad, listGroup, currentUser){&#xd;
+	var list = new Array();&#xd;
+	&#xd;
+	var c1 = DatasetFactory.createConstraint(&quot;colleagueGroupPK.groupId&quot;, gesad, gesad, ConstraintType.MUST);&#xd;
+	var c2 = DatasetFactory.createConstraint(&quot;colleagueGroupPK.colleagueId&quot;, currentUser, currentUser, ConstraintType.MUST_NOT);&#xd;
+	var gesad = DatasetFactory.getDataset(&quot;colleagueGroup&quot;, null, new Array(c1,c2), null);&#xd;
+	&#xd;
+	for(var i = 0; i &lt; gesad.rowsCount; i++){&#xd;
+		var user = gesad.getValue(i,&quot;colleagueGroupPK.colleagueId&quot;);&#xd;
+		&#xd;
+		for(var x in listGroup){&#xd;
+			var c1Temp = DatasetFactory.createConstraint(&quot;colleagueGroupPK.groupId&quot;, listGroup[x], listGroup[x], ConstraintType.MUST);&#xd;
+			var groupTemp = DatasetFactory.getDataset(&quot;colleagueGroup&quot;, null, new Array(c1Temp), null);&#xd;
+			for(var j = 0; j &lt; groupTemp.rowsCount; j++){&#xd;
+				if(user == groupTemp.getValue(j,&quot;colleagueGroupPK.colleagueId&quot;)) list.push(getLogin(user));&#xd;
+			}&#xd;
+		}&#xd;
+	}&#xd;
+	return list;&#xd;
+}&#xd;
+&#xd;
+function getLogin(IdUser){&#xd;
+	var c1 = DatasetFactory.createConstraint(&quot;colleaguePK.colleagueId&quot;, IdUser, IdUser, ConstraintType.MUST);&#xd;
+	var user = DatasetFactory.getDataset(&quot;colleague&quot;, null, new Array(c1), null);&#xd;
+	return user.getValue(0, &quot;login&quot;);&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>afterCancelProcess</eventId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function afterCancelProcess(colleagueId,processId){&#xd;
+	log.info(&quot;#afterCancelProcess processId: &quot;+processId);&#xd;
+	var company = getValue(&quot;WKCompany&quot;);&#xd;
+	deleteGroups(company);&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>activities</eventId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>var INICIO = 4;&#xd;
+var GESAD_CONFERIR_PRE_CADASTRO = 5;&#xd;
+var DECISAO_APROVACAO = 7;&#xd;
+var NOTIFICAR_GECON_PARA_COMPLEMENTO = 11;&#xd;
+var APROVACAO_GECON = 13;&#xd;
+var FIM_APROVADO = 15;&#xd;
+var FIM_REPROVADO = 9;&#xd;
+var DEFINIR_GESAD = 23;&#xd;
+var DEFINIR_GECON = 32;&#xd;
+var DEFINIR_GECON_APROVACAO = 41;&#xd;
+var PRIMEIRA_APROVACAO_GECON = 44;&#xd;
+var SEGUNDA_APROVACAO_GECON = 26;&#xd;
+&#xd;
+&#xd;
+var PREFIX_GROUP_DEFINIR_GESAD = &quot;CADASTRO_FORNECEDOR_DEFINIR_GESAD&quot;;&#xd;
+var PREFIX_GROUP_DEFINIR_GECON = &quot;CADASTRO_FORNECEDOR_DEFINIR_GECON&quot;;&#xd;
+var PREFIX_GROUP_DEFINIR_GECON_APROVACAO = &quot;CADASTRO_FORNECEDOR_DEFINIR_GECON_APROVACAO&quot;;&#xd;
+</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>afterTaskSave</eventId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function afterTaskSave(colleagueId,nextSequenceId,userList){&#xd;
+	log.info(&quot;#afterTaskSave cadastro de fornecedor===============&quot;);&#xd;
+	&#xd;
+	/*&#xd;
+	 * Associa os anexos do GED no Workflow&#xd;
+	 */&#xd;
+	&#xd;
+	try{&#xd;
+		&#xd;
+		log.info(&quot;#afterTaskSave attachDocuments&quot;);&#xd;
+		var docList = hAPI.getCardValue(&quot;listDocs&quot;);&#xd;
+		log.info(&quot;#docList : &quot;+docList);&#xd;
+		if(docList != &quot;&quot;){&#xd;
+			&#xd;
+			docList = docList.split(&quot;,&quot;);&#xd;
+			&#xd;
+			var attachments = hAPI.listAttachments();&#xd;
+			&#xd;
+	        var anexos = new java.util.ArrayList();	        	&#xd;
+			&#xd;
+	        for(var  i = 0; i &lt; attachments.size(); i++) {&#xd;
+				&#xd;
+				var docDto = attachments.get(i);&#xd;
+				&#xd;
+				anexos.add(docDto.getDocumentId().toString());	&#xd;
+				&#xd;
+			}&#xd;
+			&#xd;
+			log.info(&quot;====anexos : &quot;+anexos);&#xd;
+			&#xd;
+			for(var i in docList){&#xd;
+				log.info(&quot;Anexos : &quot;+docList[i]);&#xd;
+				index = anexos.indexOf(docList[i]);&#xd;
+				log.info(&quot;index : &quot;+index);&#xd;
+				if(index == -1){&#xd;
+					hAPI.attachDocument(docList[i]);&#xd;
+				}&#xd;
+				&#xd;
+			}&#xd;
+			&#xd;
+			hAPI.setCardValue(&quot;listDocs&quot;, &quot;&quot;);&#xd;
+		}		&#xd;
+		&#xd;
+	}catch (e) {&#xd;
+		log.error(&quot;Erro ao incluir documentos como anexos ao workflow. &quot;+e.toString());&#xd;
+	}&#xd;
+	&#xd;
+	&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>atualizaPastaForn</eventId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function atualizaPastaForn(numPasta){&#xd;
+	&#xd;
+	try{&#xd;
+		&#xd;
+		var auth = getUserProtheus();&#xd;
+		var company = hAPI.getCardValue(&quot;id_grupoempresa&quot;);&#xd;
+		var branch  = hAPI.getCardValue(&quot;id_empresafilial&quot;);&#xd;
+		var cod_pessoa  = hAPI.getCardValue(&quot;codPessoa&quot;);&#xd;
+		&#xd;
+		var serviceManager = ServiceManager.getService(&apos;PREWS005&apos;);&#xd;
+		var serviceProvider = serviceManager.getBean();&#xd;
+		var serviceLocator = serviceProvider.instantiate(&apos;com.totvs.PREWS005&apos;);&#xd;
+		&#xd;
+		var service = serviceLocator.getPREWS005SOAP();&#xd;
+			&#xd;
+		var result = service.prews005J(company, branch, auth.user, auth.pass, cod_pessoa, numPasta);&#xd;
+		log.info(&quot;######retorno atualização da pasta : &quot;+result);		&#xd;
+		&#xd;
+	}catch (e) {&#xd;
+		log.error(&quot;Erro ao atualizar pasta do Fluig no Protheus: &quot;+e.toString());&#xd;
+	}&#xd;
+	&#xd;
+&#xd;
+}&#xd;
+&#xd;
+function getUserProtheus(){&#xd;
+	var dataset = DatasetFactory.getDataset(&quot;ds_config&quot;, null, null, null);&#xd;
+	return {user : dataset.getValue(0, &quot;usuario&quot;), pass : dataset.getValue(0, &quot;senha&quot;)}; &#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>beforeStateEntry</eventId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function beforeStateEntry(sequenceId){
+	log.info(&quot;#beforeStateEntry ------- sequenceId: &quot; + sequenceId);
+	
+	var data = new Date();
+	var formatoData = new java.text.SimpleDateFormat(&quot;dd/MM/yyyy&quot;);
+	
+	if(sequenceId == DECISAO_APROVACAO){
+	 hAPI.setCardValue(&quot;text_user_gesad&quot;, getLogin(getValue(&quot;WKUser&quot;)));
+	 hAPI.setCardValue(&quot;text_data_analise&quot;, formatoData.format(data));
+	}
+	
+/*	if(sequenceId == DEFINIR_GESAD){
+		log.info(&quot;#início validação dos anexos&quot;);
+		var attachments = hAPI.listAttachments();
+		
+		if(attachments.isEmpty() &amp;&amp; hAPI.getCardValue(&quot;portal&quot;) != &apos;true&apos;){
+			throw(&quot;É necessário anexar os arquivos do processo.&quot;);
+		}
+		
+	}*/
+	
+
+	if(sequenceId == FIM_APROVADO){
+		log.info(&quot;#=============================== REALIZA INTEGRAÇÃO ================================&quot;);
+		//manterFornecedorPessoa();
+		//manterFornecedorProtheus();
+		//CRIA PASTA E ANEXA OS DADOS NO GED.
+		createGED();
+	}
+
+}
+
+function getLogin(IdUser){
+	var c1 = DatasetFactory.createConstraint(&quot;colleaguePK.colleagueId&quot;, IdUser, IdUser, ConstraintType.MUST);
+	var user = DatasetFactory.getDataset(&quot;colleague&quot;, null, new Array(c1), null);
+	return user.getValue(0, &quot;login&quot;);
+}</eventDescription>
+    </WorkflowProcessEvent>
+  </list>
+  <list>
+    <AdvancedProcessProperties>
+      <advancedProcessPropertiesPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <propertyId>AutomaticTasks</propertyId>
+        <version>2</version>
+      </advancedProcessPropertiesPK>
+      <propertieValue>23,32,41</propertieValue>
+    </AdvancedProcessProperties>
+    <AdvancedProcessProperties>
+      <advancedProcessPropertiesPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <propertyId>folder</propertyId>
+        <version>2</version>
+      </advancedProcessPropertiesPK>
+      <propertieValue>30</propertieValue>
+    </AdvancedProcessProperties>
+  </list>
+  <list>
+    <SwimLane>
+      <color>adc9ac</color>
+      <height>221</height>
+      <width>1510</width>
+      <positionX>1</positionX>
+      <positionY>140</positionY>
+      <stateName></stateName>
+      <type>2</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <sequence>1</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>82b0b7</color>
+      <height>141</height>
+      <width>1510</width>
+      <positionX>1</positionX>
+      <positionY>0</positionY>
+      <stateName></stateName>
+      <type>2</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <sequence>2</sequence>
+      </swimLanePK>
+    </SwimLane>
+  </list>
+  <list>
+    <ProcessComponGraf>
+      <componType>1</componType>
+      <positionX>5</positionX>
+      <positionY>275</positionY>
+      <processComponGrafPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <componGrafSequence>48</componGrafSequence>
+      </processComponGrafPK>
+      <stateName>Notifica Reprovação Fornecedor</stateName>
+    </ProcessComponGraf>
+    <ProcessComponGraf>
+      <componType>1</componType>
+      <positionX>1410</positionX>
+      <positionY>280</positionY>
+      <processComponGrafPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <componGrafSequence>50</componGrafSequence>
+      </processComponGrafPK>
+      <stateName>Notifica Aprovação Fornecedor</stateName>
+    </ProcessComponGraf>
+  </list>
+  <list>
+    <ProcessLinkAssoc>
+      <processLinkAssocPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <linkSequence>49</linkSequence>
+      </processLinkAssocPK>
+      <initialStateSequence>48</initialStateSequence>
+      <finalStateSequence>9</finalStateSequence>
+    </ProcessLinkAssoc>
+    <ProcessLinkAssoc>
+      <processLinkAssocPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>1</version>
+        <linkSequence>51</linkSequence>
+      </processLinkAssocPK>
+      <initialStateSequence>50</initialStateSequence>
+      <finalStateSequence>15</finalStateSequence>
+    </ProcessLinkAssoc>
+  </list>
+  <list>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>2</version>
+        <linkSequence>22</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>363</positionX>
+      <positionY>124</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>2</version>
+        <linkSequence>22</linkSequence>
+        <bendSequence>2</bendSequence>
+      </processLinkBendPK>
+      <positionX>240</positionX>
+      <positionY>124</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>2</version>
+        <linkSequence>22</linkSequence>
+        <bendSequence>3</bendSequence>
+      </processLinkBendPK>
+      <positionX>134</positionX>
+      <positionY>124</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>2</version>
+        <linkSequence>38</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>1049</positionX>
+      <positionY>119</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>2</version>
+        <linkSequence>38</linkSequence>
+        <bendSequence>2</bendSequence>
+      </processLinkBendPK>
+      <positionX>473</positionX>
+      <positionY>119</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>2</version>
+        <linkSequence>38</linkSequence>
+        <bendSequence>3</bendSequence>
+      </processLinkBendPK>
+      <positionX>440</positionX>
+      <positionY>119</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>2</version>
+        <linkSequence>47</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>569</positionX>
+      <positionY>132</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>2</version>
+        <linkSequence>47</linkSequence>
+        <bendSequence>2</bendSequence>
+      </processLinkBendPK>
+      <positionX>438</positionX>
+      <positionY>132</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>2</version>
+        <linkSequence>47</linkSequence>
+        <bendSequence>3</bendSequence>
+      </processLinkBendPK>
+      <positionX>401</positionX>
+      <positionY>132</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>2</version>
+        <linkSequence>53</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>63</positionX>
+      <positionY>135</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>2</version>
+        <linkSequence>53</linkSequence>
+        <bendSequence>2</bendSequence>
+      </processLinkBendPK>
+      <positionX>63</positionX>
+      <positionY>5</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>2</version>
+        <linkSequence>53</linkSequence>
+        <bendSequence>3</bendSequence>
+      </processLinkBendPK>
+      <positionX>520</positionX>
+      <positionY>5</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>2</version>
+        <linkSequence>62</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>1154</positionX>
+      <positionY>282</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>2</version>
+        <linkSequence>62</linkSequence>
+        <bendSequence>2</bendSequence>
+      </processLinkBendPK>
+      <positionX>911</positionX>
+      <positionY>282</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>2</version>
+        <linkSequence>67</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>1304</positionX>
+      <positionY>314</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>2</version>
+        <linkSequence>67</linkSequence>
+        <bendSequence>2</bendSequence>
+      </processLinkBendPK>
+      <positionX>913</positionX>
+      <positionY>314</positionY>
+    </ProcessLinkBend>
+  </list>
+  <list/>
+  <list>
+    <ExtendedPropertyField>
+      <extendedPropertyFieldPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>2</version>
+        <stateSequence>0</stateSequence>
+        <propertyName>AutomaticTasks</propertyName>
+      </extendedPropertyFieldPK>
+      <propertyType>0</propertyType>
+      <propertyDescription>AutomaticTasks</propertyDescription>
+      <propertyValue>23,32,41</propertyValue>
+      <isDefaultProperty>false</isDefaultProperty>
+    </ExtendedPropertyField>
+    <ExtendedPropertyField>
+      <extendedPropertyFieldPK>
+        <companyId>1</companyId>
+        <processId>Cadastro-fornecedor</processId>
+        <version>2</version>
+        <stateSequence>0</stateSequence>
+        <propertyName>folder</propertyName>
+      </extendedPropertyFieldPK>
+      <propertyType>0</propertyType>
+      <propertyDescription>folder</propertyDescription>
+      <propertyValue>30</propertyValue>
+      <isDefaultProperty>false</isDefaultProperty>
+    </ExtendedPropertyField>
+  </list>
+  <list/>
+  <list>
+    <ProcessStateService>
+      <companyId>1</companyId>
+      <processId>Cadastro-fornecedor</processId>
+      <version>1</version>
+      <sequence>56</sequence>
+      <attempts>0</attempts>
+      <sucessFullMessage></sucessFullMessage>
+      <serviceName>PESSOA-FORNECEDOR</serviceName>
+    </ProcessStateService>
+    <ProcessStateService>
+      <companyId>1</companyId>
+      <processId>Cadastro-fornecedor</processId>
+      <version>1</version>
+      <sequence>63</sequence>
+      <attempts>0</attempts>
+      <sucessFullMessage>Integração executada com sucesso</sucessFullMessage>
+      <serviceName>PREWS005AXIS</serviceName>
+    </ProcessStateService>
+  </list>
+</list>
