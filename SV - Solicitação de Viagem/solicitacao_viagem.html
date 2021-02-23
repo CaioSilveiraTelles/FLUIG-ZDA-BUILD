@@ -113,6 +113,7 @@
                     </div>
                     </br>
                     <div class="row">
+               
                         <div class="col-sm-3 col-xs-12">
                             <label for="urgencia">Motivo:</label>
                             <br/>
@@ -122,51 +123,34 @@
                             <br/>
                             <input type="radio" name="motivo" id="motivo" style="cursor: pointer" value="outros" /> Outros (Descrever)
                         </div>
-                        <div class="col-sm-3 col-xs-12">
-                             	<table tablename="Filiais" class="table table-hover" addbuttonlabel="Adicionar Filial" addbuttonclass="btn btn-primary">
-						    		<thead>
-						    			<tr>
-						    				<td>Pedido</td>
-						    			</tr>
-						    		</thead>
-						    		<tbody>
-							    		<tr>
-											<td>
-												<input
-											    type="zoom"
-												    id = "Pedido"
-												    name="Pedido"
-												    data-zoom="{
-												        'displayKey':'Pedido',
-												        'datasetId':'pc',
-												        'maximumSelectionLength':'5',
-												        'placeholder':'Escolha O PEDIDO',
-												        'fields':[
-												            {
-												               'field':'NUM_PEDIDO',
-												               'label':'Numero pedido'
-												          
-												            }  ,{
-												              'field':'Comprador',
-												              'label':'Comprador',
-												              'standard':'true'
-												              
-												            },
-					
-												             {
-												              'field':'CODPRODUTO',
-												              'label':'CODPRODUTO'
-												            }
-												        ]
-												     }"
-												/>
-											</td>
-										</tr>
-						    		</tbody>
-						    	</table>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 col-xs-12">
+                      <div class="col-sm-3 col-xs-12">
+                            
+									<input class='col-sm-3 col-xs-12'
+									    type="zoom"
+									    id = "NUM_PEDIDO"
+									    name="NUM_PEDIDO"
+									    data-zoom="{
+									        'displayKey':'NUM_PEDIDO',
+									        'datasetId':'PC',
+									        'maximumSelectionLength':'1',
+									        'placeholder':'Escolha o Pedid de Compra',
+									        'fields':[
+									            {
+									               'field':'NUM_PEDIDO',
+									               'label':'NUMERO'
+									            },{
+									              'field':'CODPRODUTO',
+									              'label':'Produto',
+									              'standard':'true'
+									            },{
+									              'field':'FILIAL',
+									              'label':'FILIAL'
+									            }
+									        ]
+									     }"
+/>
+                        </div>                     
+                          <div class="col-sm-3 col-xs-12">
                             <label for="urgencia">Valor:</label>
                             <input class="form-control money" name="vl_pedido" id="vl_pedido" type="text" />
                         </div>
