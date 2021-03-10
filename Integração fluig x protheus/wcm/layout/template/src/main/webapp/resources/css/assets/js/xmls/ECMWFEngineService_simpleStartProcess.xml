@@ -1,0 +1,45 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.workflow.ecm.technology.totvs.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:simpleStartProcess>
+         <username></username>
+         <password></password>
+         <companyId></companyId>
+         <processId></processId>
+         <comments></comments>
+         <attachments></attachments>
+         <cardData>
+         
+
+            <item>
+            		<item>fname</item>
+            		<item name="fname"></item>
+            </item>
+            <item>
+            		<item>fmail</item>
+            		<item name="fmail"></item>
+            </item>
+            <item>
+            		<item>sexo</item>
+            		<item name="sexo"></item>
+            </item>
+            <item>
+            		<item>estado</item>
+            		<item name="estado"></item>
+            </item>
+            <item>
+            		<item>pergunta</item>
+            		<item name="pergunta"></item>
+            </item>
+            <item>
+            		<item>dtRequest</item>
+            		<item name="dtRequest"></item>
+            </item>
+             <item>
+            		<item>mensagem</item>
+            		<item name="mensagem"></item>
+            </item>
+         </cardData>
+      </ws:simpleStartProcess>
+   </soapenv:Body>
+</soapenv:Envelope>
